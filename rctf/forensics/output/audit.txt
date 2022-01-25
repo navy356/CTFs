@@ -1,0 +1,25 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Tue Aug 10 21:44:24 2021
+Invocation: foremost rcts_challenge.jpg 
+Output directory: /home/navy356/CTFs/rctf/forensics/output
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: rcts_challenge.jpg
+Start: Tue Aug 10 21:44:24 2021
+Length: 78 KB (79953 bytes)
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+0:	00000000.jpg 	      72 KB 	          0 	 
+1:	00000145.png 	       5 KB 	      74737 	  (400 x 200)
+Finish: Tue Aug 10 21:44:24 2021
+
+2 FILES EXTRACTED
+	
+jpg:= 1
+png:= 1
+------------------------------------------------------------------
+
+Foremost finished at Tue Aug 10 21:44:24 2021

@@ -1,0 +1,1495 @@
+<html lang="en" class="js-focus-visible webkit chrome" data-js-focus-visible=""><head>
+    
+
+
+
+
+
+
+
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="application-name" content="JIRA" data-name="jira" data-version="8.13.13"><meta name="ajs-server-scheme" content="https">
+<meta name="ajs-server-port" content="443">
+<meta name="ajs-server-name" content="bugs.openjdk.java.net">
+<meta name="ajs-behind-proxy" content="null">
+<meta name="ajs-base-url" content="https://bugs.openjdk.java.net">
+<meta name="ajs-viewissue-use-history-api" content="false">
+<meta name="ajs-jira-base-url" content="https://bugs.openjdk.java.net">
+<meta name="ajs-serverRenderedViewIssue" content="true">
+<meta name="ajs-dev-mode" content="false">
+<meta name="ajs-context-path" content="">
+<meta name="ajs-version-number" content="8.13.13">
+<meta name="ajs-build-number" content="813013">
+<meta name="ajs-is-beta" content="false">
+<meta name="ajs-is-rc" content="false">
+<meta name="ajs-is-snapshot" content="false">
+<meta name="ajs-is-milestone" content="false">
+<meta name="ajs-remote-user" content="">
+<meta name="ajs-remote-user-fullname" content="">
+<meta name="ajs-user-locale" content="en">
+<meta name="ajs-user-locale-group-separator" content=",">
+<meta name="ajs-app-title" content="Java Bug System">
+<meta name="ajs-keyboard-shortcuts-enabled" content="true">
+<meta name="ajs-keyboard-accesskey-modifier" content="Alt">
+<meta name="ajs-enabled-dark-features" content="[&quot;com.atlassian.jira.agile.darkfeature.editable.detailsview&quot;,&quot;nps.survey.inline.dialog&quot;,&quot;com.atlassian.jira.agile.darkfeature.edit.closed.sprint.enabled&quot;,&quot;jira.plugin.devstatus.phasetwo&quot;,&quot;jira.frother.reporter.field&quot;,&quot;atlassian.rest.xsrf.legacy.enabled&quot;,&quot;jira.issue.status.lozenge&quot;,&quot;com.atlassian.jira.config.BIG_PIPE&quot;,&quot;com.atlassian.jira.projects.issuenavigator&quot;,&quot;com.atlassian.jira.config.PDL&quot;,&quot;jira.plugin.devstatus.phasetwo.enabled&quot;,&quot;atlassian.aui.raphael.disabled&quot;,&quot;app-switcher.new&quot;,&quot;frother.assignee.field&quot;,&quot;com.atlassian.jira.projects.ProjectCentricNavigation.Switch&quot;,&quot;jira.onboarding.cyoa&quot;,&quot;com.atlassian.jira.agile.darkfeature.kanplan.enabled&quot;,&quot;com.atlassian.jira.config.ProjectConfig.MENU&quot;,&quot;com.atlassian.jira.projects.sidebar.DEFER_RESOURCES&quot;,&quot;com.atlassian.jira.agile.darkfeature.kanplan.epics.and.versions.enabled&quot;,&quot;com.atlassian.jira.agile.darkfeature.sprint.goal.enabled&quot;,&quot;jira.zdu.admin-updates-ui&quot;,&quot;jira.zdu.jmx-monitoring&quot;,&quot;sd.new.settings.sidebar.location.disabled&quot;,&quot;jira.zdu.cluster-upgrade-state&quot;,&quot;com.atlassian.jira.agile.darkfeature.splitissue&quot;,&quot;com.atlassian.jira.config.CoreFeatures.LICENSE_ROLES_ENABLED&quot;,&quot;jira.export.csv.enabled&quot;]">
+<meta name="ajs-in-admin-mode" content="false">
+<meta name="ajs-is-sysadmin" content="false">
+<meta name="ajs-is-admin" content="false">
+<meta name="ajs-outgoing-mail-enabled" content="true">
+<meta name="ajs-archiving-enabled" content="false">
+<meta name="ajs-date-relativize" content="true">
+<meta name="ajs-date-time" content="HH:mm">
+<meta name="ajs-date-day" content="EEEE HH:mm">
+<meta name="ajs-date-dmy" content="yyyy-MM-dd">
+<meta name="ajs-date-complete" content="yyyy-MM-dd HH:mm">
+<script type="text/javascript">var AJS=AJS||{};AJS.debug=true;</script>
+
+
+    
+<meta id="atlassian-token" name="atlassian-token" content="BI6B-LGJG-J48D-LFXB_06c6780eb6b2a5ae231965e24ee9921552dc5097_lout">
+
+
+
+<link rel="shortcut icon" href="/s/-urb32v/813013/1rzz2as/_/jira-favicon-hires.png">
+
+
+    
+
+
+
+<!--[if IE]><![endif]-->
+<script type="text/javascript">
+    (function() {
+        var contextPath = '';
+
+        function printDeprecatedMsg() {
+            if (console && console.warn) {
+                console.warn('DEPRECATED JS - contextPath global variable has been deprecated since 7.4.0. Use `wrm/context-path` module instead.');
+            }
+        }
+
+        Object.defineProperty(window, 'contextPath', {
+            get: function() {
+                printDeprecatedMsg();
+                return contextPath;
+            },
+            set: function(value) {
+                printDeprecatedMsg();
+                contextPath = value;
+            }
+        });
+    })();
+
+</script>
+<script>
+window.WRM=window.WRM||{};window.WRM._unparsedData=window.WRM._unparsedData||{};window.WRM._unparsedErrors=window.WRM._unparsedErrors||{};
+WRM._unparsedData["com.atlassian.plugins.atlassian-plugins-webresource-plugin:context-path.context-path"]="\"\"";
+WRM._unparsedData["jira.core:feature-flags-data.feature-flag-data"]="{\"enabled-feature-keys\":[\"com.atlassian.jira.agile.darkfeature.editable.detailsview\",\"nps.survey.inline.dialog\",\"com.atlassian.jira.agile.darkfeature.edit.closed.sprint.enabled\",\"jira.plugin.devstatus.phasetwo\",\"jira.frother.reporter.field\",\"atlassian.rest.xsrf.legacy.enabled\",\"jira.issue.status.lozenge\",\"com.atlassian.jira.config.BIG_PIPE\",\"com.atlassian.jira.projects.issuenavigator\",\"com.atlassian.jira.config.PDL\",\"jira.plugin.devstatus.phasetwo.enabled\",\"atlassian.aui.raphael.disabled\",\"app-switcher.new\",\"frother.assignee.field\",\"com.atlassian.jira.projects.ProjectCentricNavigation.Switch\",\"jira.onboarding.cyoa\",\"com.atlassian.jira.agile.darkfeature.kanplan.enabled\",\"com.atlassian.jira.config.ProjectConfig.MENU\",\"com.atlassian.jira.projects.sidebar.DEFER_RESOURCES\",\"com.atlassian.jira.agile.darkfeature.kanplan.epics.and.versions.enabled\",\"com.atlassian.jira.agile.darkfeature.sprint.goal.enabled\",\"jira.zdu.admin-updates-ui\",\"jira.zdu.jmx-monitoring\",\"sd.new.settings.sidebar.location.disabled\",\"jira.zdu.cluster-upgrade-state\",\"com.atlassian.jira.agile.darkfeature.splitissue\",\"com.atlassian.jira.config.CoreFeatures.LICENSE_ROLES_ENABLED\",\"jira.export.csv.enabled\"],\"feature-flag-states\":{\"com.atlassian.jira.security.LegacyJiraTypeResolver.block.unknown.functions\":false,\"com.atlassian.jira.security.endpoint.non.admin.access.screens\":false,\"atlassian.cdn.static.assets\":true,\"jira.richeditor.bidi.warning\":true,\"com.atlassian.jira.security.endpoint.non.browse.projects.access.fields\":false,\"mail.batching\":false,\"com.atlassian.jira.diagnostics.perflog\":true,\"com.atlassian.jira.privateEntitiesEditable\":true,\"com.atlassian.jira.security.endpoint.anonymous.access.priority\":false,\"com.atlassian.jira.dbr\":true,\"com.atlassian.jira.issuetable.move.links.hidden\":true,\"jira.priorities.per.project.edit.default\":false,\"com.atlassian.jira.agile.darkfeature.unlink.sprints.on.issue.move\":true,\"jira.renderer.consider.variable.format\":true,\"com.atlassian.jira.user.dbIdBasedKeyGenerationStrategy\":true,\"jira.priorities.per.project.jsd\":true,\"com.atlassian.jira.plugin.issuenavigator.anonymousPreventCfData\":false,\"com.atlassian.jira.agile.darkfeature.rapid.boards.bands\":true,\"com.atlassian.jira.sharedEntityEditRights\":true,\"com.atlassian.jira.agile.darkfeature.flexible.boards\":true,\"com.atlassian.jira.agile.darkfeature.sprint.picker.allsprints.suggestion\":true,\"com.atlassian.jira.security.endpoint.anonymous.access.resolution\":false,\"com.atlassian.jira.agile.darkfeature.sprint.goal\":false,\"jira.dc.lock.leasing\":true,\"com.atlassian.jira.accessibility.personal.settings\":true,\"jira.cluster.monitoring.show.offline.nodes\":true,\"mail.batching.create.section.cf\":true,\"com.atlassian.jira.security.endpoint.non.browse.projects.access.autocompletedata\":false,\"com.atlassian.jira.custom.csv.escaper\":true,\"com.atlassian.mail.server.managers.hostname.verification\":true,\"com.atlassian.jira.plugin.issuenavigator.filtersUxImprovment\":true,\"com.atlassian.jira.agile.darkfeature.kanplan.epics.and.versions\":false,\"com.atlassian.jira.upgrade.startup.fix.index\":true,\"jira.dc.cleanup.cluser.tasks\":true,\"com.atlassian.jira.issues.archiving.filters\":false,\"mail.batching.override.core\":true,\"jira.users.and.roles.page.in.react\":true,\"com.atlassian.jira.security.endpoint.anonymous.access.projectCategory\":false,\"jira.redirect.anonymous.404.errors\":true,\"com.atlassian.jira.agile.darkfeature.velocity.chart.ui\":true,\"com.atlassian.jira.issuetable.draggable\":true,\"com.atlassian.jira.returnDefaultAvatarsForBrokenAvatars\":true,\"com.atlassian.jira.attachments.generate.unique.suffix\":true,\"com.atlassian.jira.agile.darkfeature.sprint.auto.management\":false,\"com.atlassian.jira.agile.darkfeature.kanban.hide.old.done.issues\":true,\"jira.jql.suggestrecentfields\":false,\"jira.version.based.node.reindex.service\":true,\"com.atlassian.jira.agile.darkfeature.backlog.showmore\":true,\"com.atlassian.jira.gdpr.rtbf\":true,\"com.atlassian.jira.agile.darkfeature.sprint.plan\":false,\"com.atlassian.jira.security.xsrf.session.token\":true,\"com.atlassian.jira.security.endpoint.anonymous.access.issueLinkType\":false,\"com.atlassian.jira.agile.darkfeature.optimistic.transitions\":true,\"com.atlassian.jira.security.endpoint.non.admin.access.avatar.system\":false,\"com.atlassian.jira.agile.darkfeature.kanplan\":false,\"com.atlassian.jira.agile.darkfeature.burnupchart\":true,\"com.atlassian.jira.issues.archiving.browse\":true,\"com.atlassian.jira.agile.darkfeature.future.sprint.dates\":true,\"jira.instrumentation.laas\":false,\"com.atlassian.jira.filtersAndDashboardsShareableWithAllGroupsAndRoles\":true,\"jira.customfields.paginated.ui\":true,\"com.atlassian.jira.agile.darkfeature.edit.closed.sprint\":false,\"mail.batching.user.notification\":true,\"jira.create.linked.issue\":true,\"com.atlassian.jira.agile.darkfeature.dataonpageload\":true,\"com.atlassian.jira.advanced.audit.log\":true,\"jira.sal.host.connect.accessor.existing.transaction.will.create.transactions\":true,\"external.links.new.window\":true,\"jira.quick.search\":true,\"com.atlassian.jira.projects.per.project.permission.query\":true,\"jira.jql.smartautoselectfirst\":false,\"com.atlassian.jira.issues.archiving\":true,\"index.use.snappy\":true,\"jira.priorities.per.project\":true,\"jira.jql.membersof.ignoreGlobalPermissionsForAnonymous\":false}}";
+WRM._unparsedData["jira.core:default-comment-security-level-data.DefaultCommentSecurityLevelHelpLink"]="{\"extraClasses\":\"default-comment-level-help\",\"title\":\"Commenting on an Issue\",\"url\":\"https://docs.atlassian.com/jira/jcore-docs-0813/Editing+and+collaborating+on+issues#Editingandcollaboratingonissues-restrictacomment\",\"isLocal\":false}";
+WRM._unparsedData["jira.core:dateFormatProvider.allFormats"]="{\"dateFormats\":{\"meridiem\":[\"AM\",\"PM\"],\"eras\":[\"BC\",\"AD\"],\"months\":[\"January\",\"February\",\"March\",\"April\",\"May\",\"June\",\"July\",\"August\",\"September\",\"October\",\"November\",\"December\"],\"monthsShort\":[\"Jan\",\"Feb\",\"Mar\",\"Apr\",\"May\",\"Jun\",\"Jul\",\"Aug\",\"Sep\",\"Oct\",\"Nov\",\"Dec\"],\"weekdaysShort\":[\"Sun\",\"Mon\",\"Tue\",\"Wed\",\"Thu\",\"Fri\",\"Sat\"],\"weekdays\":[\"Sunday\",\"Monday\",\"Tuesday\",\"Wednesday\",\"Thursday\",\"Friday\",\"Saturday\"]},\"lookAndFeelFormats\":{\"relativize\":\"true\",\"time\":\"HH:mm\",\"day\":\"EEEE HH:mm\",\"dmy\":\"yyyy-MM-dd\",\"complete\":\"yyyy-MM-dd HH:mm\"}}";
+WRM._unparsedData["com.atlassian.jira.jira-issue-nav-components:issueviewer.features"]="{\"rteEnabled\":true}";
+WRM._unparsedData["com.atlassian.jira.plugins.jira-dnd-attachment-plugin:dnd-issue-drop-zone.thumbnail-mime-types"]="\"image/vnd.wap.wbmp,image/png,image/x-png,image/jpeg,image/bmp,image/gif\"";
+WRM._unparsedData["com.atlassian.jira.plugins.jira-dnd-attachment-plugin:dnd-issue-drop-zone.upload-limit"]="\"52428800\"";
+WRM._unparsedData["com.atlassian.plugins.helptips.jira-help-tips:help-tip-manager.JiraHelpTipData"]="{\"anonymous\":true}";
+WRM._unparsedData["com.atlassian.jira.jira-view-issue-plugin:controller-subtasks.controller.subtasks.parameters"]="{\"url\":\"/rest/api/2/issue/{issueId}/subtask/move\"}";
+WRM._unparsedData["com.atlassian.jira.plugins.jira-wiki-editor:wiki-editor-thumbnails.thumbnails-allowed"]="true";
+WRM._unparsedData["com.atlassian.jira.plugins.jira-wiki-editor:wiki-editor-resources.help-data"]="{\"showHelp\":true,\"editorDocumentationUrl\":[\"https://docs.atlassian.com/jira/jcore-docs-0813/Visual+editing\"],\"editorDocumentationTitle\":[\"Show me documentation for the visual editor\"]}";
+WRM._unparsedData["com.atlassian.analytics.analytics-client:policy-update-init.policy-update-data-provider"]="false";
+WRM._unparsedData["com.atlassian.analytics.analytics-client:programmatic-analytics-init.programmatic-analytics-data-provider"]="false";
+WRM._unparsedData["jira.core:avatar-picker-data.data"]="{}";
+WRM._unparsedData["com.atlassian.jira.jira-header-plugin:dismissedFlags.flags"]="{\"dismissed\":[]}";
+WRM._unparsedData["com.atlassian.jira.jira-header-plugin:newsletter-signup-tip-init.newsletterSignup"]="{\"signupDescription\":\"Get updates, inspiration and best practices from the team behind Jira.\",\"formUrl\":\"https://www.atlassian.com/apis/exact-target/{0}/subscribe?mailingListId=1401671\",\"signupTitle\":\"Sign up!\",\"signupId\":\"newsletter-signup-tip\",\"showNewsletterTip\":false}";
+WRM._unparsedData["com.atlassian.jira.project-templates-plugin:project-templates-plugin-resources.ptAnalyticsData"]="{\"instanceCreatedDate\":\"2012-05-21\"}";
+WRM._unparsedData["jira.core:user-message-flags-data.adminLockout"]="{}";
+WRM._unparsedData["jira.request.correlation-id"]="\"18f97d19f99ba6\"";
+WRM._unparsedData["project-id"]="10100";
+WRM._unparsedData["project-key"]="\"JDK\"";
+WRM._unparsedData["project-name"]="\"JDK\"";
+WRM._unparsedData["project-type"]="\"software\"";
+WRM._unparsedData["com.atlassian.jira.jira-projects-issue-navigator:generic-filters"]="[{\"id\":\"allissues\",\"jql\":\"project = \\\"{0}\\\" ORDER BY {1}\",\"defaultOrderby\":\"created DESC\",\"label\":\"All issues\",\"requiresUser\":false,\"supportsInlineIssueCreate\":true,\"fields\":[]},{\"id\":\"allopenissues\",\"jql\":\"project = \\\"{0}\\\" AND resolution = Unresolved ORDER BY {1}\",\"defaultOrderby\":\"priority DESC, updated DESC\",\"label\":\"Open issues\",\"requiresUser\":false,\"supportsInlineIssueCreate\":true,\"fields\":[\"resolution\"]},{\"id\":\"doneissues\",\"jql\":\"project = \\\"{0}\\\" AND statusCategory = Done ORDER BY {1}\",\"defaultOrderby\":\"updated DESC\",\"label\":\"Done issues\",\"requiresUser\":false,\"supportsInlineIssueCreate\":false,\"fields\":[\"status\"]},{\"id\":\"recentlyviewed\",\"jql\":\"project = \\\"{0}\\\" AND issuekey in issueHistory() ORDER BY {1}\",\"defaultOrderby\":\"lastViewed DESC\",\"label\":\"Viewed recently\",\"requiresUser\":false,\"supportsInlineIssueCreate\":true,\"fields\":[\"issuekey\"]},{\"id\":\"addedrecently\",\"jql\":\"project = \\\"{0}\\\" AND created \u003e= -1w ORDER BY {1}\",\"defaultOrderby\":\"created DESC\",\"label\":\"Created recently\",\"requiresUser\":false,\"supportsInlineIssueCreate\":true,\"fields\":[\"created\"]},{\"id\":\"resolvedrecently\",\"jql\":\"project = \\\"{0}\\\" AND resolutiondate \u003e= -1w ORDER BY {1}\",\"defaultOrderby\":\"updated DESC\",\"label\":\"Resolved recently\",\"requiresUser\":false,\"supportsInlineIssueCreate\":false,\"fields\":[\"resolutiondate\"]},{\"id\":\"updatedrecently\",\"jql\":\"project = \\\"{0}\\\" AND updated \u003e= -1w ORDER BY {1}\",\"defaultOrderby\":\"updated DESC\",\"label\":\"Updated recently\",\"requiresUser\":false,\"supportsInlineIssueCreate\":true,\"fields\":[\"updated\"]}]";
+WRM._unparsedData["com.atlassian.jira.jira-projects-issue-navigator:default-filter-priority"]="[\"allopenissues\",\"allissues\"]";
+WRM._unparsedData["com.atlassian.jira.jira-projects-issue-navigator:can-manage-filters"]="false";
+WRM._unparsedData["com.atlassian.jira.jira-projects-issue-navigator:project-filters"]="[]";
+WRM._unparsedData["com.atlassian.jira.jira-projects-issue-navigator:can-create-issues"]="false";
+WRM._unparsedData["projectId"]="10100";
+WRM._unparsedData["projectKey"]="\"JDK\"";
+WRM._unparsedData["projectType"]="\"software\"";
+WRM._unparsedData["com.atlassian.jira.jira-projects-issue-navigator:server-rendered"]="true";
+WRM._unparsedData["archivingProjectHelpUrl"]="\"https://docs.atlassian.com/jira/jadm-docs-0813/Archiving+a+project\"";
+WRM._unparsedData["archivingIssueHelpUrl"]="\"https://docs.atlassian.com/jira/jadm-docs-0813/Archiving+an+issue\"";
+if(window.WRM._dataArrived)window.WRM._dataArrived();</script>
+<link type="text/css" rel="stylesheet" href="/s/ed203c1214a8ded3ce627227049ae521-CDN/-urb32v/813013/1rzz2as/16db8a132387113ea21f21fadd46985e/_/download/contextbatch/css/_super/batch.css" data-wrm-key="_super" data-wrm-batch-type="context" media="all">
+<link type="text/css" rel="stylesheet" href="/s/3a6d1e7e946f40b03152bda74876e9f7-CDN/-urb32v/813013/1rzz2as/df80b3e199b93a4d702b08127d3fe3bb/_/download/contextbatch/css/project.issue.navigator,jira.view.issue,jira.global,atl.general,jira.general,-_super/batch.css?agile_global_admin_condition=true&amp;jag=true&amp;jira.create.linked.issue=true&amp;richediton=true" data-wrm-key="project.issue.navigator,jira.view.issue,jira.global,atl.general,jira.general,-_super" data-wrm-batch-type="context" media="all">
+<script type="text/javascript" src="/s/7ae19d83dc6fa32b25182e02b2147f21-CDN/-urb32v/813013/1rzz2as/16db8a132387113ea21f21fadd46985e/_/download/contextbatch/js/_super/batch.js?locale=en" data-wrm-key="_super" data-wrm-batch-type="context" data-initially-rendered=""></script>
+<script type="text/javascript" src="/s/c7088092320513ba34ebcf0c6e64f437-CDN/-urb32v/813013/1rzz2as/df80b3e199b93a4d702b08127d3fe3bb/_/download/contextbatch/js/project.issue.navigator,jira.view.issue,jira.global,atl.general,jira.general,-_super/batch.js?agile_global_admin_condition=true&amp;jag=true&amp;jira.create.linked.issue=true&amp;locale=en&amp;richediton=true" data-wrm-key="project.issue.navigator,jira.view.issue,jira.global,atl.general,jira.general,-_super" data-wrm-batch-type="context" data-initially-rendered=""></script>
+<script type="text/javascript" src="/s/0c1a7c91da732c2bbbdff46856e1b3dc-CDN/-urb32v/813013/1rzz2as/aae1242f5fc81cc6a5bb8bc963ccda29/_/download/contextbatch/js/atl.global,-_super/batch.js?locale=en" data-wrm-key="atl.global,-_super" data-wrm-batch-type="context" data-initially-rendered=""></script>
+<script type="text/javascript" src="/s/d41d8cd98f00b204e9800998ecf8427e-CDN/-urb32v/813013/1rzz2as/1.0/_/download/batch/jira.webresources:calendar-en/jira.webresources:calendar-en.js" data-wrm-key="jira.webresources:calendar-en" data-wrm-batch-type="resource" data-initially-rendered=""></script>
+<script type="text/javascript" src="/s/d41d8cd98f00b204e9800998ecf8427e-CDN/-urb32v/813013/1rzz2as/1.0/_/download/batch/jira.webresources:calendar-localisation-moment/jira.webresources:calendar-localisation-moment.js" data-wrm-key="jira.webresources:calendar-localisation-moment" data-wrm-batch-type="resource" data-initially-rendered=""></script>
+<link type="text/css" rel="stylesheet" href="/s/1ec1f6e6870d7e7e0f66994aba6f5c62-CDN/-urb32v/813013/1rzz2as/9144f632a1063bfc7e418486c3a9eff1/_/download/contextbatch/css/jira.global.look-and-feel,-_super/batch.css" data-wrm-key="jira.global.look-and-feel,-_super" data-wrm-batch-type="context" media="all">
+
+<script type="text/javascript" src="/rest/api/1.0/shortcuts/813013/8f025fd771bf565abdd42900bf78cc4f/shortcuts.js?context=issuenavigation&amp;context=issueaction"></script>
+
+
+<script>
+window.WRM=window.WRM||{};window.WRM._unparsedData=window.WRM._unparsedData||{};window.WRM._unparsedErrors=window.WRM._unparsedErrors||{};
+WRM._unparsedData["com.atlassian.jira.jira-issue-nav-components:inline-edit-enabled"]="true";
+WRM._unparsedData["should-display-chaperone"]="false";
+if(window.WRM._dataArrived)window.WRM._dataArrived();</script>
+<link type="text/css" rel="stylesheet" href="/s/bf0b011b4c100f79e3cec3958c04c67e-T/-urb32v/813013/1rzz2as/5c22af41208046d43ba892b96cd501bb/_/download/contextbatch/css/com.atlassian.jira.projects.sidebar.init,-_super,-jira.view.issue,-project.issue.navigator/batch.css?jira.create.linked.issue=true&amp;richediton=true" data-wrm-key="com.atlassian.jira.projects.sidebar.init,-_super,-jira.view.issue,-project.issue.navigator" data-wrm-batch-type="context" media="all">
+<script type="text/javascript" src="/s/902ab5bfb229803788c6fecc0a4ee31c-T/-urb32v/813013/1rzz2as/5c22af41208046d43ba892b96cd501bb/_/download/contextbatch/js/com.atlassian.jira.projects.sidebar.init,-_super,-jira.view.issue,-project.issue.navigator/batch.js?jira.create.linked.issue=true&amp;locale=en&amp;richediton=true" data-wrm-key="com.atlassian.jira.projects.sidebar.init,-_super,-jira.view.issue,-project.issue.navigator" data-wrm-batch-type="context" data-initially-rendered=""></script>
+<meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+
+
+
+
+
+
+<meta name="ajs-can-search-users" content="false">
+<meta name="ajs-can-edit-watchers" content="false">
+<meta name="ajs-default-avatar-url" content="https://bugs.openjdk.java.net/secure/useravatar?size=xsmall&amp;avatarId=10123">
+<meta name="ajs-issue-project-type" content="software">
+<meta name="ajs-issue-key" content="JDK-8271459">
+<meta name="ajs-server-view-issue-is-editable" content="false">
+
+<title>[JDK-8271459] C2: Missing NegativeArraySizeException when creating StringBuilder with negative capacity - Java Bug System</title>
+<link rel="search" type="application/opensearchdescription+xml" href="/osd.jsp" title="[JDK-8271459] C2: Missing NegativeArraySizeException when creating StringBuilder with negative capacity - Java Bug System">
+
+
+</head>
+
+
+
+
+<body id="jira" class="aui-layout aui-theme-default  " data-version="8.13.13" data-aui-version="9.2.2">
+<div id="page">
+    <header id="header" role="banner">
+        
+
+
+
+
+
+
+<script>
+require(["jquery", "jira/license-banner"], function ($, licenseBanner) {
+    $(function () {
+        licenseBanner.showLicenseBanner("");
+        licenseBanner.showLicenseFlag("");
+    });
+});
+</script>
+
+
+
+        
+
+
+
+
+        
+
+
+<a class="aui-skip-link" href="/login.jsp?os_destination=%2Fbrowse%2FJDK-8271459">Log in</a><a class="aui-skip-link" href="#main">Skip to main content</a><a class="aui-skip-link" href="#sidebar">Skip to sidebar</a><nav class="aui-header aui-dropdown2-trigger-group" aria-label="Site" resolved="" data-aui-responsive="true"><div class="aui-header-inner"><div class="aui-header-primary"><span id="logo" class="aui-header-logo aui-header-logo-custom"><a href="https://bugs.openjdk.java.net/secure/MyJiraHome.jspa" aria-label="Go to home page"><img src="/s/-urb32v/813013/1rzz2as/_/jira-logo-scaled.png" alt="Java Bug System" data-aui-responsive-header-index="0"></a></span><ul class="aui-nav" style="width: auto;"><li><a href="/secure/Dashboard.jspa" class=" aui-nav-link aui-dropdown2-trigger aui-dropdown2-ajax" id="home_link" aria-haspopup="true" aria-controls="home_link-content" title="View and manage your dashboards" accesskey="d" resolved="" aria-expanded="false">Dashboards</a><div class="aui-dropdown2 aui-style-default aui-layer" id="home_link-content" data-aui-dropdown2-ajax-key="home_link" resolved="" tabindex="-1"></div></li><li><a href="/browse/JDK" class=" aui-nav-link aui-dropdown2-trigger aui-dropdown2-ajax" id="browse_link" aria-haspopup="true" aria-controls="browse_link-content" title="View recent projects and browse a list of projects" accesskey="p" resolved="" aria-expanded="false">Projects</a><div class="aui-dropdown2 aui-style-default aui-layer" id="browse_link-content" data-aui-dropdown2-ajax-key="browse_link" resolved="" tabindex="-1"></div></li><li><a href="/issues/" class=" aui-nav-link aui-dropdown2-trigger aui-dropdown2-ajax" id="find_link" aria-haspopup="true" aria-controls="find_link-content" title="Search for issues and view recent issues" accesskey="i" resolved="" aria-expanded="false">Issues</a><div class="aui-dropdown2 aui-style-default aui-layer" id="find_link-content" data-aui-dropdown2-ajax-key="find_link" resolved="" tabindex="-1"></div></li>
+</ul></div><div class="aui-header-secondary"><ul class="aui-nav">
+<li id="quicksearch-menu">
+    <form action="/secure/QuickSearch.jspa" method="get" id="quicksearch" class="aui-quicksearch dont-default-focus ajs-dirty-warning-exempt">
+        <input id="quickSearchInput" autocomplete="off" class="search" type="text" title="Search ( Type '/' )" placeholder="Search" name="searchString" accesskey="q">
+        <input type="submit" class="hidden" value="Search">
+    </form>
+</li>
+
+
+
+
+    <li id="system-help-menu">
+        <a class="aui-nav-link aui-dropdown2-trigger aui-dropdown2-trigger-arrowless" id="help_menu" aria-haspopup="true" href="https://docs.atlassian.com/jira/jcore-docs-0813/" target="$textUtils.htmlEncode($rootHelpMenuItem.params.target)" rel="noopener noreferrer" title="Help" resolved="" aria-controls="system-help-menu-content" aria-expanded="false"><span class="aui-icon aui-icon-small aui-iconfont-question-filled">Help</span></a>
+        <div id="system-help-menu-content" class="aui-dropdown2 aui-style-default aui-layer" resolved="" tabindex="-1">
+                            <div class="aui-dropdown2-section">
+                                                                <ul id="jira-help" class="aui-list-truncate">
+                                                            <li>
+                                    <a id="view_core_help" class="aui-nav-link " title="Go to the online documentation for Jira Core" href="https://docs.atlassian.com/jira/jcore-docs-0813/" target="_blank">Jira Core help</a>
+                                </li>
+                                                            <li>
+                                    <a id="keyshortscuthelp" class="aui-nav-link " title="Get more information about Jira's Keyboard Shortcuts ( Type '?' )" href="/secure/ViewKeyboardShortcuts!default.jspa" target="_blank">Keyboard Shortcuts</a>
+                                </li>
+                                                            <li>
+                                    <a id="view_about" class="aui-nav-link " title="Get more information about Jira" href="/secure/AboutPage.jspa">About Jira</a>
+                                </li>
+                                                            <li>
+                                    <a id="view_credits" class="aui-nav-link " title="See who did what" href="/secure/credits/AroundTheWorld!default.jspa" target="_blank">Jira Credits</a>
+                                </li>
+                                                    </ul>
+                                    </div>
+                    </div>
+    </li>
+
+
+
+
+
+
+
+
+
+<li id="user-options">
+            <a class="aui-nav-link login-link" href="/login.jsp?os_destination=%2Fbrowse%2FJDK-8271459">Log In</a>
+                <div id="user-options-content" class="aui-dropdown2 aui-style-default aui-layer" resolved="" tabindex="-1">
+                            <div class="aui-dropdown2-section">
+                                                                <ul id="personal" class="aui-list-truncate">
+                                                                                                                            <li>
+                                        <a id="subComponentWatch" class="" href="/secure/subComponentWatch.jspa">Watched Subcomponents</a>
+                                    </li>
+                                                                                    </ul>
+                                    </div>
+                    </div>
+    </li>
+</ul></div></div><!-- .aui-header-inner--></nav><!-- .aui-header -->
+    </header>
+    
+
+
+<div id="announcement-banner" class="alertHeader">
+    <!--<div style="background-color: #ffa500; border: 2px solid; margin: 4px; padding: 2px; font-weight: bold; text-align: center;">
+Jira will be down for Maintenance on Friday May 28 from 9.30 AM - 11.30AM PT (4.30PM - 6.30PM GMT, Friday)
+</div>-->
+</div>
+
+
+    <div id="content">
+<section class="aui-sidebar  projects-sidebar sidebar-pending"><div class="aui-sidebar-wrapper"><div class="aui-sidebar-body"><div class="aui-page-header"><div class="aui-page-header-inner"><div class="aui-page-header-image"><a href="/projects/JDK/summary" title="JDK" class="jira-project-avatar"><span class="aui-avatar aui-avatar-large aui-avatar-project"><span class="aui-avatar-inner"><img src="/secure/projectavatar?pid=10100&amp;avatarId=10301" alt="JDK"></span></span><img src="data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxIiBpZD0iV2Fyc3R3YV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MiA3MiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgNzIgNzIiPjxzdHlsZT4uc3Qye2ZpbGw6I2ZmZn08L3N0eWxlPjxnIGlkPSJHcm91cCI+PGNpcmNsZSBpZD0iT3ZhbCIgY3g9IjM2IiBjeT0iMzYiIHI9IjM2IiBmaWxsPSIjZmY5OTFmIi8+PC9nPjxnIGlkPSJQYWdlLTEiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE2IDIxKSI+PGcgaWQ9Ikdyb3VwLTMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgLjYxNjcpIj48ZGVmcz48ZmlsdGVyIGlkPSJBZG9iZV9PcGFjaXR5TWFza0ZpbHRlciIgZmlsdGVyVW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4PSIwIiB5PSIuNCIgd2lkdGg9IjE2LjkiIGhlaWdodD0iMjcuNiI+PGZlQ29sb3JNYXRyaXggdmFsdWVzPSIxIDAgMCAwIDAgMCAxIDAgMCAwIDAgMCAxIDAgMCAwIDAgMCAxIDAiLz48L2ZpbHRlcj48L2RlZnM+PG1hc2sgbWFza1VuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeD0iMCIgeT0iLjQiIHdpZHRoPSIxNi45IiBoZWlnaHQ9IjI3LjYiIGlkPSJtYXNrLTJfMV8iPjxnIGZpbHRlcj0idXJsKCNBZG9iZV9PcGFjaXR5TWFza0ZpbHRlcikiPjxwYXRoIGlkPSJwYXRoLTFfMV8iIGNsYXNzPSJzdDIiIGQ9Ik0wIC40aDE2LjlWMjhIMHoiLz48L2c+PC9tYXNrPjxwYXRoIGlkPSJGaWxsLTEiIGQ9Ik0xMy43IDI4Yy0uOCAwLTEuNi0uMy0yLjMtLjlMMS4xIDE2LjhjLTEuNS0xLjUtMS41LTMuOSAwLTUuNGwxMC0xMGMxLjItMS4yIDMuMy0xLjIgNC41IDAgMS4yIDEuMyAxLjIgMy4zIDAgNC41bC04LjIgOC4yIDguNSA4LjVjMS4yIDEuMiAxLjIgMy4zIDAgNC41LS42LjYtMS40LjktMi4yLjkiIG1hc2s9InVybCgjbWFzay0yXzFfKSIgZmlsbD0iI2ZmZiIvPjwvZz48ZyBpZD0iR3JvdXAtNiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjMgLjYxNjcpIj48ZGVmcz48ZmlsdGVyIGlkPSJBZG9iZV9PcGFjaXR5TWFza0ZpbHRlcl8xXyIgZmlsdGVyVW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4PSIuNCIgeT0iLjQiIHdpZHRoPSIxNi45IiBoZWlnaHQ9IjI3LjYiPjxmZUNvbG9yTWF0cml4IHZhbHVlcz0iMSAwIDAgMCAwIDAgMSAwIDAgMCAwIDAgMSAwIDAgMCAwIDAgMSAwIi8+PC9maWx0ZXI+PC9kZWZzPjxtYXNrIG1hc2tVbml0cz0idXNlclNwYWNlT25Vc2UiIHg9Ii40IiB5PSIuNCIgd2lkdGg9IjE2LjkiIGhlaWdodD0iMjcuNiIgaWQ9Im1hc2stNF8xXyI+PGcgZmlsdGVyPSJ1cmwoI0Fkb2JlX09wYWNpdHlNYXNrRmlsdGVyXzFfKSI+PHBhdGggaWQ9InBhdGgtM18xXyIgY2xhc3M9InN0MiIgZD0iTS40LjRoMTYuOVYyOEguNHoiLz48L2c+PC9tYXNrPjxwYXRoIGlkPSJGaWxsLTQiIGQ9Ik0xMS43IDE1Ljl6TTMuNiAyOGMtLjggMC0xLjYtLjMtMi4zLS45LTEuMi0xLjItMS4yLTMuMyAwLTQuNWw4LjUtOC41LTguMi04LjNDLjQgNC42LjQgMi41IDEuNiAxLjMgMi44LjEgNC45LjEgNi4xIDEuM2wxMCAxMGMuNy43IDEuMSAxLjcgMS4xIDIuNyAwIDEtLjQgMi0xLjEgMi43TDUuOSAyNy4xYy0uNi42LTEuNS45LTIuMy45eiIgbWFzaz0idXJsKCNtYXNrLTRfMV8pIiBmaWxsPSIjZmZmIi8+PC9nPjwvZz48L3N2Zz4=" alt="Project Type: software" class="jira-project-avatar-icon"></a></div><div class="aui-page-header-main"><h1><div class="aui-group aui-group-split"><div class="aui-item project-title"><a href="/projects/JDK/summary" title="JDK">JDK</a></div></div></h1></div><div class="aui-page-header-main scopeFilterContainer"></div></div></div><nav class="aui-navgroup aui-navgroup-vertical"><div class="aui-navgroup-inner sidebar-content-container jira-navigation"><div class="aui-sidebar-group aui-sidebar-group-tier-one" data-id="sidebar-navigation-panel"><ul class="aui-nav"><li class="aui-nav-selected"><a class="aui-nav-item " href="/projects/JDK/issues" data-link-id="com.atlassian.jira.jira-projects-issue-navigator:sidebar-issue-navigator"><span class="aui-icon aui-icon-large icon-sidebar-issues aui-iconfont-issues"></span><span class="aui-nav-item-label" title="Issues">Issues</span></a></li><li><a class="aui-nav-item " href="/projects/JDK?selectedItem=com.atlassian.jira.jira-projects-plugin:report-page" data-link-id="com.atlassian.jira.jira-projects-plugin:report-page"><span class="aui-icon aui-icon-large agile-icon-report aui-iconfont-graph-line"></span><span class="aui-nav-item-label" title="Reports">Reports</span></a></li><li><a class="aui-nav-item " href="/projects/JDK?selectedItem=com.atlassian.jira.jira-projects-plugin:components-page" data-link-id="com.atlassian.jira.jira-projects-plugin:components-page"><span class="aui-icon aui-icon-large icon-sidebar-components"></span><span class="aui-nav-item-label" title="Components">Components</span></a></li><li aria-expanded="false"><a href="#" class="aui-nav-subtree-toggle"><span class="aui-icon aui-icon-small aui-iconfont-collapsed"></span></a><a class="aui-nav-item " href="#" data-link-id="com.atlassian.jira.jira-projects-plugin:tab-panel-link-parent"><span class="aui-icon aui-icon-large icon-sidebar-add-ons"></span><span class="aui-nav-item-label" title="Add-ons">Add-ons</span></a><ul class="aui-nav"><li><a class="aui-nav-item " href="/projects/JDK?selectedItem=com.oracle.jira.jira-subcomponent-plugin:oracle-subComponent-projectPanel" data-link-id="com.oracle.jira.jira-subcomponent-plugin:oracle-subComponent-projectPanel"><span class="aui-nav-item-label" title="Subcomponents">Subcomponents</span></a></li></ul></li></ul></div></div></nav></div><div class="aui-sidebar-footer"><button class="aui-button aui-button-subtle aui-sidebar-toggle aui-sidebar-footer-tipsy" title="Expand sidebar ( [ )" data-tooltip="Expand sidebar ( [ )" resolved=""><span class="aui-icon aui-icon-small aui-iconfont-chevron-double-left"></span></button></div></div></section><section class="aui-sidebar  sidebar-placeholder"><div class="aui-sidebar-wrapper"><div class="aui-sidebar-body"></div><div class="aui-sidebar-footer"><button class="aui-button aui-button-subtle aui-sidebar-toggle aui-sidebar-footer-tipsy" title="Expand sidebar ( [ )" data-tooltip="Expand sidebar ( [ )" resolved=""><span class="aui-icon aui-icon-small aui-iconfont-chevron-double-left"></span></button></div></div></section><script id="projects-sidebar-init">
+    require(['jira/projects/sidebar/expansion-manager'], function(expansionManager) {
+        var scriptTag = document.getElementById('projects-sidebar-init');
+        var sidebar = AJS.sidebar('.aui-sidebar');
+        expansionManager(sidebar);
+        scriptTag.parentElement.removeChild(scriptTag);
+    });
+    </script><div class="aui-page-panel"><div class="aui-page-panel-inner"><div class="issue-navigator"><main id="main" class="content" role="main"><div class="issue-view"><div class="navigation-tools"><div class="pager-container"></div><div class="collapse-container"></div></div><div class="issue-container"><div id="issue-content" class="issue-edit-form"><header id="stalker" class="issue-header js-stalker"><div class="issue-header-content"><div class="aui-page-header"><div class="aui-page-header-inner"><div class="aui-page-header-image"><span id="10100" class="aui-avatar aui-avatar-large aui-avatar-project"><span class="aui-avatar-inner"><img id="project-avatar" alt="Uploaded image for project: 'JDK'" src="https://bugs.openjdk.java.net/secure/projectavatar?pid=10100&amp;avatarId=10301"></span></span></div><div class="aui-page-header-main"><ol class="aui-nav aui-nav-breadcrumbs"><li><a id="project-name-val" href="/browse/JDK">JDK</a></li><li><a class="issue-link" data-issue-key="JDK-8271459" href="/browse/JDK-8271459" id="key-val" rel="5055168">JDK-8271459</a></li></ol><h1 id="summary-val">C2: Missing NegativeArraySizeException when creating StringBuilder with negative capacity</h1></div><div class="aui-page-header-actions"><div id="issue-header-pager"></div></div></div></div><div class="command-bar"><div class="ops-cont"><div class="ops-menus aui-toolbar2"><div class="aui-toolbar2-inner"><div class="aui-toolbar2-primary"><div id="opsbar-ops-login-lnk_container" class="aui-buttons pluggable-ops"><a id="ops-login-lnk" title="Log In" class="aui-button toolbar-trigger" href="/login.jsp?os_destination=%2Fbrowse%2FJDK-8271459" resolved=""><span class="trigger-label">Log In</span></a></div><div id="opsbar-opsbar-operations" class="aui-buttons pluggable-ops"></div><div id="opsbar-opsbar-transitions" class="aui-buttons pluggable-ops"></div><div id="opsbar-opsbar-admin" class="aui-buttons pluggable-ops"></div><div id="opsbar-opsbar-restore" class="aui-buttons pluggable-ops"></div></div><div class="aui-toolbar2-secondary"><div id="opsbar-jira.issue.tools" class="aui-buttons pluggable-ops"><a href="#" id="viewissue-export" aria-haspopup="true" title="Export this issue in another format" class="aui-button  aui-dropdown2-trigger" data-aui-alignment-container=".command-bar" resolved="" aria-controls="viewissue-export_drop" aria-expanded="false"><span class="icon icon-default aui-icon aui-icon-small aui-iconfont-export"></span> <span class="dropdown-text">Export</span></a></div></div></div></div><aui-dropdown-menu id="viewissue-export_drop" resolved="" role="menu" class="aui-dropdown2 aui-layer" tabindex="-1"><ul><aui-item-link href="/si/jira.issueviews:issue-xml/JDK-8271459/JDK-8271459.xml" id="jira.issueviews:issue-xml" resolved=""><a role="menuitem" tabindex="-1" href="/si/jira.issueviews:issue-xml/JDK-8271459/JDK-8271459.xml"><!-- content {"defaultContent":"","selector":null} --><span class="trigger-label">XML</span><!-- /content --></a></aui-item-link><aui-item-link href="/si/jira.issueviews:issue-word/JDK-8271459/JDK-8271459.doc" id="jira.issueviews:issue-word" resolved=""><a role="menuitem" tabindex="-1" href="/si/jira.issueviews:issue-word/JDK-8271459/JDK-8271459.doc"><!-- content {"defaultContent":"","selector":null} --><span class="trigger-label">Word</span><!-- /content --></a></aui-item-link><aui-item-link href="/si/jira.issueviews:issue-html/JDK-8271459/JDK-8271459.html" id="jira.issueviews:issue-html" resolved=""><a role="menuitem" tabindex="-1" href="/si/jira.issueviews:issue-html/JDK-8271459/JDK-8271459.html"><!-- content {"defaultContent":"","selector":null} --><span class="trigger-label">Printable</span><!-- /content --></a></aui-item-link></ul></aui-dropdown-menu></div></div></div></header><div class="issue-body-content"><div class="aui-group issue-body"><div class="aui-item issue-main-column"><div id="details-module" class="module toggle-wrap"><div id="details-module_heading" class="mod-header"><ul class="ops"></ul><button class="aui-button toggle-title" aria-label="Details" aria-controls="details-module" aria-expanded="true" resolved=""><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"><g fill="none" fill-rule="evenodd"><path d="M3.29175 4.793c-.389.392-.389 1.027 0 1.419l2.939 2.965c.218.215.5.322.779.322s.556-.107.769-.322l2.93-2.955c.388-.392.388-1.027 0-1.419-.389-.392-1.018-.392-1.406 0l-2.298 2.317-2.307-2.327c-.194-.195-.449-.293-.703-.293-.255 0-.51.098-.703.293z" fill="#344563"></path></g></svg></button><h4 class="toggle-title">Details</h4></div><div class="mod-content">
+
+
+
+
+
+
+
+
+
+
+<ul id="issuedetails" class="property-list two-cols">
+                
+<li class="item">
+    <div class="wrap">
+        <strong class="name">Type:</strong>
+        <span id="type-val" class="value">
+                        <img alt="" height="16" src="/secure/viewavatar?size=xsmall&amp;avatarId=14703&amp;avatarType=issuetype" title="Bug - A problem which impairs or prevents the functions of the product." width="16"> Bug
+        </span>
+    </div>
+</li>                    <li class="item item-right">
+    <div class="wrap">
+        <strong class="name">Status:</strong>
+            <span id="status-val" class="value">
+                                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done jira-issue-status-lozenge-max-width-medium" data-tooltip="<span class=&quot;jira-issue-status-tooltip-title&quot;>Resolved</span><br><span class=&quot;jira-issue-status-tooltip-desc&quot;>A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.</span>" original-title="">Resolved</span>            </span>
+            </div>
+</li>
+    
+                        <li class="item new">
+    <div class="wrap">
+        <strong class="name">Priority:</strong>
+        <span id="priority-val" class="value">
+                                        <img alt="" height="16" src="/images/jbsImages/p2.png" title="P2 - Crashes, loss of data, severe memory leak." width="16">  P2                     </span>
+    </div>
+</li>                                
+<li class="item item-right">
+    <div class="wrap">
+        <strong class="name">Resolution:</strong>
+        <span id="resolution-val" class="value resolved">
+                             Fixed
+                    </span>
+    </div>
+</li>                                
+
+<li class="item">
+    <div class="wrap">
+        <strong class="name">Affects Version/s:</strong>
+        <span id="versions-val" class="value">
+                                        <span class="shorten" id="versions-field">
+                                            <span title="8 ">8</span>,                                            <span title="11 ">11</span>,                                            <span title="16 JDK 16">16</span>,                                            <span title="17 JDK 17">17</span>,                                            <span title="18 JDK 18">18</span>                                    </span>
+                    </span>
+    </div>
+</li>                                
+<li class="item item-right">
+    <div class="wrap">
+        <strong class="name">Fix Version/s:</strong>
+        <span id="fixfor-val" class="value">
+                                        <span class="shorten" id="fixVersions-field">
+                                            <a href="/issues/?jql=project+%3D+JDK+AND+fixVersion+%3D+%2218%22" title="18 JDK 18">18</a>                                    </span>
+                    </span>
+    </div>
+</li>                                
+
+<li class="item">
+    <div class="wrap">
+        <strong class="name">Component/s:</strong>
+        <span id="components-val" class="value">
+                                        <span class="shorten" id="components-field">
+                                            <a href="/issues/?jql=project+%3D+JDK+AND+component+%3D+hotspot" title="hotspot ">hotspot</a>                                    </span>
+                    </span>
+    </div>
+</li>                                    
+
+
+<li class="item full-width">
+    <div class="wrap" id="wrap-labels">
+        <strong class="name">Labels:</strong>
+                <div class="labels-wrap value">
+            <ul class="labels" id="labels-5055168-value">
+                                                                        <li><a class="lozenge" href="/issues/?jql=labels+%3D+c2" title="c2"><span>c2</span></a></li>
+                                                                                                            <li><a class="lozenge" href="/issues/?jql=labels+%3D+dcsswa" title="dcsswa"><span>dcsswa</span></a></li>
+                                                                                                            <li><a class="lozenge" href="/issues/?jql=labels+%3D+hs-comp-triaged" title="hs-comp-triaged"><span>hs-comp-triaged</span></a></li>
+                                                                                                            <li><a class="lozenge" href="/issues/?jql=labels+%3D+jdk11u-fix-request" title="jdk11u-fix-request"><span>jdk11u-fix-request</span></a></li>
+                                                                                                            <li><a class="lozenge" href="/issues/?jql=labels+%3D+jdk11u-fix-yes" title="jdk11u-fix-yes"><span>jdk11u-fix-yes</span></a></li>
+                                                                                                            <li><a class="lozenge" href="/issues/?jql=labels+%3D+jdk17u-fix-yes" title="jdk17u-fix-yes"><span>jdk17u-fix-yes</span></a></li>
+                                                                                                            <li><a class="lozenge" href="/issues/?jql=labels+%3D+oracle-triage-11" title="oracle-triage-11"><span>oracle-triage-11</span></a></li>
+                                                                                                            <li><a class="lozenge" href="/issues/?jql=labels+%3D+oracle-triage-17" title="oracle-triage-17"><span>oracle-triage-17</span></a></li>
+                                                                                                            <li><a class="lozenge" href="/issues/?jql=labels+%3D+oracle-triage-18" title="oracle-triage-18"><span>oracle-triage-18</span></a></li>
+                                                                                                            <li><a class="lozenge" href="/issues/?jql=labels+%3D+reproducer-yes" title="reproducer-yes"><span>reproducer-yes</span></a></li>
+                                                                                                            <li><a class="lozenge" href="/issues/?jql=labels+%3D+webbug" title="webbug"><span>webbug</span></a></li>
+                                                                    </ul>
+    </div>
+    </div>
+</li>            </ul>
+
+<div id="customfieldmodule">
+    <div class="aui-tabs horizontal-tabs" id="customfield-tabs" role="application">
+                    <div id="customfield-panel-1" class=" active-pane">
+                        <ul class="property-list">
+                                                    <li id="rowForcustomfield_10008" class="item">
+        <div class="wrap">
+            <strong title="Subcomponent" class="name">Subcomponent:</strong>
+            <div id="customfield_10008-val" class="value type-oracle-subComponentField" data-fieldtype="oracle-subComponentField" data-fieldtypecompletekey="com.oracle.jira.jira-subcomponent-plugin:oracle-subComponentField">
+                                    			<span id="subcomponent-subscribers-val" style="cursor: pointer;">
+	<span title="JVM JIT compilers: C1, C2, Tiered(C1+C2)"> <a href="/issues/?jql=project+in+%28JDK%29+AND+component+in+%28hotspot%29+AND+Subcomponent+in+%28compiler%29">compiler</a></span>
+			</span>
+
+	
+                            </div>
+        </div>
+    </li>
+                                                                    <li id="rowForcustomfield_10006" class="item">
+        <div class="wrap">
+            <strong title="Resolved In Build" class="name">Resolved In Build:</strong>
+            <div id="customfield_10006-val" class="value type-select" data-fieldtype="select" data-fieldtypecompletekey="com.atlassian.jira.plugin.system.customfieldtypes:select">
+                                        b18
+
+                            </div>
+        </div>
+    </li>
+                                                                    <li id="rowForcustomfield_10000" class="item">
+        <div class="wrap">
+            <strong title="CPU" class="name">CPU:</strong>
+            <div id="customfield_10000-val" class="value type-multiselect" data-fieldtype="multiselect" data-fieldtypecompletekey="com.atlassian.jira.plugin.system.customfieldtypes:multiselect">
+                                    
+
+
+    <div class="shorten" id="customfield_10000-field">
+        							<span>generic</span>			            </div>
+
+                            </div>
+        </div>
+    </li>
+                                                                    <li id="rowForcustomfield_10005" class="item">
+        <div class="wrap">
+            <strong title="OS" class="name">OS:</strong>
+            <div id="customfield_10005-val" class="value type-multiselect" data-fieldtype="multiselect" data-fieldtypecompletekey="com.atlassian.jira.plugin.system.customfieldtypes:multiselect">
+                                    
+
+
+    <div class="shorten" id="customfield_10005-field">
+        							<span>generic</span>			            </div>
+
+                            </div>
+        </div>
+    </li>
+                                        </ul>
+        </div>
+        </div></div>
+</div></div><div id="jbs-backportsPanel" class="module toggle-wrap"><div id="jbs-backportsPanel_heading" class="mod-header"><ul class="ops"></ul><button class="aui-button toggle-title" aria-label="Backports" aria-controls="jbs-backportsPanel" aria-expanded="true" resolved=""><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"><g fill="none" fill-rule="evenodd"><path d="M3.29175 4.793c-.389.392-.389 1.027 0 1.419l2.939 2.965c.218.215.5.322.779.322s.556-.107.769-.322l2.93-2.955c.388-.392.388-1.027 0-1.419-.389-.392-1.018-.392-1.406 0l-2.298 2.317-2.307-2.327c-.194-.195-.449-.293-.703-.293-.255 0-.51.098-.703.293z" fill="#344563"></path></g></svg></button><h4 class="toggle-title">Backports</h4></div><div class="mod-content"><div id="jbsLinks">
+	<table cols="7">
+		<thead>
+			<tr>
+				<th>Issue</th>
+				<th>Fix Version</th>
+				<th>Assignee</th>
+				<th>Priority</th>
+				<th>Status</th>
+				<th>Resolution</th>
+				<th>Resolved In Build</th>
+			</tr>
+		</thead>
+		<tbody>
+							<tr>
+					<td>
+						<a class="link-title" href="/browse/JDK-8275093">JDK-8275093</a>
+					</td>
+					<td>17.0.2&nbsp;</td>
+					<td><a id="issue_summary_assginee_thartmann" class="user-hover" href="/secure/ViewProfile.jspa?name=thartmann" rel="thartmann">Tobias Hartmann</a> </td>
+					<td>P2</td>
+					<td>Closed</td>
+					<td>Fixed</td>
+					<td>b03</td>
+				</tr>
+							<tr>
+					<td>
+						<a class="link-title" href="/browse/JDK-8275042">JDK-8275042</a>
+					</td>
+					<td>11.0.14-oracle&nbsp;</td>
+					<td><a id="issue_summary_assginee_thartmann" class="user-hover" href="/secure/ViewProfile.jspa?name=thartmann" rel="thartmann">Tobias Hartmann</a> </td>
+					<td>P2</td>
+					<td>Closed</td>
+					<td>Fixed</td>
+					<td>b02</td>
+				</tr>
+							<tr>
+					<td>
+						<a class="link-title" href="/browse/JDK-8275198">JDK-8275198</a>
+					</td>
+					<td>11.0.14&nbsp;</td>
+					<td><a id="issue_summary_assginee_mdoerr" class="user-hover" href="/secure/ViewProfile.jspa?name=mdoerr" rel="mdoerr">Martin Doerr</a> </td>
+					<td>P2</td>
+					<td>Resolved</td>
+					<td>Fixed</td>
+					<td>b01</td>
+				</tr>
+					</tbody>
+	</table>
+</div>
+	</div></div><div id="descriptionmodule" class="module toggle-wrap"><div id="descriptionmodule_heading" class="mod-header"><ul class="ops"></ul><button class="aui-button toggle-title" aria-label="Description" aria-controls="descriptionmodule" aria-expanded="true" resolved=""><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"><g fill="none" fill-rule="evenodd"><path d="M3.29175 4.793c-.389.392-.389 1.027 0 1.419l2.939 2.965c.218.215.5.322.779.322s.556-.107.769-.322l2.93-2.955c.388-.392.388-1.027 0-1.419-.389-.392-1.018-.392-1.406 0l-2.298 2.317-2.307-2.327c-.194-.195-.449-.293-.703-.293-.255 0-.51.098-.703.293z" fill="#344563"></path></g></svg></button><h4 class="toggle-title">Description</h4></div><div class="mod-content"><div id="description-val" class="field-ignore-highlight">
+    <div class="user-content-block">
+                    ADDITIONAL SYSTEM INFORMATION :
+<br>
+# Java version
+<br>
+java version "16.0.2" 2021-07-20
+<br>
+Java(TM) SE Runtime Environment (build 16.0.2+7-67)
+<br>
+Java HotSpot(TM) 64-Bit Server VM (build 16.0.2+7-67, mixed mode, sharing)
+<br>
+
+<br>
+# Operating system details
+<br>
+$ cat /etc/*release
+<br>
+DISTRIB_ID=Ubuntu
+<br>
+DISTRIB_RELEASE=20.04
+<br>
+DISTRIB_CODENAME=focal
+<br>
+DISTRIB_DESCRIPTION="Ubuntu 20.04.2 LTS"
+<br>
+NAME="Ubuntu"
+<br>
+VERSION="20.04.2 LTS (Focal Fossa)"
+<br>
+ID=ubuntu
+<br>
+ID_LIKE=debian
+<br>
+PRETTY_NAME="Ubuntu 20.04.2 LTS"
+<br>
+VERSION_ID="20.04"
+<br>
+HOME_URL="<a href="https://www.ubuntu.com/">https://www.ubuntu.com/</a>"
+<br>
+SUPPORT_URL="<a href="https://help.ubuntu.com/">https://help.ubuntu.com/</a>"
+<br>
+BUG_REPORT_URL="<a href="https://bugs.launchpad.net/ubuntu/">https://bugs.launchpad.net/ubuntu/</a>"
+<br>
+PRIVACY_POLICY_URL="<a href="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy">https://www.ubuntu.com/legal/terms-and-policies/privacy-policy</a>"
+<br>
+VERSION_CODENAME=focal
+<br>
+UBUNTU_CODENAME=focal
+<br>
+
+<br>
+$ uname -a
+<br>
+Linux zzq-ThinkPad-T470 5.4.0-77-generic #86-Ubuntu SMP Thu Jun 17 02:35:03 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
+<br>
+
+<br>
+A DESCRIPTION OF THE PROBLEM :
+<br>
+Different outputs of the attached program are observed between different compilation tiers. This bug affects Oracle 1.8.0_301, 11.0.12, 16.0.2 and early access build 17-ea+32-2679 and 18-ea+7-288.
+<br>
+
+<br>
+STEPS TO FOLLOW TO REPRODUCE THE PROBLEM :
+<br>
+# Compile
+<br>
+$ javac C.java
+<br>
+
+<br>
+# Default or compilation up to level 4
+<br>
+$ java C
+<br>
+
+<br>
+EXPECTED VERSUS ACTUAL BEHAVIOR :
+<br>
+EXPECTED -
+<br>
+10000
+<br>
+ACTUAL -
+<br>
+# Non-deterministic
+<br>
+5597
+<br>
+
+<br>
+---------- BEGIN SOURCE ----------
+<br>
+# C.java
+<br>
+(Attached.)
+<br>
+public class C {
+<br>
+
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;static String m() {
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;StringBuilder sb = new StringBuilder(-1);
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return sb.toString();
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}
+<br>
+
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String[] args) {
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int sum = 0;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for (int i = 0; i &lt; 10_000; ++i) {
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try {
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;m();
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} catch (Throwable e) {
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sum += 1;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(sum); // should be 10_000
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}
+<br>
+}
+<br>
+---------- END SOURCE ----------
+<br>
+
+<br>
+CUSTOMER SUBMITTED WORKAROUND :
+<br>
+# Compilation up to level 1
+<br>
+$ java -XX:TieredStopAtLevel=1 C
+<br>
+# Output (correct)
+<br>
+10000
+<br>
+
+<br>
+# Interpreter or compilation up to level 0
+<br>
+$ java -Xint C
+<br>
+# Output (correct)
+<br>
+10000
+<br>
+
+<br>
+FREQUENCY : always
+<br>
+
+<br>
+
+<br>
+
+            </div>
+</div>
+</div></div><div id="dnd-metadata" class="module toggle-wrap"><div id="dnd-metadata_heading" class="mod-header"><ul class="ops"></ul><button class="aui-button toggle-title" aria-label="Attachments" aria-controls="dnd-metadata" aria-expanded="true" resolved=""><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"><g fill="none" fill-rule="evenodd"><path d="M3.29175 4.793c-.389.392-.389 1.027 0 1.419l2.939 2.965c.218.215.5.322.779.322s.556-.107.769-.322l2.93-2.955c.388-.392.388-1.027 0-1.419-.389-.392-1.018-.392-1.406 0l-2.298 2.317-2.307-2.327c-.194-.195-.449-.293-.703-.293-.255 0-.51.098-.703.293z" fill="#344563"></path></g></svg></button><h4 class="toggle-title">Attachments</h4></div><div class="mod-content"><div id="dnd-metadata-webpanel" data-can-attach="false" data-project-type="software" data-upload-limit="52428800" data-thumbnails-allowed="true"></div></div></div><div id="attachmentmodule" class="module toggle-wrap"><div id="attachmentmodule_heading" class="mod-header"><ul class="ops"><li class="drop"><div class="aui-dd-parent"><div class="aui-button aui-button-compact aui-button-subtle js-default-dropdown" title="Options" resolved="" id="AJS_DROPDOWN__1" aria-controls="AJS_DROPDOWN__1_drop" aria-haspopup="true" aria-expanded="false"><span class="aui-icon aui-icon-small aui-iconfont-more">Options</span></div><div class="aui-dropdown-content aui-list"><ul id="attachment-sorting-options" class="aui-list-section aui-first"><li class="aui-list-item"><a id="attachment-sort-key-name" href="/browse/JDK-8271459?attachmentSortBy=fileName#attachmentmodule" class="aui-list-checked aui-checked aui-list-item-link" title="viewissue.subtasks.tab.show.all.name"><span>Sort By Name</span></a></li><li class="aui-list-item"><a id="attachment-sort-key-date" href="/browse/JDK-8271459?attachmentSortBy=dateTime#attachmentmodule" class="aui-list-checked aui-list-item-link" title="Sort By Date"><span>Sort By Date</span></a></li></ul><ul id="attachment-sorting-order-options" class="aui-list-section"><li class="aui-list-item"><a id="attachment-sort-direction-asc" href="/browse/JDK-8271459?attachmentOrder=asc#attachmentmodule" class="aui-list-checked aui-checked aui-list-item-link" title="Ascending"><span>Ascending</span></a></li><li class="aui-list-item"><a id="attachment-sort-direction-desc" href="/browse/JDK-8271459?attachmentOrder=desc#attachmentmodule" class="aui-list-checked aui-list-item-link" title="Descending"><span>Descending</span></a></li></ul><ul id="attachment-view-mode-options" class="aui-list-section"><li class="aui-list-item"><a id="attachment-view-mode-gallery" href="/browse/JDK-8271459?attachmentViewMode=gallery#attachmentmodule" class="aui-list-checked aui-list-item-link" title="Thumbnails"><span>Thumbnails</span></a></li><li class="aui-list-item"><a id="attachment-view-mode-list" href="/browse/JDK-8271459?attachmentViewMode=list#attachmentmodule" class="aui-list-checked aui-checked aui-list-item-link" title="List"><span>List</span></a></li></ul><ul id="attachment-manage-options" class="aui-list-section aui-last"><li class="aui-list-item"><a id="aszip" href="/secure/attachmentzip/5055168.zip" class="aui-list-checked aui-list-item-link" title="Download all attachments as a ZIP file"><span>Download All</span></a></li></ul></div></div></li></ul><button class="aui-button toggle-title" aria-label="Attachments" aria-controls="attachmentmodule" aria-expanded="true" resolved=""><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"><g fill="none" fill-rule="evenodd"><path d="M3.29175 4.793c-.389.392-.389 1.027 0 1.419l2.939 2.965c.218.215.5.322.779.322s.556-.107.769-.322l2.93-2.955c.388-.392.388-1.027 0-1.419-.389-.392-1.018-.392-1.406 0l-2.298 2.317-2.307-2.327c-.194-.195-.449-.293-.703-.293-.255 0-.51.098-.703.293z" fill="#344563"></path></g></svg></button><h4 class="toggle-title">Attachments</h4></div><div class="mod-content"><ol id="file_attachments" class="item-attachments" data-sort-key="fileName" data-sort-order="asc"><li class="attachment-content js-file-attachment" data-attachment-id="95841" data-issue-id="5055168" data-attachment-type="file"><div class="attachment-thumb"><a href="/secure/attachment/95841/test.java" draggable="true" data-downloadurl="text/x-java-source:test.java:https://bugs.openjdk.java.net/secure/attachment/95841/test.java"><span class="aui-icon aui-icon-small attachment-icon aui-iconfont-file-code" title="Java Source File"></span></a></div><dl><dt class="attachment-title"><a href="/secure/attachment/95841/test.java" title="Latest  2021-07-28 23:58 - swati sharma" draggable="true" data-downloadurl="text/x-java-source:test.java:https://bugs.openjdk.java.net/secure/attachment/95841/test.java">test.java</a></dt><dd class="attachment-delete"><span class="icon"></span></dd><dd class="attachment-date"><time class="livestamp" datetime="2021-07-28T23:58:06.000-07:00">2021-07-28 23:58</time></dd><dd class="attachment-size">0.4 kB</dd><dd class="attachment-author">swati sharma</dd></dl></li></ol></div></div><div id="linkingmodule" class="module toggle-wrap"><div id="linkingmodule_heading" class="mod-header"><ul class="ops"></ul><button class="aui-button toggle-title" aria-label="Issue Links" aria-controls="linkingmodule" aria-expanded="true" resolved=""><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"><g fill="none" fill-rule="evenodd"><path d="M3.29175 4.793c-.389.392-.389 1.027 0 1.419l2.939 2.965c.218.215.5.322.779.322s.556-.107.769-.322l2.93-2.955c.388-.392.388-1.027 0-1.419-.389-.392-1.018-.392-1.406 0l-2.298 2.317-2.307-2.327c-.194-.195-.449-.293-.703-.293-.255 0-.51.098-.703.293z" fill="#344563"></path></g></svg></button><h4 class="toggle-title">Issue Links</h4></div><div class="mod-content">
+
+
+
+
+
+
+<div class="links-container" data-default-link-icon="/images/icons/generic_link_16.png">
+                <dl class="links-list ">
+            <dt title="backported by">backported by</dt>
+                            <dd id="internal-5060297_10200">
+                    <div class="link-content">
+                                                    
+
+
+
+<p>
+            <img src="/secure/viewavatar?size=xsmall&amp;avatarId=14716&amp;avatarType=issuetype" width="16" height="16" title="Backport - A issue that is required to port a Bug or Feature into another product release. This issue type is generally associated with the main Bug/Feature to represent each individual release of the port." alt="Backport - A issue that is required to port a Bug or Feature into another product release. This issue type is generally associated with the main Bug/Feature to represent each individual release of the port.">
+        <span title="JDK-8275198: C2: Missing NegativeArraySizeException when creating StringBuilder with negative capacity">
+        <a href="/browse/JDK-8275198" data-issue-key="JDK-8275198" class="issue-link link-title resolution">JDK-8275198</a>
+        <span class="link-summary">C2: Missing NegativeArraySizeException when creating StringBuilder with negative capacity</span>
+    </span>
+</p>
+<ul class="link-snapshot">
+        <li class="priority">        <img src="/images/jbsImages/p2.png" width="16" height="16" title="P2 - Crashes, loss of data, severe memory leak." alt="P2 - Crashes, loss of data, severe memory leak.">
+    </li>
+                <li class="status">
+                        <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-short" data-tooltip="<span class=&quot;jira-issue-status-tooltip-title&quot;>Resolved</span><br><span class=&quot;jira-issue-status-tooltip-desc&quot;>A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.</span>" original-title="">Resolved</span>
+                    </li>
+    </ul>
+                                            </div>
+                                    </dd>
+                            <dd id="internal-5060114_10200">
+                    <div class="link-content">
+                                                    
+
+
+
+<p>
+            <img src="/secure/viewavatar?size=xsmall&amp;avatarId=14716&amp;avatarType=issuetype" width="16" height="16" title="Backport - A issue that is required to port a Bug or Feature into another product release. This issue type is generally associated with the main Bug/Feature to represent each individual release of the port." alt="Backport - A issue that is required to port a Bug or Feature into another product release. This issue type is generally associated with the main Bug/Feature to represent each individual release of the port.">
+        <span title="JDK-8275042: C2: Missing NegativeArraySizeException when creating StringBuilder with negative capacity">
+        <a href="/browse/JDK-8275042" data-issue-key="JDK-8275042" class="issue-link link-title resolution">JDK-8275042</a>
+        <span class="link-summary">C2: Missing NegativeArraySizeException when creating StringBuilder with negative capacity</span>
+    </span>
+</p>
+<ul class="link-snapshot">
+        <li class="priority">        <img src="/images/jbsImages/p2.png" width="16" height="16" title="P2 - Crashes, loss of data, severe memory leak." alt="P2 - Crashes, loss of data, severe memory leak.">
+    </li>
+                <li class="status">
+                        <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-short" data-tooltip="<span class=&quot;jira-issue-status-tooltip-title&quot;>Closed</span><br><span class=&quot;jira-issue-status-tooltip-desc&quot;>The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.</span>" original-title="">Closed</span>
+                    </li>
+    </ul>
+                                            </div>
+                                    </dd>
+                            <dd id="internal-5060175_10200">
+                    <div class="link-content">
+                                                    
+
+
+
+<p>
+            <img src="/secure/viewavatar?size=xsmall&amp;avatarId=14716&amp;avatarType=issuetype" width="16" height="16" title="Backport - A issue that is required to port a Bug or Feature into another product release. This issue type is generally associated with the main Bug/Feature to represent each individual release of the port." alt="Backport - A issue that is required to port a Bug or Feature into another product release. This issue type is generally associated with the main Bug/Feature to represent each individual release of the port.">
+        <span title="JDK-8275093: C2: Missing NegativeArraySizeException when creating StringBuilder with negative capacity">
+        <a href="/browse/JDK-8275093" data-issue-key="JDK-8275093" class="issue-link link-title resolution">JDK-8275093</a>
+        <span class="link-summary">C2: Missing NegativeArraySizeException when creating StringBuilder with negative capacity</span>
+    </span>
+</p>
+<ul class="link-snapshot">
+        <li class="priority">        <img src="/images/jbsImages/p2.png" width="16" height="16" title="P2 - Crashes, loss of data, severe memory leak." alt="P2 - Crashes, loss of data, severe memory leak.">
+    </li>
+                <li class="status">
+                        <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-short" data-tooltip="<span class=&quot;jira-issue-status-tooltip-title&quot;>Closed</span><br><span class=&quot;jira-issue-status-tooltip-desc&quot;>The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.</span>" original-title="">Closed</span>
+                    </li>
+    </ul>
+                                            </div>
+                                    </dd>
+                    </dl>
+            <dl class="links-list ">
+            <dt title="links to">links to</dt>
+                            <dd id="remote-38898" data-remote-link-id="38898" class="
+                        remote-link                                            ">
+                    <div class="link-content">
+                                                
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>
+            <img src="https://bugs.openjdk.java.net/secure/attachment/86055/octicon-git-commit.png" width="16" height="16" title="Commit" alt="Commit">
+        <span title="Commit: openjdk/jdk11u-dev/844c504b">
+        <a href="https://git.openjdk.java.net/jdk11u-dev/commit/844c504bc18fa8a79ceacc6b6f235650f5e643bf" class="link-title" target="_blank" rel="noopener">Commit</a>
+        <span class="link-summary">openjdk/jdk11u-dev/844c504b</span>
+    </span>
+</p>
+<ul class="link-snapshot">
+    </ul>
+
+                                        </div>
+                                    </dd>
+                            <dd id="remote-38820" data-remote-link-id="38820" class="
+                        remote-link                                            ">
+                    <div class="link-content">
+                                                
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>
+            <img src="https://bugs.openjdk.java.net/secure/attachment/86055/octicon-git-commit.png" width="16" height="16" title="Commit" alt="Commit">
+        <span title="Commit: openjdk/jdk17u/1cc972f3">
+        <a href="https://git.openjdk.java.net/jdk17u/commit/1cc972f34ea79242e6016b55c1ab896b5c58a511" class="link-title" target="_blank" rel="noopener">Commit</a>
+        <span class="link-summary">openjdk/jdk17u/1cc972f3</span>
+    </span>
+</p>
+<ul class="link-snapshot">
+    </ul>
+
+                                        </div>
+                                    </dd>
+                            <dd id="remote-38418" data-remote-link-id="38418" class="
+                        remote-link                        collapsed-link                    ">
+                    <div class="link-content">
+                                                
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>
+            <img src="https://bugs.openjdk.java.net/secure/attachment/86055/octicon-git-commit.png" width="16" height="16" title="Commit" alt="Commit">
+        <span title="Commit: openjdk/jdk/3953e077">
+        <a href="https://git.openjdk.java.net/jdk/commit/3953e0774c59c5e936e752aa08b6b6778e232994" class="link-title" target="_blank" rel="noopener">Commit</a>
+        <span class="link-summary">openjdk/jdk/3953e077</span>
+    </span>
+</p>
+<ul class="link-snapshot">
+    </ul>
+
+                                        </div>
+                                    </dd>
+                            <dd id="remote-38797" data-remote-link-id="38797" class="
+                        remote-link                        collapsed-link                    ">
+                    <div class="link-content">
+                                                
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>
+            <img src="https://bugs.openjdk.java.net/secure/attachment/86054/octicon-git-pull-request.png" width="16" height="16" title="Review" alt="Review">
+        <span title="Review: openjdk/jdk11u-dev/510">
+        <a href="https://git.openjdk.java.net/jdk11u-dev/pull/510" class="link-title" target="_blank" rel="noopener">Review</a>
+        <span class="link-summary">openjdk/jdk11u-dev/510</span>
+    </span>
+</p>
+<ul class="link-snapshot">
+    </ul>
+
+                                        </div>
+                                    </dd>
+                            <dd id="remote-38773" data-remote-link-id="38773" class="
+                        remote-link                        collapsed-link                    ">
+                    <div class="link-content">
+                                                
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>
+            <img src="https://bugs.openjdk.java.net/secure/attachment/86054/octicon-git-pull-request.png" width="16" height="16" title="Review" alt="Review">
+        <span title="Review: openjdk/jdk17u/177">
+        <a href="https://git.openjdk.java.net/jdk17u/pull/177" class="link-title" target="_blank" rel="noopener">Review</a>
+        <span class="link-summary">openjdk/jdk17u/177</span>
+    </span>
+</p>
+<ul class="link-snapshot">
+    </ul>
+
+                                        </div>
+                                    </dd>
+                            <dd id="remote-37766" data-remote-link-id="37766" class="
+                        remote-link                        collapsed-link                    ">
+                    <div class="link-content">
+                                                
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>
+            <img src="https://bugs.openjdk.java.net/secure/attachment/86054/octicon-git-pull-request.png" width="16" height="16" title="Review" alt="Review">
+        <span title="Review: openjdk/jdk/5652">
+        <a href="https://git.openjdk.java.net/jdk/pull/5652" class="link-title" target="_blank" rel="noopener">Review</a>
+        <span class="link-summary">openjdk/jdk/5652</span>
+    </span>
+</p>
+<ul class="link-snapshot">
+    </ul>
+
+                                        </div>
+                                    </dd>
+                    </dl>
+                <div id="show-more-links">
+            <button class="aui-button aui-button-link" id="show-more-links-link" resolved="">Show 4 more links</button> <span>(4 links to)</span>
+        </div>
+    </div>
+</div></div><div id="activitymodule" class="module toggle-wrap"><div id="activitymodule_heading" class="mod-header"><ul class="ops"></ul><button class="aui-button toggle-title" aria-label="Activity" aria-controls="activitymodule" aria-expanded="true" resolved=""><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"><g fill="none" fill-rule="evenodd"><path d="M3.29175 4.793c-.389.392-.389 1.027 0 1.419l2.939 2.965c.218.215.5.322.779.322s.556-.107.769-.322l2.93-2.955c.388-.392.388-1.027 0-1.419-.389-.392-1.018-.392-1.406 0l-2.298 2.317-2.307-2.327c-.194-.195-.449-.293-.703-.293-.255 0-.51.098-.703.293z" fill="#344563"></path></g></svg></button><h4 class="toggle-title">Activity</h4></div><div class="mod-content">
+<div class="tabwrap aui-tabs horizontal-tabs aui-tabs-disabled">
+
+        <ul id="issue-tabs" class="tabs-menu">
+                                
+            <li class="menu-item " id="all-tabpanel" data-id="all-tabpanel" data-key="com.atlassian.jira.plugin.system.issuetabpanels:all-tabpanel" data-label="All" data-href="/browse/JDK-8271459?page=com.atlassian.jira.plugin.system.issuetabpanels:all-tabpanel">
+                                    <a id="all-tabpanel" href="/browse/JDK-8271459?page=com.atlassian.jira.plugin.system.issuetabpanels:all-tabpanel" class="ajax-activity-content">All</a>
+                            </li>
+                                
+            <li class="menu-item  active-tab active " id="comment-tabpanel" data-id="comment-tabpanel" data-key="com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel" data-label="Comments" data-href="/browse/JDK-8271459?page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel">
+                                    <a tabindex="0">Comments</a>
+                            </li>
+                                
+            <li class="menu-item " id="worklog-tabpanel" data-id="worklog-tabpanel" data-key="com.atlassian.jira.plugin.system.issuetabpanels:worklog-tabpanel" data-label="Work Log" data-href="/browse/JDK-8271459?page=com.atlassian.jira.plugin.system.issuetabpanels:worklog-tabpanel">
+                                    <a id="worklog-tabpanel" href="/browse/JDK-8271459?page=com.atlassian.jira.plugin.system.issuetabpanels:worklog-tabpanel" class="ajax-activity-content">Work Log</a>
+                            </li>
+                                
+            <li class="menu-item " id="changehistory-tabpanel" data-id="changehistory-tabpanel" data-key="com.atlassian.jira.plugin.system.issuetabpanels:changehistory-tabpanel" data-label="History" data-href="/browse/JDK-8271459?page=com.atlassian.jira.plugin.system.issuetabpanels:changehistory-tabpanel">
+                                    <a id="changehistory-tabpanel" href="/browse/JDK-8271459?page=com.atlassian.jira.plugin.system.issuetabpanels:changehistory-tabpanel" class="ajax-activity-content">History</a>
+                            </li>
+                                
+            <li class="menu-item " id="activity-stream-issue-tab" data-id="activity-stream-issue-tab" data-key="com.atlassian.streams.streams-jira-plugin:activity-stream-issue-tab" data-label="Activity" data-href="/browse/JDK-8271459?page=com.atlassian.streams.streams-jira-plugin:activity-stream-issue-tab">
+                                    <a id="activity-stream-issue-tab" href="/browse/JDK-8271459?page=com.atlassian.streams.streams-jira-plugin:activity-stream-issue-tab" class="ajax-activity-content">Activity</a>
+                            </li>
+                </ul>
+
+                    <div class="sortwrap">
+                                    <a class="issue-activity-sort-link ajax-activity-content" rel="nofollow" data-tab-sort="" data-order="desc" href="/browse/JDK-8271459?actionOrder=desc" title="Ascending order - Click to sort in descending order">
+                        <span class="aui-icon aui-icon-small aui-iconfont-up">Ascending order - Click to sort in descending order</span>
+                    </a>
+                            </div>
+                        <div class="tabs-pane active-pane"></div>
+    </div>
+    <div class="issuePanelWrapper">
+        <div class="issuePanelProgress"></div>
+        <div class="issuePanelContainer" id="issue_actions_container">
+                                                
+
+
+<div id="comment-14438203" class="issue-data-block activity-comment twixi-block  expanded">
+    <div class="twixi-wrap verbose actionContainer">
+        <div class="action-head">
+            <a href="#" title="Collapse comment" class="twixi"><span class="icon-default aui-icon aui-icon-small aui-iconfont-expanded"><span>Hide</span></span></a>
+            <div class="action-links">
+                <a href="/browse/JDK-8271459?focusedCommentId=14438203&amp;page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-14438203" title="Right click and copy link for a permanent link to this comment." class="activitymodule-link issue-comment-action">
+                    <span class="icon-default aui-icon aui-icon-small aui-iconfont-link">Permalink</span></a>
+                                            </div>
+            <div class="action-details">        
+    
+    
+    
+                
+
+    <a class="user-hover user-avatar" rel="sswsharm" id="commentauthor_14438203_verbose" href="/secure/ViewProfile.jspa?name=sswsharm"><span class="aui-avatar aui-avatar-xsmall"><span class="aui-avatar-inner"><img src="https://bugs.openjdk.java.net/secure/useravatar?size=xsmall&amp;avatarId=16628" alt="sswsharm"></span></span> swati sharma</a>
+ added a comment  - <span class="commentdate_14438203_verbose subText"><span class="date user-tz" title="2021-07-29 00:07"><time class="livestamp" datetime="2021-07-29T00:07:19-0700">2021-07-29 00:07</time></span></span>  </div>
+        </div>
+        <div class="action-body flooded">Issue is reproduced. This test case executes properly till JDK7 and produces output "10000" but fails from JDK 8 onwards
+<br>
+
+<br>
+OS: Windows 10
+<br>
+JDK 7u321: Pass
+<br>
+Output: 10000
+<br>
+
+<br>
+JDK 8: Fail
+<br>
+Output: 5566
+<br>
+
+<br>
+JDK 8u301:fail
+<br>
+Output:5829
+<br>
+
+<br>
+JDK 17ea32:Fail
+<br>
+Output:5653
+<br>
+
+<br>
+However, customer workaround produces proper output for all JDKs
+<br>
+# Compilation up to level 1
+<br>
+$ java -XX:TieredStopAtLevel=1 test
+<br>
+# Output (correct)
+<br>
+10000
+<br>
+
+<br>
+# Interpreter or compilation up to level 0
+<br>
+$ java -Xint test
+<br>
+# Output (correct)
+<br>
+10000
+<br>
+
+<br>
+Moving it to Dev team for further analysis. </div>
+    </div>
+    <div class="twixi-wrap concise actionContainer">
+        <div class="action-head">
+            <a href="#" title="Expand comment" class="twixi"><span class="icon-default aui-icon aui-icon-small aui-iconfont-collapsed"><span>Show</span></span></a>
+            <div class="action-details flooded">
+                        
+    
+    
+    
+                
+
+    <a class="user-hover user-avatar" rel="sswsharm" id="commentauthor_14438203_concise" href="/secure/ViewProfile.jspa?name=sswsharm"><span class="aui-avatar aui-avatar-xsmall"><span class="aui-avatar-inner"><img src="https://bugs.openjdk.java.net/secure/useravatar?size=xsmall&amp;avatarId=16628" alt="sswsharm"></span></span> swati sharma</a>
+ added a comment  - <span class="commentdate_14438203_concise subText"><span class="date user-tz" title="2021-07-29 00:07"><time class="livestamp" datetime="2021-07-29T00:07:19-0700">2021-07-29 00:07</time></span></span>                   Issue is reproduced. This test case executes properly till JDK7 and produces output "10000" but fails from JDK 8 onwards
+ 
+
+ 
+OS: Windows 10
+ 
+JDK 7u321: Pass
+ 
+Output: 10000
+ 
+
+ 
+JDK 8: Fail
+ 
+Output: 5566
+ 
+
+ 
+JDK 8u301:fail
+ 
+Output:5829
+ 
+
+ 
+JDK 17ea32:Fail
+ 
+Output:5653
+ 
+
+ 
+However, customer workaround produces proper output for all JDKs
+ 
+# Compilation up to level 1
+ 
+$ java -XX:TieredStopAtLevel=1 test
+ 
+# Output (correct)
+ 
+10000
+ 
+
+ 
+# Interpreter or compilation up to level 0
+ 
+$ java -Xint test
+ 
+# Output (correct)
+ 
+10000
+ 
+
+ 
+Moving it to Dev team for further analysis.             </div>
+        </div>
+    </div>
+</div>
+                                     
+
+
+<div id="comment-14438231" class="issue-data-block activity-comment twixi-block  expanded">
+    <div class="twixi-wrap verbose actionContainer">
+        <div class="action-head">
+            <a href="#" title="Collapse comment" class="twixi"><span class="icon-default aui-icon aui-icon-small aui-iconfont-expanded"><span>Hide</span></span></a>
+            <div class="action-links">
+                <a href="/browse/JDK-8271459?focusedCommentId=14438231&amp;page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-14438231" title="Right click and copy link for a permanent link to this comment." class="activitymodule-link issue-comment-action">
+                    <span class="icon-default aui-icon aui-icon-small aui-iconfont-link">Permalink</span></a>
+                                            </div>
+            <div class="action-details">        
+    
+    
+    
+                
+
+    <a class="user-hover user-avatar" rel="chagedorn" id="commentauthor_14438231_verbose" href="/secure/ViewProfile.jspa?name=chagedorn"><span class="aui-avatar aui-avatar-xsmall"><span class="aui-avatar-inner"><img src="https://bugs.openjdk.java.net/secure/useravatar?size=xsmall&amp;avatarId=10122" alt="chagedorn"></span></span> Christian Hagedorn</a>
+ added a comment  - <span class="commentdate_14438231_verbose subText"><span class="date user-tz" title="2021-07-29 03:17"><time class="livestamp" datetime="2021-07-29T03:17:45-0700">2021-07-29 03:17</time></span></span>  </div>
+        </div>
+        <div class="action-body flooded">ILW = Incorrect execution of compiled C2 code, reproducible with simple test, use -XX:-OptimizeStringConcat = HMM = P2 </div>
+    </div>
+    <div class="twixi-wrap concise actionContainer">
+        <div class="action-head">
+            <a href="#" title="Expand comment" class="twixi"><span class="icon-default aui-icon aui-icon-small aui-iconfont-collapsed"><span>Show</span></span></a>
+            <div class="action-details flooded">
+                        
+    
+    
+    
+                
+
+    <a class="user-hover user-avatar" rel="chagedorn" id="commentauthor_14438231_concise" href="/secure/ViewProfile.jspa?name=chagedorn"><span class="aui-avatar aui-avatar-xsmall"><span class="aui-avatar-inner"><img src="https://bugs.openjdk.java.net/secure/useravatar?size=xsmall&amp;avatarId=10122" alt="chagedorn"></span></span> Christian Hagedorn</a>
+ added a comment  - <span class="commentdate_14438231_concise subText"><span class="date user-tz" title="2021-07-29 03:17"><time class="livestamp" datetime="2021-07-29T03:17:45-0700">2021-07-29 03:17</time></span></span>                   ILW = Incorrect execution of compiled C2 code, reproducible with simple test, use -XX:-OptimizeStringConcat = HMM = P2             </div>
+        </div>
+    </div>
+</div>
+                                     
+
+
+<div id="comment-14451034" class="issue-data-block activity-comment twixi-block  expanded">
+    <div class="twixi-wrap verbose actionContainer">
+        <div class="action-head">
+            <a href="#" title="Collapse comment" class="twixi"><span class="icon-default aui-icon aui-icon-small aui-iconfont-expanded"><span>Hide</span></span></a>
+            <div class="action-links">
+                <a href="/browse/JDK-8271459?focusedCommentId=14451034&amp;page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-14451034" title="Right click and copy link for a permanent link to this comment." class="activitymodule-link issue-comment-action">
+                    <span class="icon-default aui-icon aui-icon-small aui-iconfont-link">Permalink</span></a>
+                                            </div>
+            <div class="action-details">        
+    
+    
+    
+                
+
+    <a class="user-hover user-avatar" rel="roboduke" id="commentauthor_14451034_verbose" href="/secure/ViewProfile.jspa?name=roboduke"><span class="aui-avatar aui-avatar-xsmall"><span class="aui-avatar-inner"><img src="https://bugs.openjdk.java.net/secure/useravatar?size=xsmall&amp;avatarId=10122" alt="roboduke"></span></span> Robo Duke</a>
+ added a comment  - <span class="commentdate_14451034_verbose subText"><span class="date user-tz" title="2021-10-05 00:03"><time class="livestamp" datetime="2021-10-05T00:03:54-0700">2021-10-05 00:03</time></span></span>  </div>
+        </div>
+        <div class="action-body flooded">Changeset: 3953e077<br>
+Author:    Christian Hagedorn &lt;<a href="mailto:chagedorn@openjdk.org">chagedorn@openjdk.org</a>&gt;<br>
+Date:      2021-10-05 07:02:06 +0000<br>
+URL:       <a href="https://git.openjdk.java.net/jdk/commit/3953e0774c59c5e936e752aa08b6b6778e232994">https://git.openjdk.java.net/jdk/commit/3953e0774c59c5e936e752aa08b6b6778e232994</a><br>
+ </div>
+    </div>
+    <div class="twixi-wrap concise actionContainer">
+        <div class="action-head">
+            <a href="#" title="Expand comment" class="twixi"><span class="icon-default aui-icon aui-icon-small aui-iconfont-collapsed"><span>Show</span></span></a>
+            <div class="action-details flooded">
+                        
+    
+    
+    
+                
+
+    <a class="user-hover user-avatar" rel="roboduke" id="commentauthor_14451034_concise" href="/secure/ViewProfile.jspa?name=roboduke"><span class="aui-avatar aui-avatar-xsmall"><span class="aui-avatar-inner"><img src="https://bugs.openjdk.java.net/secure/useravatar?size=xsmall&amp;avatarId=10122" alt="roboduke"></span></span> Robo Duke</a>
+ added a comment  - <span class="commentdate_14451034_concise subText"><span class="date user-tz" title="2021-10-05 00:03"><time class="livestamp" datetime="2021-10-05T00:03:54-0700">2021-10-05 00:03</time></span></span>                   Changeset: 3953e077 
+Author:    Christian Hagedorn &lt; chagedorn@openjdk.org &gt; 
+Date:      2021-10-05 07:02:06 +0000 
+URL:        https://git.openjdk.java.net/jdk/commit/3953e0774c59c5e936e752aa08b6b6778e232994  
+             </div>
+        </div>
+    </div>
+</div>
+                                     
+
+
+<div id="comment-14452059" class="issue-data-block activity-comment twixi-block  expanded">
+    <div class="twixi-wrap verbose actionContainer">
+        <div class="action-head">
+            <a href="#" title="Collapse comment" class="twixi"><span class="icon-default aui-icon aui-icon-small aui-iconfont-expanded"><span>Hide</span></span></a>
+            <div class="action-links">
+                <a href="/browse/JDK-8271459?focusedCommentId=14452059&amp;page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-14452059" title="Right click and copy link for a permanent link to this comment." class="activitymodule-link issue-comment-action">
+                    <span class="icon-default aui-icon aui-icon-small aui-iconfont-link">Permalink</span></a>
+                                            </div>
+            <div class="action-details">        
+    
+    
+                                            
+    
+                
+
+    <a class="user-hover user-avatar" rel="thartmann" id="commentauthor_14452059_verbose" href="/secure/ViewProfile.jspa?name=thartmann"><span class="aui-avatar aui-avatar-xsmall"><span class="aui-avatar-inner"><img src="https://bugs.openjdk.java.net/secure/useravatar?size=xsmall&amp;avatarId=10122" alt="thartmann"></span></span> Tobias Hartmann</a>
+ added a comment  - <span class="commentdate_14452059_verbose subText"><span class="date user-tz" title="2021-10-11 05:18"><time class="livestamp" datetime="2021-10-11T05:18:38-0700">2021-10-11 05:18</time></span></span>   - <span class="redText subText" title="Tobias Hartmann - 2021-10-11 05:21">edited</span> </div>
+        </div>
+        <div class="action-body flooded">Fix request (17u):
+<br>
+The patch fixes a bug in C2 that leads to incorrect execution of compiled code. The fix is low risk (bailout from optimization) and has been tested in the JDK 18 for a while and with tier1-3 in JDK 17u. The patch did not apply cleanly due to changes in IRNode.java (test code). </div>
+    </div>
+    <div class="twixi-wrap concise actionContainer">
+        <div class="action-head">
+            <a href="#" title="Expand comment" class="twixi"><span class="icon-default aui-icon aui-icon-small aui-iconfont-collapsed"><span>Show</span></span></a>
+            <div class="action-details flooded">
+                        
+    
+    
+                                            
+    
+                
+
+    <a class="user-hover user-avatar" rel="thartmann" id="commentauthor_14452059_concise" href="/secure/ViewProfile.jspa?name=thartmann"><span class="aui-avatar aui-avatar-xsmall"><span class="aui-avatar-inner"><img src="https://bugs.openjdk.java.net/secure/useravatar?size=xsmall&amp;avatarId=10122" alt="thartmann"></span></span> Tobias Hartmann</a>
+ added a comment  - <span class="commentdate_14452059_concise subText"><span class="date user-tz" title="2021-10-11 05:18"><time class="livestamp" datetime="2021-10-11T05:18:38-0700">2021-10-11 05:18</time></span></span>   - <span class="redText subText" title="Tobias Hartmann - 2021-10-11 05:21">edited</span>                  Fix request (17u):
+ 
+The patch fixes a bug in C2 that leads to incorrect execution of compiled code. The fix is low risk (bailout from optimization) and has been tested in the JDK 18 for a while and with tier1-3 in JDK 17u. The patch did not apply cleanly due to changes in IRNode.java (test code).             </div>
+        </div>
+    </div>
+</div>
+                                     
+
+
+<div id="comment-14452114" class="issue-data-block activity-comment twixi-block  expanded">
+    <div class="twixi-wrap verbose actionContainer">
+        <div class="action-head">
+            <a href="#" title="Collapse comment" class="twixi"><span class="icon-default aui-icon aui-icon-small aui-iconfont-expanded"><span>Hide</span></span></a>
+            <div class="action-links">
+                <a href="/browse/JDK-8271459?focusedCommentId=14452114&amp;page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-14452114" title="Right click and copy link for a permanent link to this comment." class="activitymodule-link issue-comment-action">
+                    <span class="icon-default aui-icon aui-icon-small aui-iconfont-link">Permalink</span></a>
+                                            </div>
+            <div class="action-details">        
+    
+    
+    
+                
+
+    <a class="user-hover user-avatar" rel="mdoerr" id="commentauthor_14452114_verbose" href="/secure/ViewProfile.jspa?name=mdoerr"><span class="aui-avatar aui-avatar-xsmall"><span class="aui-avatar-inner"><img src="https://bugs.openjdk.java.net/secure/useravatar?size=xsmall&amp;avatarId=10122" alt="mdoerr"></span></span> Martin Doerr</a>
+ added a comment  - <span class="commentdate_14452114_verbose subText"><span class="date user-tz" title="2021-10-11 10:46"><time class="livestamp" datetime="2021-10-11T10:46:05-0700">2021-10-11 10:46</time></span></span>  </div>
+        </div>
+        <div class="action-body flooded">Fix Request (11u):
+<br>
+Should get backported for parity with 11.0.14-oracle. Risk: see 17u backport comment above. Doesn't apply cleanly. Review: <a href="https://github.com/openjdk/jdk11u-dev/pull/510">https://github.com/openjdk/jdk11u-dev/pull/510</a> </div>
+    </div>
+    <div class="twixi-wrap concise actionContainer">
+        <div class="action-head">
+            <a href="#" title="Expand comment" class="twixi"><span class="icon-default aui-icon aui-icon-small aui-iconfont-collapsed"><span>Show</span></span></a>
+            <div class="action-details flooded">
+                        
+    
+    
+    
+                
+
+    <a class="user-hover user-avatar" rel="mdoerr" id="commentauthor_14452114_concise" href="/secure/ViewProfile.jspa?name=mdoerr"><span class="aui-avatar aui-avatar-xsmall"><span class="aui-avatar-inner"><img src="https://bugs.openjdk.java.net/secure/useravatar?size=xsmall&amp;avatarId=10122" alt="mdoerr"></span></span> Martin Doerr</a>
+ added a comment  - <span class="commentdate_14452114_concise subText"><span class="date user-tz" title="2021-10-11 10:46"><time class="livestamp" datetime="2021-10-11T10:46:05-0700">2021-10-11 10:46</time></span></span>                   Fix Request (11u):
+ 
+Should get backported for parity with 11.0.14-oracle. Risk: see 17u backport comment above. Doesn't apply cleanly. Review:  https://github.com/openjdk/jdk11u-dev/pull/510              </div>
+        </div>
+    </div>
+</div>
+                                     
+
+
+<div id="comment-14470163" class="issue-data-block activity-comment twixi-block  expanded">
+    <div class="twixi-wrap verbose actionContainer">
+        <div class="action-head">
+            <a href="#" title="Collapse comment" class="twixi"><span class="icon-default aui-icon aui-icon-small aui-iconfont-expanded"><span>Hide</span></span></a>
+            <div class="action-links">
+                <a href="/browse/JDK-8271459?focusedCommentId=14470163&amp;page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-14470163" title="Right click and copy link for a permanent link to this comment." class="activitymodule-link issue-comment-action">
+                    <span class="icon-default aui-icon aui-icon-small aui-iconfont-link">Permalink</span></a>
+                                            </div>
+            <div class="action-details">        
+    
+    
+    
+                
+
+    <a class="user-hover user-avatar" rel="pnarayanaswa" id="commentauthor_14470163_verbose" href="/secure/ViewProfile.jspa?name=pnarayanaswa"><span class="aui-avatar aui-avatar-xsmall"><span class="aui-avatar-inner"><img src="https://bugs.openjdk.java.net/secure/useravatar?size=xsmall&amp;avatarId=10122" alt="pnarayanaswa"></span></span> Praveen Narayanaswamy</a>
+ added a comment  - <span class="commentdate_14470163_verbose subText"><span class="date user-tz" title="2022-01-18 22:11"><time class="livestamp" datetime="2022-01-18T22:11:00-0800">2022-01-18 22:11</time></span></span>  </div>
+        </div>
+        <div class="action-body flooded">Additional Information from submitter:
+<br>
+============================
+<br>
+Thanks for the fix. I believe the fix should be backported to jdk8u as well, because I am still able to reproduce this bug in 8u321 released today (Jan 18, 2022).
+<br>
+java version "1.8.0_321"
+<br>
+Java(TM) SE Runtime Environment (build 1.8.0_321-b07)
+<br>
+Java HotSpot(TM) 64-Bit Server VM (build 25.321-b07, mixed mode) </div>
+    </div>
+    <div class="twixi-wrap concise actionContainer">
+        <div class="action-head">
+            <a href="#" title="Expand comment" class="twixi"><span class="icon-default aui-icon aui-icon-small aui-iconfont-collapsed"><span>Show</span></span></a>
+            <div class="action-details flooded">
+                        
+    
+    
+    
+                
+
+    <a class="user-hover user-avatar" rel="pnarayanaswa" id="commentauthor_14470163_concise" href="/secure/ViewProfile.jspa?name=pnarayanaswa"><span class="aui-avatar aui-avatar-xsmall"><span class="aui-avatar-inner"><img src="https://bugs.openjdk.java.net/secure/useravatar?size=xsmall&amp;avatarId=10122" alt="pnarayanaswa"></span></span> Praveen Narayanaswamy</a>
+ added a comment  - <span class="commentdate_14470163_concise subText"><span class="date user-tz" title="2022-01-18 22:11"><time class="livestamp" datetime="2022-01-18T22:11:00-0800">2022-01-18 22:11</time></span></span>                   Additional Information from submitter:
+ 
+============================
+ 
+Thanks for the fix. I believe the fix should be backported to jdk8u as well, because I am still able to reproduce this bug in 8u321 released today (Jan 18, 2022).
+ 
+java version "1.8.0_321"
+ 
+Java(TM) SE Runtime Environment (build 1.8.0_321-b07)
+ 
+Java HotSpot(TM) 64-Bit Server VM (build 25.321-b07, mixed mode)             </div>
+        </div>
+    </div>
+</div>
+                                     </div>
+    </div>
+</div></div></div><div id="viewissuesidebar" class="aui-item issue-side-column"><div id="peoplemodule" class="module toggle-wrap"><div id="peoplemodule_heading" class="mod-header"><ul class="ops"></ul><button class="aui-button toggle-title" aria-label="People" aria-controls="peoplemodule" aria-expanded="true" resolved=""><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"><g fill="none" fill-rule="evenodd"><path d="M3.29175 4.793c-.389.392-.389 1.027 0 1.419l2.939 2.965c.218.215.5.322.779.322s.556-.107.769-.322l2.93-2.955c.388-.392.388-1.027 0-1.419-.389-.392-1.018-.392-1.406 0l-2.298 2.317-2.307-2.327c-.194-.195-.449-.293-.703-.293-.255 0-.51.098-.703.293z" fill="#344563"></path></g></svg></button><h4 class="toggle-title">People</h4></div><div class="mod-content">
+
+
+
+
+
+<div class="item-details people-details" id="peopledetails">
+                        
+<dl>
+    <dt>Assignee:</dt>
+    <dd>
+        <span id="assignee-val" class="view-issue-field">
+
+            <span class="user-hover" id="issue_summary_assignee_chagedorn" rel="chagedorn">
+            
+
+    
+    <span class="aui-avatar aui-avatar-small"><span class="aui-avatar-inner"><img src="https://bugs.openjdk.java.net/secure/useravatar?size=small&amp;avatarId=10122" alt="chagedorn"></span></span>
+            Christian Hagedorn
+        </span>
+    </span>
+            </dd>
+</dl>                                
+<dl>
+    <dt>Reporter:</dt>
+    <dd>
+        <span id="reporter-val" class="view-issue-field">
+
+            <span class="user-hover" id="issue_summary_reporter_webbuggrp" rel="webbuggrp">
+            
+
+    
+    <span class="aui-avatar aui-avatar-small"><span class="aui-avatar-inner"><img src="https://bugs.openjdk.java.net/secure/useravatar?size=small&amp;avatarId=10122" alt="webbuggrp"></span></span>
+            Webbug Group
+        </span>
+    </span>
+    </dd>
+</dl>                </div>
+    <div class="item-details">
+                        <dl>
+        <dt>Votes:</dt>
+        <dd>
+                                <aui-badge id="vote-data" class="">0</aui-badge>
+            
+                                                <span id="vote-label" title="You have to be logged in to vote for an issue.">Vote for this issue</span>
+                    </dd>
+    </dl>
+                            <dl>
+        <dt>Watchers:</dt>
+        <dd>
+                                
+                                
+                            <aui-badge id="watcher-data" class="">10</aui-badge>
+            
+                                        <span id="watch-label" title="You have to be logged in to watch an issue.">Start watching this issue</span>
+                    </dd>
+    </dl>
+        </div>
+</div></div><div id="datesmodule" class="module toggle-wrap"><div id="datesmodule_heading" class="mod-header"><ul class="ops"></ul><button class="aui-button toggle-title" aria-label="Dates" aria-controls="datesmodule" aria-expanded="true" resolved=""><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"><g fill="none" fill-rule="evenodd"><path d="M3.29175 4.793c-.389.392-.389 1.027 0 1.419l2.939 2.965c.218.215.5.322.779.322s.556-.107.769-.322l2.93-2.955c.388-.392.388-1.027 0-1.419-.389-.392-1.018-.392-1.406 0l-2.298 2.317-2.307-2.327c-.194-.195-.449-.293-.703-.293-.255 0-.51.098-.703.293z" fill="#344563"></path></g></svg></button><h4 class="toggle-title">Dates</h4></div><div class="mod-content">
+<div class="item-details">
+            <dl class="dates">
+            <dt>Created:</dt>
+            <dd class="date user-tz" title="2021-07-26 19:14">
+                <span data-name="Created" id="created-val" data-fieldtype="datetime">
+                                                                                                        <time class="livestamp" datetime="2021-07-26T19:14:21-0700">2021-07-26 19:14</time>                                                                                         </span>
+            </dd>
+        </dl>
+            <dl class="dates">
+            <dt>Updated:</dt>
+            <dd class="date user-tz" title="2022-01-19 02:17">
+                <span data-name="Updated" id="updated-val" data-fieldtype="datetime">
+                                                                                                        <time class="livestamp" datetime="2022-01-19T02:17:07-0800">3 days ago 02:17</time>                                                                                         </span>
+            </dd>
+        </dl>
+            <dl class="dates">
+            <dt>Resolved:</dt>
+            <dd class="date user-tz" title="2021-10-05 00:03">
+                <span data-name="Resolved" id="resolutiondate-val" data-fieldtype="datetime">
+                                                                                                        <time class="livestamp" datetime="2021-10-05T00:03:55-0700">2021-10-05 00:03</time>                                                                                         </span>
+            </dd>
+        </dl>
+    </div>
+</div></div></div></div></div></div></div></div></main></div></div></div><div class="issue-navigator-init"></div>
+    </div>
+    <footer id="footer" role="contentinfo">
+        
+
+<section class="footer-body">
+<ul class="atlassian-footer">
+    <li>
+        Atlassian Jira <a class="seo-link" rel="nofollow" href="https://www.atlassian.com/software/jira">Project Management Software</a>
+                                            <span id="footer-build-information">(v8.13.13#813013-<span title="3ab5fbe7b6c572b1ee4ccec98a9f447334884e00" data-commit-id="3ab5fbe7b6c572b1ee4ccec98a9f447334884e00}">sha1:3ab5fbe</span>)</span>
+    </li>
+    <li>
+        <a id="about-link" rel="nofollow" href="/secure/AboutPage.jspa/secure/AboutPage.jspa">About Jira</a>
+    </li>
+    <li>
+        <a id="footer-report-problem-link" rel="nofollow" href="/secure/CreateIssue!default.jspa">Report a problem</a>
+    </li>
+</ul>
+    <p class="atlassian-footer">
+        <span class="licensemessage">
+            
+        </span>
+    </p>
+
+    <div id="footer-logo"><a rel="nofollow" href="http://www.atlassian.com/">Atlassian</a></div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<fieldset class="hidden parameters">
+    <input type="hidden" title="loggedInUser" value="">
+    <input type="hidden" title="ajaxTimeout" value="The call to the Jira server did not complete within the timeout period.  We are unsure of the result of this operation.">
+    <input type="hidden" title="JiraVersion" value="8.13.13">
+    <input type="hidden" title="ajaxUnauthorised" value="You are not authorised to perform this operation. Please log in.">
+    <input type="hidden" title="baseURL" value="https://bugs.openjdk.java.net">
+    <input type="hidden" title="ajaxCommsError" value="The Jira server could not be contacted. This may be a temporary glitch or the server may be down. ">
+    <input type="hidden" title="ajaxServerError" value="The Jira server was contacted but has returned an error response. We are unsure of the result of this operation.">
+    <input type="hidden" title="ajaxErrorCloseDialog" value="Close this dialog and press refresh in your browser">
+    <input type="hidden" title="ajaxErrorDialogHeading" value="Communications Breakdown">
+
+    <input type="hidden" title="dirtyMessage" value="You have entered new data on this page. If you navigate away from this page without first saving your data, the changes will be lost.">
+    <input type="hidden" title="dirtyDialogMessage" value="You have entered new data in this dialog. If you navigate away from this dialog without first saving your data, the changes will be lost. Click cancel to return to the dialog.">
+    <input type="hidden" title="keyType" value="Type">
+    <input type="hidden" title="keyThen" value="then">
+    <input type="hidden" title="dblClickToExpand" value="Double click to expand">
+    <input type="hidden" title="actions" value="Actions">
+    <input type="hidden" title="removeItem" value="Remove">
+    <input type="hidden" title="workflow" value="Workflow">
+    <input type="hidden" title="labelNew" value="New Label">
+    <input type="hidden" title="issueActionsHint" value="Begin typing for available operations or press down to see all">
+    <input type="hidden" title="closelink" value="Close">
+    <input type="hidden" title="dotOperations" value="Operations">
+    <input type="hidden" title="dotLoading" value="Loading...">
+    <input type="hidden" title="frotherSuggestions" value="Suggestions">
+    <input type="hidden" title="frotherNomatches" value="No Matches">
+    <input type="hidden" title="multiselectVersionsError" value="{0} is not a valid version.">
+    <input type="hidden" title="multiselectComponentsError" value="{0} is not a valid component.">
+    <input type="hidden" title="multiselectGenericError" value="The value {0} is invalid.">
+</fieldset>
+
+    </footer>
+</div>
+
+
+<script type="text/javascript" src="/s/d41d8cd98f00b204e9800998ecf8427e-CDN/-urb32v/813013/1rzz2as/1.0/_/download/batch/jira.webresources:bigpipe-js/jira.webresources:bigpipe-js.js" data-wrm-key="jira.webresources:bigpipe-js" data-wrm-batch-type="resource" data-initially-rendered=""></script>
+<script>
+window.WRM=window.WRM||{};window.WRM._unparsedData=window.WRM._unparsedData||{};window.WRM._unparsedErrors=window.WRM._unparsedErrors||{};
+WRM._unparsedData["activity-panel-pipe-id"]="\"\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n    \u003cdiv class=\\\"tabwrap aui-tabs horizontal-tabs aui-tabs-disabled\\\"\u003e\\n\\n        \u003cul id=\\\"issue-tabs\\\" class=\\\"tabs-menu\\\"\u003e\\n                                \\n            \u003cli class=\\\"menu-item \\\"\\n                id=\\\"all-tabpanel\\\"\\n                data-id=\\\"all-tabpanel\\\"\\n                data-key=\\\"com.atlassian.jira.plugin.system.issuetabpanels:all-tabpanel\\\"\\n                data-label=\\\"All\\\"\\n                data-href=\\\"\\/browse\\/JDK-8271459?page=com.atlassian.jira.plugin.system.issuetabpanels:all-tabpanel\\\"\\n            \u003e\\n                                    \u003ca id=\\\"all-tabpanel\\\" href=\\\"\\/browse\\/JDK-8271459?page=com.atlassian.jira.plugin.system.issuetabpanels:all-tabpanel\\\" class=\\\"ajax-activity-content\\\"\u003eAll\u003c\\/a\u003e\\n                            \u003c\\/li\u003e\\n                                \\n            \u003cli class=\\\"menu-item  active-tab active \\\"\\n                id=\\\"comment-tabpanel\\\"\\n                data-id=\\\"comment-tabpanel\\\"\\n                data-key=\\\"com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel\\\"\\n                data-label=\\\"Comments\\\"\\n                data-href=\\\"\\/browse\\/JDK-8271459?page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel\\\"\\n            \u003e\\n                                    \u003ca tabindex=\\\"0\\\"\u003eComments\u003c\\/a\u003e\\n                            \u003c\\/li\u003e\\n                                \\n            \u003cli class=\\\"menu-item \\\"\\n                id=\\\"worklog-tabpanel\\\"\\n                data-id=\\\"worklog-tabpanel\\\"\\n                data-key=\\\"com.atlassian.jira.plugin.system.issuetabpanels:worklog-tabpanel\\\"\\n                data-label=\\\"Work Log\\\"\\n                data-href=\\\"\\/browse\\/JDK-8271459?page=com.atlassian.jira.plugin.system.issuetabpanels:worklog-tabpanel\\\"\\n            \u003e\\n                                    \u003ca id=\\\"worklog-tabpanel\\\" href=\\\"\\/browse\\/JDK-8271459?page=com.atlassian.jira.plugin.system.issuetabpanels:worklog-tabpanel\\\" class=\\\"ajax-activity-content\\\"\u003eWork Log\u003c\\/a\u003e\\n                            \u003c\\/li\u003e\\n                                \\n            \u003cli class=\\\"menu-item \\\"\\n                id=\\\"changehistory-tabpanel\\\"\\n                data-id=\\\"changehistory-tabpanel\\\"\\n                data-key=\\\"com.atlassian.jira.plugin.system.issuetabpanels:changehistory-tabpanel\\\"\\n                data-label=\\\"History\\\"\\n                data-href=\\\"\\/browse\\/JDK-8271459?page=com.atlassian.jira.plugin.system.issuetabpanels:changehistory-tabpanel\\\"\\n            \u003e\\n                                    \u003ca id=\\\"changehistory-tabpanel\\\" href=\\\"\\/browse\\/JDK-8271459?page=com.atlassian.jira.plugin.system.issuetabpanels:changehistory-tabpanel\\\" class=\\\"ajax-activity-content\\\"\u003eHistory\u003c\\/a\u003e\\n                            \u003c\\/li\u003e\\n                                \\n            \u003cli class=\\\"menu-item \\\"\\n                id=\\\"activity-stream-issue-tab\\\"\\n                data-id=\\\"activity-stream-issue-tab\\\"\\n                data-key=\\\"com.atlassian.streams.streams-jira-plugin:activity-stream-issue-tab\\\"\\n                data-label=\\\"Activity\\\"\\n                data-href=\\\"\\/browse\\/JDK-8271459?page=com.atlassian.streams.streams-jira-plugin:activity-stream-issue-tab\\\"\\n            \u003e\\n                                    \u003ca id=\\\"activity-stream-issue-tab\\\" href=\\\"\\/browse\\/JDK-8271459?page=com.atlassian.streams.streams-jira-plugin:activity-stream-issue-tab\\\" class=\\\"ajax-activity-content\\\"\u003eActivity\u003c\\/a\u003e\\n                            \u003c\\/li\u003e\\n                \u003c\\/ul\u003e\\n\\n                    \u003cdiv class=\\\"sortwrap\\\"\u003e\\n                                    \u003ca class=\\\"issue-activity-sort-link ajax-activity-content\\\" rel=\\\"nofollow\\\" data-tab-sort data-order=\\\"desc\\\" href=\\\"\\/browse\\/JDK-8271459?actionOrder=desc\\\" title=\\\"Ascending order - Click to sort in descending order\\\"\u003e\\n                        \u003cspan class=\\\"aui-icon aui-icon-small aui-iconfont-up\\\"\u003eAscending order - Click to sort in descending order\u003c\\/span\u003e\\n                    \u003c\\/a\u003e\\n                            \u003c\\/div\u003e\\n                        \u003cdiv class=\\\"tabs-pane active-pane\\\"\u003e\u003c\\/div\u003e\\n    \u003c\\/div\u003e\\n    \u003cdiv class=\\\"issuePanelWrapper\\\"\u003e\\n        \u003cdiv class=\\\"issuePanelProgress\\\"\u003e\u003c\\/div\u003e\\n        \u003cdiv class=\\\"issuePanelContainer\\\" id=\\\"issue_actions_container\\\"\u003e\\n                                                \\n\\n\\n\u003cdiv id=\\\"comment-14438203\\\" class=\\\"issue-data-block activity-comment twixi-block  expanded\\\"\u003e\\n    \u003cdiv class=\\\"twixi-wrap verbose actionContainer\\\"\u003e\\n        \u003cdiv class=\\\"action-head\\\"\u003e\\n            \u003ca href=\\\"#\\\" title=\\\"Collapse comment\\\" class=\\\"twixi\\\"\u003e\u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-expanded\\\"\u003e\u003cspan\u003eHide\u003c\\/span\u003e\u003c\\/span\u003e\u003c\\/a\u003e\\n            \u003cdiv class=\\\"action-links\\\"\u003e\\n                \u003ca href=\\\"\\/browse\\/JDK-8271459?focusedCommentId=14438203&page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-14438203\\\"\\n                   title=\\\"Right click and copy link for a permanent link to this comment.\\\" class=\\\"activitymodule-link issue-comment-action\\\"\u003e\\n                    \u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-link\\\"\u003ePermalink\u003c\\/span\u003e\u003c\\/a\u003e\\n                                            \u003c\\/div\u003e\\n            \u003cdiv class=\\\"action-details\\\"\u003e        \\n    \\n    \\n    \\n                \\n\\n    \u003ca class=\\\"user-hover user-avatar\\\" rel=\\\"sswsharm\\\" id=\\\"commentauthor_14438203_verbose\\\" href=\\\"\\/secure\\/ViewProfile.jspa?name=sswsharm\\\"\u003e\u003cspan class=\\\"aui-avatar aui-avatar-xsmall\\\"\u003e\u003cspan class=\\\"aui-avatar-inner\\\"\u003e\u003cimg src=\\\"https:\\/\\/bugs.openjdk.java.net\\/secure\\/useravatar?size=xsmall&amp;avatarId=16628\\\" alt=\\\"sswsharm\\\" \\/\u003e\u003c\\/span\u003e\u003c\\/span\u003e swati sharma\u003c\\/a\u003e\\n added a comment  - \u003cspan class=\'commentdate_14438203_verbose subText\'\u003e\u003cspan class=\'date user-tz\' title=\'2021-07-29 00:07\'\u003e\u003ctime class=\'livestamp\' datetime=\'2021-07-29T00:07:19-0700\'\u003e2021-07-29 00:07\u003c\\/time\u003e\u003c\\/span\u003e\u003c\\/span\u003e  \u003c\\/div\u003e\\n        \u003c\\/div\u003e\\n        \u003cdiv class=\\\"action-body flooded\\\"\u003eIssue is reproduced. This test case executes properly till JDK7 and produces output &quot;10000&quot; but fails from JDK 8 onwards\\r\u003cbr\\/\u003e\\n\\r\u003cbr\\/\u003e\\nOS: Windows 10\\r\u003cbr\\/\u003e\\nJDK 7u321: Pass\\r\u003cbr\\/\u003e\\nOutput: 10000\\r\u003cbr\\/\u003e\\n\\r\u003cbr\\/\u003e\\nJDK 8: Fail\\r\u003cbr\\/\u003e\\nOutput: 5566\\r\u003cbr\\/\u003e\\n\\r\u003cbr\\/\u003e\\nJDK 8u301:fail\\r\u003cbr\\/\u003e\\nOutput:5829\\r\u003cbr\\/\u003e\\n\\r\u003cbr\\/\u003e\\nJDK 17ea32:Fail\\r\u003cbr\\/\u003e\\nOutput:5653\\r\u003cbr\\/\u003e\\n\\r\u003cbr\\/\u003e\\nHowever, customer workaround produces proper output for all JDKs\\r\u003cbr\\/\u003e\\n# Compilation up to level 1\\r\u003cbr\\/\u003e\\n$ java -XX:TieredStopAtLevel=1 test\\r\u003cbr\\/\u003e\\n# Output (correct)\\r\u003cbr\\/\u003e\\n10000\\r\u003cbr\\/\u003e\\n\\r\u003cbr\\/\u003e\\n# Interpreter or compilation up to level 0\\r\u003cbr\\/\u003e\\n$ java -Xint test\\r\u003cbr\\/\u003e\\n# Output (correct)\\r\u003cbr\\/\u003e\\n10000\\r\u003cbr\\/\u003e\\n\\r\u003cbr\\/\u003e\\nMoving it to Dev team for further analysis. \u003c\\/div\u003e\\n    \u003c\\/div\u003e\\n    \u003cdiv class=\\\"twixi-wrap concise actionContainer\\\"\u003e\\n        \u003cdiv class=\\\"action-head\\\"\u003e\\n            \u003ca href=\\\"#\\\" title=\\\"Expand comment\\\" class=\\\"twixi\\\"\u003e\u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-collapsed\\\"\u003e\u003cspan\u003eShow\u003c\\/span\u003e\u003c\\/span\u003e\u003c\\/a\u003e\\n            \u003cdiv class=\\\"action-details flooded\\\"\u003e\\n                        \\n    \\n    \\n    \\n                \\n\\n    \u003ca class=\\\"user-hover user-avatar\\\" rel=\\\"sswsharm\\\" id=\\\"commentauthor_14438203_concise\\\" href=\\\"\\/secure\\/ViewProfile.jspa?name=sswsharm\\\"\u003e\u003cspan class=\\\"aui-avatar aui-avatar-xsmall\\\"\u003e\u003cspan class=\\\"aui-avatar-inner\\\"\u003e\u003cimg src=\\\"https:\\/\\/bugs.openjdk.java.net\\/secure\\/useravatar?size=xsmall&amp;avatarId=16628\\\" alt=\\\"sswsharm\\\" \\/\u003e\u003c\\/span\u003e\u003c\\/span\u003e swati sharma\u003c\\/a\u003e\\n added a comment  - \u003cspan class=\'commentdate_14438203_concise subText\'\u003e\u003cspan class=\'date user-tz\' title=\'2021-07-29 00:07\'\u003e\u003ctime class=\'livestamp\' datetime=\'2021-07-29T00:07:19-0700\'\u003e2021-07-29 00:07\u003c\\/time\u003e\u003c\\/span\u003e\u003c\\/span\u003e                   Issue is reproduced. This test case executes properly till JDK7 and produces output &quot;10000&quot; but fails from JDK 8 onwards\\r \\n\\r \\nOS: Windows 10\\r \\nJDK 7u321: Pass\\r \\nOutput: 10000\\r \\n\\r \\nJDK 8: Fail\\r \\nOutput: 5566\\r \\n\\r \\nJDK 8u301:fail\\r \\nOutput:5829\\r \\n\\r \\nJDK 17ea32:Fail\\r \\nOutput:5653\\r \\n\\r \\nHowever, customer workaround produces proper output for all JDKs\\r \\n# Compilation up to level 1\\r \\n$ java -XX:TieredStopAtLevel=1 test\\r \\n# Output (correct)\\r \\n10000\\r \\n\\r \\n# Interpreter or compilation up to level 0\\r \\n$ java -Xint test\\r \\n# Output (correct)\\r \\n10000\\r \\n\\r \\nMoving it to Dev team for further analysis.             \u003c\\/div\u003e\\n        \u003c\\/div\u003e\\n    \u003c\\/div\u003e\\n\u003c\\/div\u003e\\n                                     \\n\\n\\n\u003cdiv id=\\\"comment-14438231\\\" class=\\\"issue-data-block activity-comment twixi-block  expanded\\\"\u003e\\n    \u003cdiv class=\\\"twixi-wrap verbose actionContainer\\\"\u003e\\n        \u003cdiv class=\\\"action-head\\\"\u003e\\n            \u003ca href=\\\"#\\\" title=\\\"Collapse comment\\\" class=\\\"twixi\\\"\u003e\u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-expanded\\\"\u003e\u003cspan\u003eHide\u003c\\/span\u003e\u003c\\/span\u003e\u003c\\/a\u003e\\n            \u003cdiv class=\\\"action-links\\\"\u003e\\n                \u003ca href=\\\"\\/browse\\/JDK-8271459?focusedCommentId=14438231&page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-14438231\\\"\\n                   title=\\\"Right click and copy link for a permanent link to this comment.\\\" class=\\\"activitymodule-link issue-comment-action\\\"\u003e\\n                    \u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-link\\\"\u003ePermalink\u003c\\/span\u003e\u003c\\/a\u003e\\n                                            \u003c\\/div\u003e\\n            \u003cdiv class=\\\"action-details\\\"\u003e        \\n    \\n    \\n    \\n                \\n\\n    \u003ca class=\\\"user-hover user-avatar\\\" rel=\\\"chagedorn\\\" id=\\\"commentauthor_14438231_verbose\\\" href=\\\"\\/secure\\/ViewProfile.jspa?name=chagedorn\\\"\u003e\u003cspan class=\\\"aui-avatar aui-avatar-xsmall\\\"\u003e\u003cspan class=\\\"aui-avatar-inner\\\"\u003e\u003cimg src=\\\"https:\\/\\/bugs.openjdk.java.net\\/secure\\/useravatar?size=xsmall&amp;avatarId=10122\\\" alt=\\\"chagedorn\\\" \\/\u003e\u003c\\/span\u003e\u003c\\/span\u003e Christian Hagedorn\u003c\\/a\u003e\\n added a comment  - \u003cspan class=\'commentdate_14438231_verbose subText\'\u003e\u003cspan class=\'date user-tz\' title=\'2021-07-29 03:17\'\u003e\u003ctime class=\'livestamp\' datetime=\'2021-07-29T03:17:45-0700\'\u003e2021-07-29 03:17\u003c\\/time\u003e\u003c\\/span\u003e\u003c\\/span\u003e  \u003c\\/div\u003e\\n        \u003c\\/div\u003e\\n        \u003cdiv class=\\\"action-body flooded\\\"\u003eILW = Incorrect execution of compiled C2 code, reproducible with simple test, use -XX:-OptimizeStringConcat = HMM = P2 \u003c\\/div\u003e\\n    \u003c\\/div\u003e\\n    \u003cdiv class=\\\"twixi-wrap concise actionContainer\\\"\u003e\\n        \u003cdiv class=\\\"action-head\\\"\u003e\\n            \u003ca href=\\\"#\\\" title=\\\"Expand comment\\\" class=\\\"twixi\\\"\u003e\u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-collapsed\\\"\u003e\u003cspan\u003eShow\u003c\\/span\u003e\u003c\\/span\u003e\u003c\\/a\u003e\\n            \u003cdiv class=\\\"action-details flooded\\\"\u003e\\n                        \\n    \\n    \\n    \\n                \\n\\n    \u003ca class=\\\"user-hover user-avatar\\\" rel=\\\"chagedorn\\\" id=\\\"commentauthor_14438231_concise\\\" href=\\\"\\/secure\\/ViewProfile.jspa?name=chagedorn\\\"\u003e\u003cspan class=\\\"aui-avatar aui-avatar-xsmall\\\"\u003e\u003cspan class=\\\"aui-avatar-inner\\\"\u003e\u003cimg src=\\\"https:\\/\\/bugs.openjdk.java.net\\/secure\\/useravatar?size=xsmall&amp;avatarId=10122\\\" alt=\\\"chagedorn\\\" \\/\u003e\u003c\\/span\u003e\u003c\\/span\u003e Christian Hagedorn\u003c\\/a\u003e\\n added a comment  - \u003cspan class=\'commentdate_14438231_concise subText\'\u003e\u003cspan class=\'date user-tz\' title=\'2021-07-29 03:17\'\u003e\u003ctime class=\'livestamp\' datetime=\'2021-07-29T03:17:45-0700\'\u003e2021-07-29 03:17\u003c\\/time\u003e\u003c\\/span\u003e\u003c\\/span\u003e                   ILW = Incorrect execution of compiled C2 code, reproducible with simple test, use -XX:-OptimizeStringConcat = HMM = P2             \u003c\\/div\u003e\\n        \u003c\\/div\u003e\\n    \u003c\\/div\u003e\\n\u003c\\/div\u003e\\n                                     \\n\\n\\n\u003cdiv id=\\\"comment-14451034\\\" class=\\\"issue-data-block activity-comment twixi-block  expanded\\\"\u003e\\n    \u003cdiv class=\\\"twixi-wrap verbose actionContainer\\\"\u003e\\n        \u003cdiv class=\\\"action-head\\\"\u003e\\n            \u003ca href=\\\"#\\\" title=\\\"Collapse comment\\\" class=\\\"twixi\\\"\u003e\u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-expanded\\\"\u003e\u003cspan\u003eHide\u003c\\/span\u003e\u003c\\/span\u003e\u003c\\/a\u003e\\n            \u003cdiv class=\\\"action-links\\\"\u003e\\n                \u003ca href=\\\"\\/browse\\/JDK-8271459?focusedCommentId=14451034&page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-14451034\\\"\\n                   title=\\\"Right click and copy link for a permanent link to this comment.\\\" class=\\\"activitymodule-link issue-comment-action\\\"\u003e\\n                    \u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-link\\\"\u003ePermalink\u003c\\/span\u003e\u003c\\/a\u003e\\n                                            \u003c\\/div\u003e\\n            \u003cdiv class=\\\"action-details\\\"\u003e        \\n    \\n    \\n    \\n                \\n\\n    \u003ca class=\\\"user-hover user-avatar\\\" rel=\\\"roboduke\\\" id=\\\"commentauthor_14451034_verbose\\\" href=\\\"\\/secure\\/ViewProfile.jspa?name=roboduke\\\"\u003e\u003cspan class=\\\"aui-avatar aui-avatar-xsmall\\\"\u003e\u003cspan class=\\\"aui-avatar-inner\\\"\u003e\u003cimg src=\\\"https:\\/\\/bugs.openjdk.java.net\\/secure\\/useravatar?size=xsmall&amp;avatarId=10122\\\" alt=\\\"roboduke\\\" \\/\u003e\u003c\\/span\u003e\u003c\\/span\u003e Robo Duke\u003c\\/a\u003e\\n added a comment  - \u003cspan class=\'commentdate_14451034_verbose subText\'\u003e\u003cspan class=\'date user-tz\' title=\'2021-10-05 00:03\'\u003e\u003ctime class=\'livestamp\' datetime=\'2021-10-05T00:03:54-0700\'\u003e2021-10-05 00:03\u003c\\/time\u003e\u003c\\/span\u003e\u003c\\/span\u003e  \u003c\\/div\u003e\\n        \u003c\\/div\u003e\\n        \u003cdiv class=\\\"action-body flooded\\\"\u003eChangeset: 3953e077\u003cbr\\/\u003e\\nAuthor:    Christian Hagedorn &lt;\u003ca href=\'mailto:chagedorn@openjdk.org\'\u003echagedorn@openjdk.org\u003c\\/a\u003e&gt;\u003cbr\\/\u003e\\nDate:      2021-10-05 07:02:06 +0000\u003cbr\\/\u003e\\nURL:       \u003ca href=\\\"https:\\/\\/git.openjdk.java.net\\/jdk\\/commit\\/3953e0774c59c5e936e752aa08b6b6778e232994\\\"\u003ehttps:\\/\\/git.openjdk.java.net\\/jdk\\/commit\\/3953e0774c59c5e936e752aa08b6b6778e232994\u003c\\/a\u003e\u003cbr\\/\u003e\\n \u003c\\/div\u003e\\n    \u003c\\/div\u003e\\n    \u003cdiv class=\\\"twixi-wrap concise actionContainer\\\"\u003e\\n        \u003cdiv class=\\\"action-head\\\"\u003e\\n            \u003ca href=\\\"#\\\" title=\\\"Expand comment\\\" class=\\\"twixi\\\"\u003e\u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-collapsed\\\"\u003e\u003cspan\u003eShow\u003c\\/span\u003e\u003c\\/span\u003e\u003c\\/a\u003e\\n            \u003cdiv class=\\\"action-details flooded\\\"\u003e\\n                        \\n    \\n    \\n    \\n                \\n\\n    \u003ca class=\\\"user-hover user-avatar\\\" rel=\\\"roboduke\\\" id=\\\"commentauthor_14451034_concise\\\" href=\\\"\\/secure\\/ViewProfile.jspa?name=roboduke\\\"\u003e\u003cspan class=\\\"aui-avatar aui-avatar-xsmall\\\"\u003e\u003cspan class=\\\"aui-avatar-inner\\\"\u003e\u003cimg src=\\\"https:\\/\\/bugs.openjdk.java.net\\/secure\\/useravatar?size=xsmall&amp;avatarId=10122\\\" alt=\\\"roboduke\\\" \\/\u003e\u003c\\/span\u003e\u003c\\/span\u003e Robo Duke\u003c\\/a\u003e\\n added a comment  - \u003cspan class=\'commentdate_14451034_concise subText\'\u003e\u003cspan class=\'date user-tz\' title=\'2021-10-05 00:03\'\u003e\u003ctime class=\'livestamp\' datetime=\'2021-10-05T00:03:54-0700\'\u003e2021-10-05 00:03\u003c\\/time\u003e\u003c\\/span\u003e\u003c\\/span\u003e                   Changeset: 3953e077 \\nAuthor:    Christian Hagedorn &lt; chagedorn@openjdk.org &gt; \\nDate:      2021-10-05 07:02:06 +0000 \\nURL:        https:\\/\\/git.openjdk.java.net\\/jdk\\/commit\\/3953e0774c59c5e936e752aa08b6b6778e232994  \\n             \u003c\\/div\u003e\\n        \u003c\\/div\u003e\\n    \u003c\\/div\u003e\\n\u003c\\/div\u003e\\n                                     \\n\\n\\n\u003cdiv id=\\\"comment-14452059\\\" class=\\\"issue-data-block activity-comment twixi-block  expanded\\\"\u003e\\n    \u003cdiv class=\\\"twixi-wrap verbose actionContainer\\\"\u003e\\n        \u003cdiv class=\\\"action-head\\\"\u003e\\n            \u003ca href=\\\"#\\\" title=\\\"Collapse comment\\\" class=\\\"twixi\\\"\u003e\u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-expanded\\\"\u003e\u003cspan\u003eHide\u003c\\/span\u003e\u003c\\/span\u003e\u003c\\/a\u003e\\n            \u003cdiv class=\\\"action-links\\\"\u003e\\n                \u003ca href=\\\"\\/browse\\/JDK-8271459?focusedCommentId=14452059&page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-14452059\\\"\\n                   title=\\\"Right click and copy link for a permanent link to this comment.\\\" class=\\\"activitymodule-link issue-comment-action\\\"\u003e\\n                    \u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-link\\\"\u003ePermalink\u003c\\/span\u003e\u003c\\/a\u003e\\n                                            \u003c\\/div\u003e\\n            \u003cdiv class=\\\"action-details\\\"\u003e        \\n    \\n    \\n                                            \\n    \\n                \\n\\n    \u003ca class=\\\"user-hover user-avatar\\\" rel=\\\"thartmann\\\" id=\\\"commentauthor_14452059_verbose\\\" href=\\\"\\/secure\\/ViewProfile.jspa?name=thartmann\\\"\u003e\u003cspan class=\\\"aui-avatar aui-avatar-xsmall\\\"\u003e\u003cspan class=\\\"aui-avatar-inner\\\"\u003e\u003cimg src=\\\"https:\\/\\/bugs.openjdk.java.net\\/secure\\/useravatar?size=xsmall&amp;avatarId=10122\\\" alt=\\\"thartmann\\\" \\/\u003e\u003c\\/span\u003e\u003c\\/span\u003e Tobias Hartmann\u003c\\/a\u003e\\n added a comment  - \u003cspan class=\'commentdate_14452059_verbose subText\'\u003e\u003cspan class=\'date user-tz\' title=\'2021-10-11 05:18\'\u003e\u003ctime class=\'livestamp\' datetime=\'2021-10-11T05:18:38-0700\'\u003e2021-10-11 05:18\u003c\\/time\u003e\u003c\\/span\u003e\u003c\\/span\u003e   - \u003cspan class=\\\"redText subText\\\" title=\\\"Tobias Hartmann - 2021-10-11 05:21\\\"\u003eedited\u003c\\/span\u003e \u003c\\/div\u003e\\n        \u003c\\/div\u003e\\n        \u003cdiv class=\\\"action-body flooded\\\"\u003eFix request (17u):\\r\u003cbr\\/\u003e\\nThe patch fixes a bug in C2 that leads to incorrect execution of compiled code. The fix is low risk (bailout from optimization) and has been tested in the JDK 18 for a while and with tier1-3 in JDK 17u. The patch did not apply cleanly due to changes in IRNode.java (test code). \u003c\\/div\u003e\\n    \u003c\\/div\u003e\\n    \u003cdiv class=\\\"twixi-wrap concise actionContainer\\\"\u003e\\n        \u003cdiv class=\\\"action-head\\\"\u003e\\n            \u003ca href=\\\"#\\\" title=\\\"Expand comment\\\" class=\\\"twixi\\\"\u003e\u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-collapsed\\\"\u003e\u003cspan\u003eShow\u003c\\/span\u003e\u003c\\/span\u003e\u003c\\/a\u003e\\n            \u003cdiv class=\\\"action-details flooded\\\"\u003e\\n                        \\n    \\n    \\n                                            \\n    \\n                \\n\\n    \u003ca class=\\\"user-hover user-avatar\\\" rel=\\\"thartmann\\\" id=\\\"commentauthor_14452059_concise\\\" href=\\\"\\/secure\\/ViewProfile.jspa?name=thartmann\\\"\u003e\u003cspan class=\\\"aui-avatar aui-avatar-xsmall\\\"\u003e\u003cspan class=\\\"aui-avatar-inner\\\"\u003e\u003cimg src=\\\"https:\\/\\/bugs.openjdk.java.net\\/secure\\/useravatar?size=xsmall&amp;avatarId=10122\\\" alt=\\\"thartmann\\\" \\/\u003e\u003c\\/span\u003e\u003c\\/span\u003e Tobias Hartmann\u003c\\/a\u003e\\n added a comment  - \u003cspan class=\'commentdate_14452059_concise subText\'\u003e\u003cspan class=\'date user-tz\' title=\'2021-10-11 05:18\'\u003e\u003ctime class=\'livestamp\' datetime=\'2021-10-11T05:18:38-0700\'\u003e2021-10-11 05:18\u003c\\/time\u003e\u003c\\/span\u003e\u003c\\/span\u003e   - \u003cspan class=\\\"redText subText\\\" title=\\\"Tobias Hartmann - 2021-10-11 05:21\\\"\u003eedited\u003c\\/span\u003e                  Fix request (17u):\\r \\nThe patch fixes a bug in C2 that leads to incorrect execution of compiled code. The fix is low risk (bailout from optimization) and has been tested in the JDK 18 for a while and with tier1-3 in JDK 17u. The patch did not apply cleanly due to changes in IRNode.java (test code).             \u003c\\/div\u003e\\n        \u003c\\/div\u003e\\n    \u003c\\/div\u003e\\n\u003c\\/div\u003e\\n                                     \\n\\n\\n\u003cdiv id=\\\"comment-14452114\\\" class=\\\"issue-data-block activity-comment twixi-block  expanded\\\"\u003e\\n    \u003cdiv class=\\\"twixi-wrap verbose actionContainer\\\"\u003e\\n        \u003cdiv class=\\\"action-head\\\"\u003e\\n            \u003ca href=\\\"#\\\" title=\\\"Collapse comment\\\" class=\\\"twixi\\\"\u003e\u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-expanded\\\"\u003e\u003cspan\u003eHide\u003c\\/span\u003e\u003c\\/span\u003e\u003c\\/a\u003e\\n            \u003cdiv class=\\\"action-links\\\"\u003e\\n                \u003ca href=\\\"\\/browse\\/JDK-8271459?focusedCommentId=14452114&page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-14452114\\\"\\n                   title=\\\"Right click and copy link for a permanent link to this comment.\\\" class=\\\"activitymodule-link issue-comment-action\\\"\u003e\\n                    \u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-link\\\"\u003ePermalink\u003c\\/span\u003e\u003c\\/a\u003e\\n                                            \u003c\\/div\u003e\\n            \u003cdiv class=\\\"action-details\\\"\u003e        \\n    \\n    \\n    \\n                \\n\\n    \u003ca class=\\\"user-hover user-avatar\\\" rel=\\\"mdoerr\\\" id=\\\"commentauthor_14452114_verbose\\\" href=\\\"\\/secure\\/ViewProfile.jspa?name=mdoerr\\\"\u003e\u003cspan class=\\\"aui-avatar aui-avatar-xsmall\\\"\u003e\u003cspan class=\\\"aui-avatar-inner\\\"\u003e\u003cimg src=\\\"https:\\/\\/bugs.openjdk.java.net\\/secure\\/useravatar?size=xsmall&amp;avatarId=10122\\\" alt=\\\"mdoerr\\\" \\/\u003e\u003c\\/span\u003e\u003c\\/span\u003e Martin Doerr\u003c\\/a\u003e\\n added a comment  - \u003cspan class=\'commentdate_14452114_verbose subText\'\u003e\u003cspan class=\'date user-tz\' title=\'2021-10-11 10:46\'\u003e\u003ctime class=\'livestamp\' datetime=\'2021-10-11T10:46:05-0700\'\u003e2021-10-11 10:46\u003c\\/time\u003e\u003c\\/span\u003e\u003c\\/span\u003e  \u003c\\/div\u003e\\n        \u003c\\/div\u003e\\n        \u003cdiv class=\\\"action-body flooded\\\"\u003eFix Request (11u):\\r\u003cbr\\/\u003e\\nShould get backported for parity with 11.0.14-oracle. Risk: see 17u backport comment above. Doesn&#39;t apply cleanly. Review: \u003ca href=\\\"https:\\/\\/github.com\\/openjdk\\/jdk11u-dev\\/pull\\/510\\\"\u003ehttps:\\/\\/github.com\\/openjdk\\/jdk11u-dev\\/pull\\/510\u003c\\/a\u003e \u003c\\/div\u003e\\n    \u003c\\/div\u003e\\n    \u003cdiv class=\\\"twixi-wrap concise actionContainer\\\"\u003e\\n        \u003cdiv class=\\\"action-head\\\"\u003e\\n            \u003ca href=\\\"#\\\" title=\\\"Expand comment\\\" class=\\\"twixi\\\"\u003e\u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-collapsed\\\"\u003e\u003cspan\u003eShow\u003c\\/span\u003e\u003c\\/span\u003e\u003c\\/a\u003e\\n            \u003cdiv class=\\\"action-details flooded\\\"\u003e\\n                        \\n    \\n    \\n    \\n                \\n\\n    \u003ca class=\\\"user-hover user-avatar\\\" rel=\\\"mdoerr\\\" id=\\\"commentauthor_14452114_concise\\\" href=\\\"\\/secure\\/ViewProfile.jspa?name=mdoerr\\\"\u003e\u003cspan class=\\\"aui-avatar aui-avatar-xsmall\\\"\u003e\u003cspan class=\\\"aui-avatar-inner\\\"\u003e\u003cimg src=\\\"https:\\/\\/bugs.openjdk.java.net\\/secure\\/useravatar?size=xsmall&amp;avatarId=10122\\\" alt=\\\"mdoerr\\\" \\/\u003e\u003c\\/span\u003e\u003c\\/span\u003e Martin Doerr\u003c\\/a\u003e\\n added a comment  - \u003cspan class=\'commentdate_14452114_concise subText\'\u003e\u003cspan class=\'date user-tz\' title=\'2021-10-11 10:46\'\u003e\u003ctime class=\'livestamp\' datetime=\'2021-10-11T10:46:05-0700\'\u003e2021-10-11 10:46\u003c\\/time\u003e\u003c\\/span\u003e\u003c\\/span\u003e                   Fix Request (11u):\\r \\nShould get backported for parity with 11.0.14-oracle. Risk: see 17u backport comment above. Doesn&#39;t apply cleanly. Review:  https:\\/\\/github.com\\/openjdk\\/jdk11u-dev\\/pull\\/510              \u003c\\/div\u003e\\n        \u003c\\/div\u003e\\n    \u003c\\/div\u003e\\n\u003c\\/div\u003e\\n                                     \\n\\n\\n\u003cdiv id=\\\"comment-14470163\\\" class=\\\"issue-data-block activity-comment twixi-block  expanded\\\"\u003e\\n    \u003cdiv class=\\\"twixi-wrap verbose actionContainer\\\"\u003e\\n        \u003cdiv class=\\\"action-head\\\"\u003e\\n            \u003ca href=\\\"#\\\" title=\\\"Collapse comment\\\" class=\\\"twixi\\\"\u003e\u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-expanded\\\"\u003e\u003cspan\u003eHide\u003c\\/span\u003e\u003c\\/span\u003e\u003c\\/a\u003e\\n            \u003cdiv class=\\\"action-links\\\"\u003e\\n                \u003ca href=\\\"\\/browse\\/JDK-8271459?focusedCommentId=14470163&page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-14470163\\\"\\n                   title=\\\"Right click and copy link for a permanent link to this comment.\\\" class=\\\"activitymodule-link issue-comment-action\\\"\u003e\\n                    \u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-link\\\"\u003ePermalink\u003c\\/span\u003e\u003c\\/a\u003e\\n                                            \u003c\\/div\u003e\\n            \u003cdiv class=\\\"action-details\\\"\u003e        \\n    \\n    \\n    \\n                \\n\\n    \u003ca class=\\\"user-hover user-avatar\\\" rel=\\\"pnarayanaswa\\\" id=\\\"commentauthor_14470163_verbose\\\" href=\\\"\\/secure\\/ViewProfile.jspa?name=pnarayanaswa\\\"\u003e\u003cspan class=\\\"aui-avatar aui-avatar-xsmall\\\"\u003e\u003cspan class=\\\"aui-avatar-inner\\\"\u003e\u003cimg src=\\\"https:\\/\\/bugs.openjdk.java.net\\/secure\\/useravatar?size=xsmall&amp;avatarId=10122\\\" alt=\\\"pnarayanaswa\\\" \\/\u003e\u003c\\/span\u003e\u003c\\/span\u003e Praveen Narayanaswamy\u003c\\/a\u003e\\n added a comment  - \u003cspan class=\'commentdate_14470163_verbose subText\'\u003e\u003cspan class=\'date user-tz\' title=\'2022-01-18 22:11\'\u003e\u003ctime class=\'livestamp\' datetime=\'2022-01-18T22:11:00-0800\'\u003e2022-01-18 22:11\u003c\\/time\u003e\u003c\\/span\u003e\u003c\\/span\u003e  \u003c\\/div\u003e\\n        \u003c\\/div\u003e\\n        \u003cdiv class=\\\"action-body flooded\\\"\u003eAdditional Information from submitter:\\r\u003cbr\\/\u003e\\n============================\\r\u003cbr\\/\u003e\\nThanks for the fix. I believe the fix should be backported to jdk8u as well, because I am still able to reproduce this bug in 8u321 released today (Jan 18, 2022).\\r\u003cbr\\/\u003e\\njava version &quot;1.8.0_321&quot;\\r\u003cbr\\/\u003e\\nJava(TM) SE Runtime Environment (build 1.8.0_321-b07)\\r\u003cbr\\/\u003e\\nJava HotSpot(TM) 64-Bit Server VM (build 25.321-b07, mixed mode) \u003c\\/div\u003e\\n    \u003c\\/div\u003e\\n    \u003cdiv class=\\\"twixi-wrap concise actionContainer\\\"\u003e\\n        \u003cdiv class=\\\"action-head\\\"\u003e\\n            \u003ca href=\\\"#\\\" title=\\\"Expand comment\\\" class=\\\"twixi\\\"\u003e\u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-collapsed\\\"\u003e\u003cspan\u003eShow\u003c\\/span\u003e\u003c\\/span\u003e\u003c\\/a\u003e\\n            \u003cdiv class=\\\"action-details flooded\\\"\u003e\\n                        \\n    \\n    \\n    \\n                \\n\\n    \u003ca class=\\\"user-hover user-avatar\\\" rel=\\\"pnarayanaswa\\\" id=\\\"commentauthor_14470163_concise\\\" href=\\\"\\/secure\\/ViewProfile.jspa?name=pnarayanaswa\\\"\u003e\u003cspan class=\\\"aui-avatar aui-avatar-xsmall\\\"\u003e\u003cspan class=\\\"aui-avatar-inner\\\"\u003e\u003cimg src=\\\"https:\\/\\/bugs.openjdk.java.net\\/secure\\/useravatar?size=xsmall&amp;avatarId=10122\\\" alt=\\\"pnarayanaswa\\\" \\/\u003e\u003c\\/span\u003e\u003c\\/span\u003e Praveen Narayanaswamy\u003c\\/a\u003e\\n added a comment  - \u003cspan class=\'commentdate_14470163_concise subText\'\u003e\u003cspan class=\'date user-tz\' title=\'2022-01-18 22:11\'\u003e\u003ctime class=\'livestamp\' datetime=\'2022-01-18T22:11:00-0800\'\u003e2022-01-18 22:11\u003c\\/time\u003e\u003c\\/span\u003e\u003c\\/span\u003e                   Additional Information from submitter:\\r \\n============================\\r \\nThanks for the fix. I believe the fix should be backported to jdk8u as well, because I am still able to reproduce this bug in 8u321 released today (Jan 18, 2022).\\r \\njava version &quot;1.8.0_321&quot;\\r \\nJava(TM) SE Runtime Environment (build 1.8.0_321-b07)\\r \\nJava HotSpot(TM) 64-Bit Server VM (build 25.321-b07, mixed mode)             \u003c\\/div\u003e\\n        \u003c\\/div\u003e\\n    \u003c\\/div\u003e\\n\u003c\\/div\u003e\\n                                     \u003c\\/div\u003e\\n    \u003c\\/div\u003e\\n\"";
+if(window.WRM._dataArrived)window.WRM._dataArrived();</script>
+<script>
+window.WRM=window.WRM||{};window.WRM._unparsedData=window.WRM._unparsedData||{};window.WRM._unparsedErrors=window.WRM._unparsedErrors||{};
+WRM._unparsedData["scope-filter-data"]="{\"createScopeActions\":[],\"scopes\":[]}";
+WRM._unparsedData["sidebar-collapsed-by-default"]="true";
+WRM._unparsedData["com.atlassian.jira.projects.shortcuts:can-manage"]="false";
+WRM._unparsedData["com.atlassian.jira.projects.shortcuts:with-icons"]="false";
+WRM._unparsedData["com.atlassian.jira.projects.shortcuts:shortcuts"]="[]";
+WRM._unparsedData["com.atlassian.jira.projects.shortcuts:project-id"]="10100";
+WRM._unparsedData["sidebar-id"]="\"\u003csection class=\\\"aui-sidebar  projects-sidebar sidebar-pending\\\" \u003e\u003cdiv class=\\\"aui-sidebar-wrapper\\\"\u003e\u003cdiv class=\\\"aui-sidebar-body\\\"\u003e\u003cdiv class=\\\"aui-page-header\\\" \u003e\u003cdiv class=\\\"aui-page-header-inner\\\"\u003e\u003cdiv class=\\\"aui-page-header-image\\\" \u003e\u003ca href=\\\"\\/projects\\/JDK\\/summary\\\" title=\\\"JDK\\\" class=\\\"jira-project-avatar\\\"\u003e\u003cspan class=\\\"aui-avatar aui-avatar-large aui-avatar-project\\\"\u003e\u003cspan class=\\\"aui-avatar-inner\\\"\u003e\u003cimg src=\\\"\\/secure\\/projectavatar?pid=10100&amp;avatarId=10301\\\" alt=\\\"JDK\\\" \\/\u003e\u003c\\/span\u003e\u003c\\/span\u003e\u003cimg src=\\\"data:image\\/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxIiBpZD0iV2Fyc3R3YV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MiA3MiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgNzIgNzIiPjxzdHlsZT4uc3Qye2ZpbGw6I2ZmZn08L3N0eWxlPjxnIGlkPSJHcm91cCI+PGNpcmNsZSBpZD0iT3ZhbCIgY3g9IjM2IiBjeT0iMzYiIHI9IjM2IiBmaWxsPSIjZmY5OTFmIi8+PC9nPjxnIGlkPSJQYWdlLTEiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE2IDIxKSI+PGcgaWQ9Ikdyb3VwLTMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgLjYxNjcpIj48ZGVmcz48ZmlsdGVyIGlkPSJBZG9iZV9PcGFjaXR5TWFza0ZpbHRlciIgZmlsdGVyVW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4PSIwIiB5PSIuNCIgd2lkdGg9IjE2LjkiIGhlaWdodD0iMjcuNiI+PGZlQ29sb3JNYXRyaXggdmFsdWVzPSIxIDAgMCAwIDAgMCAxIDAgMCAwIDAgMCAxIDAgMCAwIDAgMCAxIDAiLz48L2ZpbHRlcj48L2RlZnM+PG1hc2sgbWFza1VuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeD0iMCIgeT0iLjQiIHdpZHRoPSIxNi45IiBoZWlnaHQ9IjI3LjYiIGlkPSJtYXNrLTJfMV8iPjxnIGZpbHRlcj0idXJsKCNBZG9iZV9PcGFjaXR5TWFza0ZpbHRlcikiPjxwYXRoIGlkPSJwYXRoLTFfMV8iIGNsYXNzPSJzdDIiIGQ9Ik0wIC40aDE2LjlWMjhIMHoiLz48L2c+PC9tYXNrPjxwYXRoIGlkPSJGaWxsLTEiIGQ9Ik0xMy43IDI4Yy0uOCAwLTEuNi0uMy0yLjMtLjlMMS4xIDE2LjhjLTEuNS0xLjUtMS41LTMuOSAwLTUuNGwxMC0xMGMxLjItMS4yIDMuMy0xLjIgNC41IDAgMS4yIDEuMyAxLjIgMy4zIDAgNC41bC04LjIgOC4yIDguNSA4LjVjMS4yIDEuMiAxLjIgMy4zIDAgNC41LS42LjYtMS40LjktMi4yLjkiIG1hc2s9InVybCgjbWFzay0yXzFfKSIgZmlsbD0iI2ZmZiIvPjwvZz48ZyBpZD0iR3JvdXAtNiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjMgLjYxNjcpIj48ZGVmcz48ZmlsdGVyIGlkPSJBZG9iZV9PcGFjaXR5TWFza0ZpbHRlcl8xXyIgZmlsdGVyVW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4PSIuNCIgeT0iLjQiIHdpZHRoPSIxNi45IiBoZWlnaHQ9IjI3LjYiPjxmZUNvbG9yTWF0cml4IHZhbHVlcz0iMSAwIDAgMCAwIDAgMSAwIDAgMCAwIDAgMSAwIDAgMCAwIDAgMSAwIi8+PC9maWx0ZXI+PC9kZWZzPjxtYXNrIG1hc2tVbml0cz0idXNlclNwYWNlT25Vc2UiIHg9Ii40IiB5PSIuNCIgd2lkdGg9IjE2LjkiIGhlaWdodD0iMjcuNiIgaWQ9Im1hc2stNF8xXyI+PGcgZmlsdGVyPSJ1cmwoI0Fkb2JlX09wYWNpdHlNYXNrRmlsdGVyXzFfKSI+PHBhdGggaWQ9InBhdGgtM18xXyIgY2xhc3M9InN0MiIgZD0iTS40LjRoMTYuOVYyOEguNHoiLz48L2c+PC9tYXNrPjxwYXRoIGlkPSJGaWxsLTQiIGQ9Ik0xMS43IDE1Ljl6TTMuNiAyOGMtLjggMC0xLjYtLjMtMi4zLS45LTEuMi0xLjItMS4yLTMuMyAwLTQuNWw4LjUtOC41LTguMi04LjNDLjQgNC42LjQgMi41IDEuNiAxLjMgMi44LjEgNC45LjEgNi4xIDEuM2wxMCAxMGMuNy43IDEuMSAxLjcgMS4xIDIuNyAwIDEtLjQgMi0xLjEgMi43TDUuOSAyNy4xYy0uNi42LTEuNS45LTIuMy45eiIgbWFzaz0idXJsKCNtYXNrLTRfMV8pIiBmaWxsPSIjZmZmIi8+PC9nPjwvZz48L3N2Zz4=\\\" alt=\\\"Project Type: software\\\" class=\\\"jira-project-avatar-icon\\\" \\/\u003e\u003c\\/a\u003e\u003c\\/div\u003e\u003cdiv class=\\\"aui-page-header-main\\\" \u003e\u003ch1\u003e\u003cdiv class=\\\"aui-group aui-group-split\\\"\u003e\u003cdiv class=\\\"aui-item project-title\\\"\u003e\u003ca href=\\\"\\/projects\\/JDK\\/summary\\\" title=\\\"JDK\\\"\u003eJDK\u003c\\/a\u003e\u003c\\/div\u003e\u003c\\/div\u003e\u003c\\/h1\u003e\u003c\\/div\u003e\u003cdiv class=\\\"aui-page-header-main scopeFilterContainer\\\" \u003e\u003c\\/div\u003e\u003c\\/div\u003e\u003c\\/div\u003e\u003cnav class=\\\"aui-navgroup aui-navgroup-vertical\\\"\u003e\u003cdiv class=\\\"aui-navgroup-inner sidebar-content-container jira-navigation\\\"\u003e\u003cdiv class=\\\"aui-sidebar-group aui-sidebar-group-tier-one\\\" data-id=\\\"sidebar-navigation-panel\\\"\u003e\u003cul class=\\\"aui-nav\\\"\u003e\u003cli class=\\\"aui-nav-selected\\\" \u003e\u003ca class=\\\"aui-nav-item \\\" href=\\\"\\/projects\\/JDK\\/issues\\\" data-link-id=\\\"com.atlassian.jira.jira-projects-issue-navigator:sidebar-issue-navigator\\\" \u003e\u003cspan class=\\\"aui-icon aui-icon-large icon-sidebar-issues aui-iconfont-issues\\\"\u003e\u003c\\/span\u003e\u003cspan class=\\\"aui-nav-item-label\\\" title=\\\"Issues\\\"\u003eIssues\u003c\\/span\u003e\u003c\\/a\u003e\u003c\\/li\u003e\u003cli  \u003e\u003ca class=\\\"aui-nav-item \\\" href=\\\"\\/projects\\/JDK?selectedItem=com.atlassian.jira.jira-projects-plugin:report-page\\\" data-link-id=\\\"com.atlassian.jira.jira-projects-plugin:report-page\\\" \u003e\u003cspan class=\\\"aui-icon aui-icon-large agile-icon-report aui-iconfont-graph-line\\\"\u003e\u003c\\/span\u003e\u003cspan class=\\\"aui-nav-item-label\\\" title=\\\"Reports\\\"\u003eReports\u003c\\/span\u003e\u003c\\/a\u003e\u003c\\/li\u003e\u003cli  \u003e\u003ca class=\\\"aui-nav-item \\\" href=\\\"\\/projects\\/JDK?selectedItem=com.atlassian.jira.jira-projects-plugin:components-page\\\" data-link-id=\\\"com.atlassian.jira.jira-projects-plugin:components-page\\\" \u003e\u003cspan class=\\\"aui-icon aui-icon-large icon-sidebar-components\\\"\u003e\u003c\\/span\u003e\u003cspan class=\\\"aui-nav-item-label\\\" title=\\\"Components\\\"\u003eComponents\u003c\\/span\u003e\u003c\\/a\u003e\u003c\\/li\u003e\u003cli  aria-expanded=\\\"false\\\"\u003e\u003ca href=\\\"#\\\" class=\\\"aui-nav-subtree-toggle\\\"\u003e\u003cspan class=\\\"aui-icon aui-icon-small aui-iconfont-collapsed\\\"\u003e\u003c\\/span\u003e\u003c\\/a\u003e\u003ca class=\\\"aui-nav-item \\\" href=\\\"#\\\" data-link-id=\\\"com.atlassian.jira.jira-projects-plugin:tab-panel-link-parent\\\" \u003e\u003cspan class=\\\"aui-icon aui-icon-large icon-sidebar-add-ons\\\"\u003e\u003c\\/span\u003e\u003cspan class=\\\"aui-nav-item-label\\\" title=\\\"Add-ons\\\"\u003eAdd-ons\u003c\\/span\u003e\u003c\\/a\u003e\u003cul class=\\\"aui-nav\\\"\u003e\u003cli  \u003e\u003ca class=\\\"aui-nav-item \\\" href=\\\"\\/projects\\/JDK?selectedItem=com.oracle.jira.jira-subcomponent-plugin:oracle-subComponent-projectPanel\\\" data-link-id=\\\"com.oracle.jira.jira-subcomponent-plugin:oracle-subComponent-projectPanel\\\" \u003e\u003cspan class=\\\"aui-nav-item-label\\\" title=\\\"Subcomponents\\\"\u003eSubcomponents\u003c\\/span\u003e\u003c\\/a\u003e\u003c\\/li\u003e\u003c\\/ul\u003e\u003c\\/li\u003e\u003c\\/ul\u003e\u003c\\/div\u003e\u003c\\/div\u003e\u003c\\/nav\u003e\u003c\\/div\u003e\u003cdiv class=\\\"aui-sidebar-footer\\\"\u003e\u003cbutton class=\\\"aui-button aui-button-subtle aui-sidebar-toggle aui-sidebar-footer-tipsy\\\" title=\\\"Expand sidebar ( [ )\\\" data-tooltip=\\\"Expand sidebar ( [ )\\\"\u003e\u003cspan class=\\\"aui-icon aui-icon-small aui-iconfont-chevron-double-left\\\"\u003e\u003c\\/span\u003e\u003c\\/button\u003e\u003c\\/div\u003e\u003c\\/div\u003e\u003c\\/section\u003e\"";
+if(window.WRM._dataArrived)window.WRM._dataArrived();</script>
+<script type="text/javascript" src="/s/d41d8cd98f00b204e9800998ecf8427e-CDN/-urb32v/813013/1rzz2as/1.0/_/download/batch/jira.webresources:bigpipe-init/jira.webresources:bigpipe-init.js" data-wrm-key="jira.webresources:bigpipe-init" data-wrm-batch-type="resource" data-initially-rendered=""></script>
+
+<form id="jira_request_timing_info" class="dont-default-focus">
+	<fieldset class="parameters hidden">
+		<input type="hidden" title="jira.request.start.millis" value="1642870016941">
+		<input type="hidden" title="jira.request.server.time" value="197">
+		<input type="hidden" title="jira.request.id" value="1006x92105916x9">
+		<input type="hidden" title="jira.session.expiry.time" value="1642873616060">
+		<input type="hidden" title="jira.session.expiry.in.mins" value="59">
+		<input id="jiraConcurrentRequests" type="hidden" name="jira.request.concurrent.requests" value="13">
+		<input type="hidden" title="db.reads.time.in.ms" value="51">
+		<input type="hidden" title="db.conns.time.in.ms" value="59">
+	</fieldset>
+</form>
+<!--
+	                 REQUEST ID : 1006x92105916x9
+	          REQUEST TIMESTAMP : [22/Jan/2022:16:46:56 +0000]
+	               REQUEST TIME : 0.1970
+	                 ASESSIONID : koaswj
+	        CONCURRENT REQUESTS : 13
+
+	                      db.reads : OpSnapshot{name='db.reads', invocationCount=34, elapsedTotal=51618979, elapsedMin=568607, elapsedMax=10772301, resultSetSize=0, cpuTotal=0, cpuMin=0, cpuMax=0}
+	                      db.conns : OpSnapshot{name='db.conns', invocationCount=37, elapsedTotal=59262635, elapsedMin=666126, elapsedMax=10854405, resultSetSize=0, cpuTotal=0, cpuMin=0, cpuMax=0}
+-->
+
+
+
+</body></html>

@@ -1,0 +1,46 @@
+Metadata-Version: 1.1
+Name: skynet
+Version: 1.1
+Summary: import skynet, if you dare
+Home-page: http://xkcd.com/521/
+Author: Lennart Regebro
+Author-email: regebro@gmail.com
+License: CC0 1.0 Universal
+Description: Skynet
+        ======
+        
+        This module demonstrates the usage of Pythons exit-hook, exception hook and signals handling.
+        It does so by using these hooks to prevent you from exiting Python to the best if its ability.
+        
+        Contributors
+        ------------
+        
+         - Lennart Regebro <regebro@gmail.com>
+        
+        
+        Changes
+        =======
+        
+        1.1 (2016-02-29)
+        ----------------
+        
+        - Tried to make it work on OS X.
+        
+        
+        1.0 (2013-10-19)
+        ----------------
+        
+        Original release.
+        
+Keywords: skynet
+Platform: UNKNOWN
+Classifier: License :: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
+Classifier: Programming Language :: Python :: 2.4
+Classifier: Programming Language :: Python :: 2.5
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.1
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5

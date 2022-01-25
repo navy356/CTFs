@@ -1,0 +1,28 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: tomcat-jasper-el
+Bundle-SymbolicName: org.apache.tomcat-jasper-el
+Bundle-Version: 9.0.56
+Export-Package: org.apache.el;uses:="javax.el,org.apache.el.parser";ve
+ rsion="9.0.56",org.apache.el.lang;uses:="javax.el,org.apache.el.parse
+ r";version="9.0.56",org.apache.el.parser;uses:="javax.el,org.apache.e
+ l.lang";version="9.0.56"
+Implementation-Title: Apache Tomcat
+Implementation-Vendor: Apache Software Foundation
+Implementation-Version: 9.0.56
+Import-Package: javax.el
+Private-Package: org.apache.el.stream,org.apache.el.util
+Provide-Capability: osgi.service;objectClass:List<String>="javax.el.Ex
+ pressionFactory";effective:=active,osgi.serviceloader;osgi.serviceloa
+ der="javax.el.ExpressionFactory";register:="org.apache.el.ExpressionF
+ actoryImpl"
+Require-Capability: osgi.extender;filter:="(&(osgi.extender=osgi.servi
+ celoader.registrar)(version>=1.0.0)(!(version>=2.0.0)))",osgi.contrac
+ t;osgi.contract=JavaEL;filter:="(&(osgi.contract=JavaEL)(version=3.0.
+ 0))",osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Specification-Title: Apache Tomcat
+Specification-Vendor: Apache Software Foundation
+Specification-Version: 9.0
+X-Compile-Source-JDK: 8
+X-Compile-Target-JDK: 8
+

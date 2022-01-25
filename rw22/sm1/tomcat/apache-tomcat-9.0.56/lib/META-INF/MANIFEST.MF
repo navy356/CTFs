@@ -1,0 +1,63 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: tomcat-jasper
+Bundle-SymbolicName: org.apache.tomcat-jasper
+Bundle-Version: 9.0.56
+Export-Package: org.apache.jasper;uses:="javax.servlet,javax.servlet.j
+ sp.tagext,org.apache.jasper.compiler,org.apache.jasper.servlet,org.ap
+ ache.tomcat,org.apache.tomcat.util.descriptor.tld,org.apache.tools.an
+ t";version="9.0.56",org.apache.jasper.compiler;uses:="javax.el,javax.
+ servlet,javax.servlet.jsp.tagext,org.apache.jasper,org.apache.jasper.
+ compiler.tagplugin,org.apache.jasper.servlet,org.apache.jasper.util,o
+ rg.apache.tomcat,org.apache.tomcat.util.descriptor.tld,org.apache.too
+ ls.ant,org.xml.sax";version="9.0.56",org.apache.jasper.compiler.tagpl
+ ugin;version="9.0.56",org.apache.jasper.el;uses:="javax.el,javax.serv
+ let.jsp.el";version="9.0.56",org.apache.jasper.optimizations;uses:="o
+ rg.apache.jasper,org.apache.jasper.compiler";version="9.0.56",org.apa
+ che.jasper.runtime;uses:="javax.el,javax.servlet,javax.servlet.http,j
+ avax.servlet.jsp,javax.servlet.jsp.el,javax.servlet.jsp.tagext,org.ap
+ ache.jasper,org.apache.jasper.el,org.apache.tomcat";version="9.0.56",
+ org.apache.jasper.security;version="9.0.56",org.apache.jasper.servlet
+ ;uses:="javax.servlet,javax.servlet.descriptor,javax.servlet.http,jav
+ ax.servlet.jsp.tagext,org.apache.jasper,org.apache.jasper.compiler,or
+ g.apache.jasper.util,org.apache.tomcat,org.apache.tomcat.util.descrip
+ tor.tld,org.xml.sax";version="9.0.56",org.apache.jasper.tagplugins.js
+ tl;uses:="javax.servlet,javax.servlet.http,javax.servlet.jsp";version
+ ="9.0.56",org.apache.jasper.tagplugins.jstl.core;uses:="javax.servlet
+ .jsp,org.apache.jasper.compiler.tagplugin";version="9.0.56",org.apach
+ e.jasper.util;uses:="org.xml.sax,org.xml.sax.helpers";version="9.0.56
+ "
+Implementation-Title: Apache Tomcat
+Implementation-Vendor: Apache Software Foundation
+Implementation-Version: 9.0.56
+Import-Package: javax.el,javax.servlet,javax.servlet.descriptor,javax.
+ servlet.http,javax.servlet.jsp,javax.servlet.jsp.el,javax.servlet.jsp
+ .tagext,javax.xml.parsers,javax.xml.stream,org.apache.el.util,org.apa
+ che.jasper,org.apache.jasper.compiler,org.apache.jasper.compiler.tagp
+ lugin,org.apache.jasper.el,org.apache.jasper.runtime,org.apache.jaspe
+ r.security,org.apache.jasper.servlet,org.apache.jasper.tagplugins.jst
+ l,org.apache.jasper.util,org.apache.juli.logging;version="[9.0,10)",o
+ rg.apache.tomcat;version="[9.0,10)",org.apache.tomcat.util.descriptor
+ ;version="[9.0,10)",org.apache.tomcat.util.descriptor.tagplugin;versi
+ on="[9.0,10)",org.apache.tomcat.util.descriptor.tld;version="[9.0,10)
+ ",org.apache.tomcat.util.descriptor.web;version="[9.0,10)",org.apache
+ .tomcat.util.digester;version="[9.0,10)",org.apache.tomcat.util.scan;
+ version="[9.0,10)",org.apache.tomcat.util.security;version="[9.0,10)"
+ ,org.apache.tools.ant,org.apache.tools.ant.taskdefs,org.apache.tools.
+ ant.types,org.apache.tools.ant.util,org.eclipse.jdt.core.compiler,org
+ .eclipse.jdt.internal.compiler,org.eclipse.jdt.internal.compiler.clas
+ sfmt,org.eclipse.jdt.internal.compiler.env,org.eclipse.jdt.internal.c
+ ompiler.impl,org.eclipse.jdt.internal.compiler.problem,org.xml.sax,or
+ g.xml.sax.ext,org.xml.sax.helpers
+Private-Package: org.apache.jasper.resources
+Require-Capability: osgi.contract;osgi.contract=JavaJSP;filter:="(&(os
+ gi.contract=JavaJSP)(version=2.3.0))",osgi.contract;osgi.contract=Jav
+ aServlet;filter:="(&(osgi.contract=JavaServlet)(version=4.0.0))",osgi
+ .contract;osgi.contract=JavaEL;filter:="(&(osgi.contract=JavaEL)(vers
+ ion=3.0.0))",osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Specification-Title: Apache Tomcat
+Specification-Vendor: Apache Software Foundation
+Specification-Version: 9.0
+X-Compile-Source-JDK: 8
+X-Compile-Target-JDK: 8
+

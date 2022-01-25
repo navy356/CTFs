@@ -1,0 +1,12 @@
+CHANGES.txt
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+skynet/__init__.py
+skynet.egg-info/PKG-INFO
+skynet.egg-info/SOURCES.txt
+skynet.egg-info/dependency_links.txt
+skynet.egg-info/entry_points.txt
+skynet.egg-info/not-zip-safe
+skynet.egg-info/top_level.txt

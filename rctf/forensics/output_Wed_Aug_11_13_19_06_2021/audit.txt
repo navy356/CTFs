@@ -1,0 +1,23 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Wed Aug 11 13:19:06 2021
+Invocation: foremost the-jetsons-family.jpg -T 
+Output directory: /home/navy356/CTFs/rctf/forensics/output_Wed_Aug_11_13_19_06_2021
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: the-jetsons-family.jpg
+Start: Wed Aug 11 13:19:06 2021
+Length: 105 KB (107736 bytes)
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+0:	00000000.jpg 	     105 KB 	          0 	 
+Finish: Wed Aug 11 13:19:06 2021
+
+1 FILES EXTRACTED
+	
+jpg:= 1
+------------------------------------------------------------------
+
+Foremost finished at Wed Aug 11 13:19:06 2021

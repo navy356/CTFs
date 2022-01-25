@@ -1,0 +1,7 @@
+t_fl4g_v3lue_su
+t_fl4g_name_su
+id
+
+0x68616e64736f6d655f666c6167
+
+TetCTF{_W3LlLlLlll_Pl44yYyYyyYY_<3_vina_*100*28904961445554#}

@@ -1,0 +1,18 @@
+version: "3.0"
+services:
+  animals:
+    container_name: tetctf-animals
+    build:
+      context: .
+      dockerfile: ./animals/Dockerfile
+    ports:
+        - "3000:3000"
+    user: "1000:1000"
+    restart: always
+
+  countdown:
+    container_name: tetctf-countdown
+    build:
+      context: .
+      dockerfile: ./countdown/Dockerfile
+    restart: always

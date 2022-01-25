@@ -1,0 +1,23 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Sun Nov  8 19:44:58 2020
+Invocation: foremost message.wav 
+Output directory: /home/navy/Desktop/QCTF/output
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: message.wav
+Start: Sun Nov  8 19:44:58 2020
+Length: 1 MB (1788331 bytes)
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+0:	00000000.wav 	       1 MB 	          0 	 
+Finish: Sun Nov  8 19:44:58 2020
+
+1 FILES EXTRACTED
+	
+rif:= 1
+------------------------------------------------------------------
+
+Foremost finished at Sun Nov  8 19:44:58 2020
