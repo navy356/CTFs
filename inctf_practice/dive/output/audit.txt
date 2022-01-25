@@ -1,0 +1,25 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Thu Sep  2 23:44:58 2021
+Invocation: foremost sky_diving_7755faed-42a0-4cbb-97aa-3aea1504feb9.jpg 
+Output directory: /home/navy356/CTFs/inctf_practice/dive/output
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: sky_diving_7755faed-42a0-4cbb-97aa-3aea1504feb9.jpg
+Start: Thu Sep  2 23:44:58 2021
+Length: 1 MB (1692787 bytes)
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+0:	00000000.jpg 	       9 KB 	          0 	 
+1:	00000019.zip 	       1 MB 	       9806 	 
+Finish: Thu Sep  2 23:44:58 2021
+
+2 FILES EXTRACTED
+	
+jpg:= 1
+zip:= 1
+------------------------------------------------------------------
+
+Foremost finished at Thu Sep  2 23:44:58 2021

@@ -1,0 +1,23 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Sun Jan 17 03:14:27 2021
+Invocation: foremost -T mild_und_leise.mp3 
+Output directory: /home/navy/CTFs/isfcr/output_Sun_Jan_17_03_14_27_2021
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: mild_und_leise.mp3
+Start: Sun Jan 17 03:14:27 2021
+Length: 17 MB (17930976 bytes)
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+0:	00000000.png 	     320 KB 	        161 	  (600 x 600)
+Finish: Sun Jan 17 03:14:27 2021
+
+1 FILES EXTRACTED
+	
+png:= 1
+------------------------------------------------------------------
+
+Foremost finished at Sun Jan 17 03:14:27 2021

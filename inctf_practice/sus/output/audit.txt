@@ -1,0 +1,28 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Thu Sep  2 23:43:20 2021
+Invocation: foremost sus_9d2ad44e-3a31-41fa-96c4-90177384d0aa.png 
+Output directory: /home/navy356/CTFs/inctf_practice/sus/output
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: sus_9d2ad44e-3a31-41fa-96c4-90177384d0aa.png
+Start: Thu Sep  2 23:43:20 2021
+Length: 170 KB (174395 bytes)
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+0:	00000015.jpg 	      14 KB 	       7821 	 
+1:	00000044.jpg 	      50 KB 	      22948 	 
+2:	00000145.jpg 	      14 KB 	      74478 	 
+3:	00000175.jpg 	      82 KB 	      89725 	 
+4:	00000000.png 	       7 KB 	          0 	  (381 x 132)
+Finish: Thu Sep  2 23:43:20 2021
+
+5 FILES EXTRACTED
+	
+jpg:= 4
+png:= 1
+------------------------------------------------------------------
+
+Foremost finished at Thu Sep  2 23:43:20 2021

@@ -1,0 +1,21 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Sat Jan  8 04:46:51 2022
+Invocation: foremost test2 
+Output directory: /home/navy356/CTFs/inctf22/pcap/output
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: test2
+Start: Sat Jan  8 04:46:51 2022
+Length: 225 KB (231407 bytes)
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+Finish: Sat Jan  8 04:46:51 2022
+
+0 FILES EXTRACTED
+	
+------------------------------------------------------------------
+
+Foremost finished at Sat Jan  8 04:46:51 2022

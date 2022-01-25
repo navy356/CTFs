@@ -1,0 +1,21 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Sun Jan 17 03:10:38 2021
+Invocation: foremost rararasputin.mp3 -T 
+Output directory: /home/navy/CTFs/isfcr/output_Sun_Jan_17_03_10_38_2021
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: rararasputin.mp3
+Start: Sun Jan 17 03:10:38 2021
+Length: 5 MB (5323774 bytes)
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+Finish: Sun Jan 17 03:10:38 2021
+
+0 FILES EXTRACTED
+	
+------------------------------------------------------------------
+
+Foremost finished at Sun Jan 17 03:10:38 2021

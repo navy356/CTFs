@@ -1,0 +1,23 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Sat Jan  8 09:54:44 2022
+Invocation: foremost flag.png 
+Output directory: /home/navy356/CTFs/inctf22/deeper/output
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: flag.png
+Start: Sat Jan  8 09:54:44 2022
+Length: 699 KB (716029 bytes)
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+0:	00000000.png 	     699 KB 	         16 	  (960 x 701)
+Finish: Sat Jan  8 09:54:44 2022
+
+1 FILES EXTRACTED
+	
+png:= 1
+------------------------------------------------------------------
+
+Foremost finished at Sat Jan  8 09:54:44 2022

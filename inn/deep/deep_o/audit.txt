@@ -1,0 +1,23 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Sun Dec 19 17:03:35 2021
+Invocation: foremost deep.pdf -T 
+Output directory: /home/navy356/CTFs/inn/deep/output_Sun_Dec_19_17_03_35_2021
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: deep.pdf
+Start: Sun Dec 19 17:03:35 2021
+Length: 279 KB (285772 bytes)
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+0:	00000000.pdf 	      66 KB 	          0 	 
+Finish: Sun Dec 19 17:03:35 2021
+
+1 FILES EXTRACTED
+	
+pdf:= 1
+------------------------------------------------------------------
+
+Foremost finished at Sun Dec 19 17:03:35 2021

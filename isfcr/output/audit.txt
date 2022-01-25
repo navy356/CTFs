@@ -1,0 +1,23 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Sat Jan 16 23:08:49 2021
+Invocation: foremost corrupt.png 
+Output directory: /home/navy/CTFs/isfcr/output
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: corrupt.png
+Start: Sat Jan 16 23:08:49 2021
+Length: 329 KB (337448 bytes)
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+0:	00000188.png 	       3 KB 	      96682 	  (500 x 500)
+Finish: Sat Jan 16 23:08:49 2021
+
+1 FILES EXTRACTED
+	
+png:= 1
+------------------------------------------------------------------
+
+Foremost finished at Sat Jan 16 23:08:49 2021

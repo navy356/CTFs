@@ -1,0 +1,97 @@
+339,340c339,340
+<     "uploader_id", "uploader_url" attributes with the same semantics as videos
+<     (see above).
+---
+>     "uploader_id", "uploader_url", "duration" attributes with the same semantics
+>     as videos (see above).
+1239a1240,1245
+>         def extract_interaction_type(e):
+>             interaction_type = e.get('interactionType')
+>             if isinstance(interaction_type, dict):
+>                 interaction_type = interaction_type.get('@type')
+>             return str_or_none(interaction_type)
+> 
+1241a1248,1249
+>             if isinstance(interaction_statistic, dict):
+>                 interaction_statistic = [interaction_statistic]
+1249,1250c1257,1258
+<                 interaction_type = is_e.get('interactionType')
+<                 if not isinstance(interaction_type, compat_str):
+---
+>                 interaction_type = extract_interaction_type(is_e)
+>                 if not interaction_type:
+1459c1467
+<         except ExtractorError:
+---
+>         except ExtractorError as e:
+1461c1469,1470
+<                 '%s: %s URL is invalid, skipping' % (video_id, item))
+---
+>                 '%s: %s URL is invalid, skipping: %s'
+>                 % (video_id, item, error_to_compat_str(e.cause)))
+1666c1675
+<         # master playlist tags MUST NOT appear in a media playist and vice versa.
+---
+>         # master playlist tags MUST NOT appear in a media playlist and vice versa.
+2515,2517c2524,2528
+<         media_tags = [(media_tag, media_type, '')
+<                       for media_tag, media_type
+<                       in re.findall(r'(?s)(<(?:amp-)?(video|audio)[^>]*/>)', webpage)]
+---
+>         # For dl8-* tags see https://delight-vr.com/documentation/dl8-video/
+>         _MEDIA_TAG_NAME_RE = r'(?:(?:amp|dl8(?:-live)?)-)?(video|audio)'
+>         media_tags = [(media_tag, media_tag_name, media_type, '')
+>                       for media_tag, media_tag_name, media_type
+>                       in re.findall(r'(?s)(<(%s)[^>]*/>)' % _MEDIA_TAG_NAME_RE, webpage)]
+2523,2524c2534,2535
+<             r'(?s)(<(?P<tag>(?:amp-)?(?:video|audio))(?:\s+[^>]*)?>)(.*?)</(?P=tag)>', webpage))
+<         for media_tag, media_type, media_content in media_tags:
+---
+>             r'(?s)(<(?P<tag>%s)(?:\s+[^>]*)?>)(.*?)</(?P=tag)>' % _MEDIA_TAG_NAME_RE, webpage))
+>         for media_tag, _, media_type, media_content in media_tags:
+2596a2608,2614
+>         signed = 'hdnea=' in manifest_url
+>         if not signed:
+>             # https://learn.akamai.com/en-us/webhelp/media-services-on-demand/stream-packaging-user-guide/GUID-BE6C0F73-1E06-483B-B0EA-57984B91B7F9.html
+>             manifest_url = re.sub(
+>                 r'(?:b=[\d,-]+|(?:__a__|attributes)=off|__b__=\d+)&?',
+>                 '', manifest_url).strip('?')
+> 
+2597a2616
+> 
+2609a2629
+> 
+2614c2634
+<         formats.extend(self._extract_m3u8_formats(
+---
+>         m3u8_formats = self._extract_m3u8_formats(
+2616c2636,2660
+<             m3u8_id='hls', fatal=False))
+---
+>             m3u8_id='hls', fatal=False)
+>         formats.extend(m3u8_formats)
+> 
+>         http_host = hosts.get('http')
+>         if http_host and m3u8_formats and not signed:
+>             REPL_REGEX = r'https?://[^/]+/i/([^,]+),([^/]+),([^/]+)\.csmil/.+'
+>             qualities = re.match(REPL_REGEX, m3u8_url).group(2).split(',')
+>             qualities_length = len(qualities)
+>             if len(m3u8_formats) in (qualities_length, qualities_length + 1):
+>                 i = 0
+>                 for f in m3u8_formats:
+>                     if f['vcodec'] != 'none':
+>                         for protocol in ('http', 'https'):
+>                             http_f = f.copy()
+>                             del http_f['manifest_url']
+>                             http_url = re.sub(
+>                                 REPL_REGEX, protocol + r'://%s/\g<1>%s\3' % (http_host, qualities[i]), f['url'])
+>                             http_f.update({
+>                                 'format_id': http_f['format_id'].replace('hls-', protocol + '-'),
+>                                 'url': http_url,
+>                                 'protocol': protocol,
+>                             })
+>                             formats.append(http_f)
+>                         i += 1
+> 
+3023d3066
+< 

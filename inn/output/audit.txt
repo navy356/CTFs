@@ -1,0 +1,23 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Fri Dec 17 22:51:32 2021
+Invocation: foremost oliver.mp3 
+Output directory: /home/navy356/CTFs/inn/output
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: oliver.mp3
+Start: Fri Dec 17 22:51:32 2021
+Length: 8 MB (8584900 bytes)
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+0:	00000000.jpg 	     187 KB 	        186 	 
+Finish: Fri Dec 17 22:51:32 2021
+
+1 FILES EXTRACTED
+	
+jpg:= 1
+------------------------------------------------------------------
+
+Foremost finished at Fri Dec 17 22:51:32 2021

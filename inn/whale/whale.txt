@@ -1,0 +1,45 @@
+Nmap scan report for 181.63.131.34.bc.googleusercontent.com (34.131.63.181)
+Host is up (0.096s latency).
+Not shown: 62763 filtered tcp ports (no-response), 2769 closed tcp ports (reset)
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     OpenSSH 7.9p1 Debian 10+deb10u2 (protocol 2.0)
+| ssh-hostkey: 
+|   2048 76:96:c1:e3:10:63:85:25:68:a3:83:53:55:a8:8b:57 (RSA)
+|   256 41:65:15:18:02:f5:3b:c1:98:c3:3f:d3:2f:46:46:37 (ECDSA)
+|_  256 4c:04:0d:b9:68:95:e1:56:e8:41:5d:1b:12:aa:4e:43 (ED25519)
+80/tcp   open  http    nginx 1.14.2
+|_http-title: Secure?
+|_http-server-header: nginx/1.14.2
+2375/tcp open  docker  Docker 18.09.1 (API 1.39)
+| docker-version: 
+|   Version: 18.09.1
+|   Os: linux
+|   GitCommit: 4c52b90
+|   Arch: amd64
+|   GoVersion: go1.11.6
+|   MinAPIVersion: 1.12
+|   BuildTime: 2021-02-21T17:18:35.000000000+00:00
+|   KernelVersion: 4.19.0-18-cloud-amd64
+|   ApiVersion: 1.39
+|   Platform: 
+|     Name: 
+|   Components: 
+|     
+|       Version: 18.09.1
+|       Details: 
+|         Os: linux
+|         GitCommit: 4c52b90
+|         Arch: amd64
+|         KernelVersion: 4.19.0-18-cloud-amd64
+|         MinAPIVersion: 1.12
+|         GoVersion: go1.11.6
+|         ApiVersion: 1.39
+|         Experimental: false
+|         BuildTime: 2021-02-21T17:18:35.000000000+00:00
+|_      Name: Engine
+Aggressive OS guesses: HP P2000 G3 NAS device (90%), Linux 2.6.32 (89%), Linux 2.6.32 - 3.1 (89%), Linux 5.0 (89%), Linux 5.0 - 5.4 (89%), Linux 5.1 (89%), Ubiquiti AirOS 5.5.9 (89%), Ubiquiti Pico Station WAP (AirOS 5.2.6) (89%), Linux 2.6.32 - 3.13 (88%), Linux 3.0 - 3.2 (88%)
+No exact OS matches for host (test conditions non-ideal).
+Service Info: OSs: Linux, linux; CPE: cpe:/o:linux:linux_kernel
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 2525.18 seconds

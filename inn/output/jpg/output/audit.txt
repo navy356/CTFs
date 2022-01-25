@@ -1,0 +1,24 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Fri Dec 17 22:54:03 2021
+Invocation: foremost test.bin 
+Output directory: /home/navy356/CTFs/inn/output/jpg/output
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: test.bin
+Start: Fri Dec 17 22:54:03 2021
+Length: 10 KB (10437 bytes)
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+0:	00000000.jpg 	       4 KB 	        260 	 
+1:	00000011.jpg 	       4 KB 	       5676 	 
+Finish: Fri Dec 17 22:54:03 2021
+
+2 FILES EXTRACTED
+	
+jpg:= 2
+------------------------------------------------------------------
+
+Foremost finished at Fri Dec 17 22:54:03 2021

