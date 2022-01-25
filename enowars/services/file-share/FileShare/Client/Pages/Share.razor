@@ -1,0 +1,59 @@
+﻿@page "/share-files"
+@using System.Linq
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.Extensions.Logging
+@using FileShare.Shared
+@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+@inject HttpClient Http
+@attribute [Authorize]
+
+
+<h1>Share your files</h1>
+
+<p>
+    <label>
+        Select with whom you want to share your folder.
+    </label>
+</p>
+
+@if (users.Count > 0)
+
+{
+<div class="col-12 row">
+    <button class="form-control col-1 btn btn-primary" @onclick="Save">Save</button>
+</div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Users</th>
+                        </tr>
+                    </thead>
+                    <CheckBoxList Data="@users"
+                                  TextField="@((item)=>item.UserName)"
+                                  ValueField="@((item)=>item.Id)"
+                                  SelectedValues="@SelectedIds" />
+                </table>
+}
+
+@code { private IList<ApplicationUserDTO> users = new List<ApplicationUserDTO>();
+    protected List<string> SelectedIds = new List<string>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            users = await Http.GetFromJsonAsync<List<ApplicationUserDTO>>("api/users");
+            SelectedIds = await Http.GetFromJsonAsync<List<string>>("api/share");
+            await InvokeAsync(() => StateHasChanged())
+                        .ConfigureAwait(false);
+        }
+        catch (AccessTokenNotAvailableException exception)
+        {
+            exception.Redirect();
+        }
+    }
+    protected void Save()
+    {
+        Http.PostAsJsonAsync("api/share", SelectedIds.ToArray());
+    }
+}

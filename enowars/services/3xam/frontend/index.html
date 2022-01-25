@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>3xams</title>
+        <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+        <script src="vendor/xhook/xhook.js"></script>
+        <script src="vendor/angularjs/angular.js"></script>
+        <script src="vendor/angularjs/angular-ui-router.js"></script>
+        <script src="vendor/noise-c.wasm/constants.js"></script>
+        <script src="vendor/noise-c.wasm/noise-c.js"></script>
+        <script src="vendor/noise-c.wasm/index.js"></script>
+        
+        
+        <script src="scripts/main.js"></script>
+        <script src="scripts/net/fancysocket.js"></script>
+        <script src="scripts/net/syncsocket.js"></script>
+        <script src="scripts/net/noisysocket.js"></script>
+        <script src="scripts/util/arr.js"></script>
+        <script src="scripts/components/alerts/alerts.js"></script>
+        <script src="scripts/components/dashboard/dashboard.js"></script>
+        <script src="scripts/components/root/root.js"></script>
+        <script src="scripts/components/exam/exam.js"></script>
+        <script src="scripts/components/scores/scores.js"></script>
+        <script src="scripts/components/question/question.js"></script>
+        <script src="scripts/components/signup/signup.js"></script>
+        <script src="scripts/services/api.js"></script>
+        <script src="scripts/services/api_osd.js"></script>
+        <script src="scripts/services/notifications.js"></script>
+        <script src="scripts/services/webtunnel.js"></script>
+        <script src="scripts/config.js"></script>
+    </head>
+    <body> 
+        <div ui-view="layout"></div>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+{% extends "base" %}
+
+{% block title %} Register {% endblock %}
+
+{% block heading %} Register! {% endblock %}
+
+{% block action %} <a class="btn btn-primary btn-lg float-right" href="/posts/view/0">Back!</a> {% endblock %}
+
+{% block content %}
+    <div style="background-color: white; font-size: large">
+        Sign up for the amazing <span class="blink_text">ACTIVITY TRACKER</span>!!!
+        <br>
+        Upload your workouts, activities, and whatever else is on your mind, and share it with your friends! Live a healthy lifestyle!
+    </div>
+    <br>
+    <form enctype="multipart/form-data" action="/auth/signup" method="post">
+        <div class="form-group">
+            <label for="email"><b>Email</b></label>
+            <input class="form-control" type="text" placeholder="email address" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="password"><b>Password</b></label>
+            <input class="form-control" type="password" placeholder="password" name="password" required>
+        </div>
+
+        <div class="form-group">
+            <label for="image"><b>A selfie:</b></label>
+            <div class="custom-file">
+                <input type="file" name="image" class="custom-file-input" id="image" aria-describedby="imageHelpBlock">
+                <label class="custom-file-label" for="image">Choose picture file</label>
+            </div>
+            <small id="imageHelpBlock" class="form-text text-muted">
+                Hold on to this image, you can use it for password recovery!
+            </small>
+
+        </div>
+
+        <button class="btn btn-primary btn-block btn-large" type="submit">Signup</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,4 @@
+{
+    "protocol": "http://",
+    "route": ":8080/api"
+}

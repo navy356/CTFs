@@ -1,0 +1,130 @@
+version: '2.1'
+networks:
+  3xam:
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    ports:
+      - 8220:80
+    networks:
+      - 3xam
+    mem_limit: 1G
+    memswap_limit: 2G
+    ulimits:
+      core:
+        soft: 0
+        hard: 0
+      nproc:
+        soft: 4000
+        hard: 4000
+  db:
+    image: mariadb
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_DATABASE: 3xam
+    volumes:
+      - ./backend_internal/storage:/var/lib/mysql
+      - ./backend_internal/sql:/docker-entrypoint-initdb.d
+    networks:
+      - 3xam
+    mem_limit: 1G
+    memswap_limit: 2G
+    ulimits:
+      core:
+        soft: 0
+        hard: 0
+      nproc:
+        soft: 4000
+        hard: 4000
+  adminer:
+    image: adminer
+    restart: always
+    networks:
+      - 3xam
+    mem_limit: 1G
+    memswap_limit: 2G
+    ulimits:
+      core:
+        soft: 0
+        hard: 0
+      nproc:
+        soft: 4000
+        hard: 4000
+  backend_internal:
+    depends_on:
+      - "logger"
+      - "db"
+    build:
+      context: .
+      dockerfile: backend_internal/Dockerfile
+    environment:
+      DB_HOST: db
+      DB_NAME: 3xam
+      DB_USERNAME: root
+      DB_PASSWORD: 123456
+      PYTHONUNBUFFERED: ${PYTHONUNBUFFERED}
+      BACKEND_INTERNAL_MEASURE_FUNCS: ${BACKEND_INTERNAL_MEASURE_FUNCS}
+      BACKEND_INTERNAL_MEASURE_CHUNKS: ${BACKEND_INTERNAL_MEASURE_CHUNKS}
+    networks:
+      - 3xam
+    restart: always
+    container_name: backend_internal
+    mem_limit: 1G
+    memswap_limit: 2G
+    ulimits:
+      core:
+        soft: 0
+        hard: 0
+      nproc:
+        soft: 4000
+        hard: 4000
+  backend:
+    depends_on:
+      - "logger"
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    environment:
+      PYTHONUNBUFFERED: ${PYTHONUNBUFFERED}
+      BACKEND_MEASURE_FUNCS: ${BACKEND_MEASURE_FUNCS}
+      BACKEND_MEASURE_CHUNKS: ${BACKEND_MEASURE_CHUNKS}
+    networks:
+      - 3xam
+    ports:
+      - 8221:5000
+    container_name: backend
+    mem_limit: 1G
+    memswap_limit: 2G
+    ulimits:
+      core:
+        soft: 0
+        hard: 0
+      nproc:
+        soft: 4000
+        hard: 4000
+  logger:
+    build:
+      context: .
+      dockerfile: logger/Dockerfile
+    volumes:
+      - ./logger/data:/logger_data
+    environment:
+      PYTHONUNBUFFERED: ${PYTHONUNBUFFERED}
+      LOGGER_MEASURE_FUNCS: ${LOGGER_MEASURE_FUNCS}
+      LOGGER_MEASURE_CHUNKS: ${LOGGER_MEASURE_CHUNKS}
+      LOGSTORE_DATA_DIR: /logger_data
+    networks:
+      - 3xam
+    container_name: logger
+    mem_limit: 1G
+    memswap_limit: 2G
+    ulimits:
+      core:
+        soft: 0
+        hard: 0
+      nproc:
+        soft: 4000
+        hard: 4000

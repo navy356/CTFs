@@ -1,0 +1,25 @@
+{% extends "base" %}
+
+{% block title %} Friends {% endblock %}
+
+{% block heading %} Add friend! {% endblock %}
+
+{% block action %} <a class="btn btn-primary btn-lg float-right" href="/posts/view/0">Get me out of here!</a> {% endblock %}
+
+{% block content %}
+    <form enctype="multipart/form-data" style="width: 100%" method="POST" action="/friends/insert">
+        <div class="col">
+            <hr>
+            <div class="form-group">
+                <label for="email"><b>Your friend's email</b></label>
+                <input class="form-control" type="text" placeholder="email address" name="email" required>
+            </div>
+            <button class="btn btn-primary btn-block btn-large">Add friend!</button>
+            {% if err %}
+                <div class="alert alert-danger">
+                    {{ err }}
+                </div>
+            {% endif %}
+        </div>
+    </form>
+{% endblock %}

@@ -1,0 +1,60 @@
+﻿@page "/"
+@using FileShare.Shared
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+@using Microsoft.Extensions.Logging
+@inject IHttpClientFactory ClientFactory
+@inject HttpClient Http
+@inject ILogger<Index> logger
+
+
+
+<h1>The fastest, bestest and securest File Share you will ever see!</h1>
+
+Sharing is caring 🙈
+
+
+@*<AuthorizeView>
+        <Authorized>
+            <h1>Join @users.Count Users!</h1>
+        </Authorized>
+        <NotAuthorized>
+            <h1>TU is already using this service.</h1>
+        </NotAuthorized>
+    </AuthorizeView>*@
+
+
+Have fun!
+
+<p>Be aware users older than 11 minutes will be deleted! To ensure service availability.</p>
+
+
+@code {
+
+    [CascadingParameter]
+    private Task<AuthenticationState> authenticationStateTask { get; set; }
+
+    private List<ApplicationUserDTO> users;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var authState = await authenticationStateTask;
+        var user = authState.User;
+        if (user.Identity.IsAuthenticated)
+        {
+            try
+            {
+                logger.LogInformation("Trying to request");
+
+                users = await Http.GetFromJsonAsync<List<ApplicationUserDTO>>("api/users");
+                logger.LogInformation("Request finished {status}", users.Count);
+                StateHasChanged();
+            }
+            catch (AccessTokenNotAvailableException exception)
+            {
+                exception.Redirect();
+            }
+            //users = await Http.GetFromJsonAsync<ApplicationUserDTO[]>("api/user");
+        }
+
+    } }

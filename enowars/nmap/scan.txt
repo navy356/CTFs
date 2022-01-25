@@ -1,0 +1,24 @@
+Starting Nmap 7.80 ( https://nmap.org ) at 2021-07-10 14:26 CEST
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.000051s latency).
+Not shown: 989 closed ports
+PORT      STATE SERVICE
+22/tcp    open  ssh
+2222/tcp  open  EtherNetIP-1
+4242/tcp  open  vrml-multi-use
+8001/tcp  open  vcom-tunnel
+8010/tcp  open  xmpp
+8011/tcp  open  unknown
+8080/tcp  open  http-proxy
+8081/tcp  open  blackice-icecap
+9090/tcp  open  zeus-admin
+49153/tcp open  unknown
+49154/tcp open  unknown
+Device type: general purpose
+Running: Linux 2.6.X
+OS CPE: cpe:/o:linux:linux_kernel:2.6.32
+OS details: Linux 2.6.32
+Network Distance: 0 hops
+
+OS detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 1.51 seconds

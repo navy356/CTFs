@@ -1,0 +1,80 @@
+version: '2.1'
+
+services:
+  db:
+    image: mysql
+    ports:
+      - 3306
+    environment:
+      MYSQL_ROOT_PASSWORD: 123
+    volumes:
+      - mysql:/var/lib/mysql
+      - mysql_config:/etc/mysql
+    networks:
+      - shatranj-network
+    healthcheck:
+      test:
+        - CMD
+        - mysqladmin
+        - ping
+        - -h
+        - localhost
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    mem_limit: 1G
+    memswap_limit: 2G
+    ulimits:
+      core:
+        soft: 0
+        hard: 0
+      nproc:
+        soft: 4000
+        hard: 4000
+  backend:
+    build:
+      context: ./shatranj-server
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
+    volumes:
+      - /home/app
+    depends_on:
+      - db
+    networks:
+      - shatranj-network
+    extra_hosts:
+      - host.docker.internal:host-gateway
+    mem_limit: 1G
+    memswap_limit: 2G
+    ulimits:
+      core:
+        soft: 0
+        hard: 0
+      nproc:
+        soft: 4000
+        hard: 4000
+  frontend:
+    build:
+      context: ./shatranj-frontend
+      dockerfile: Dockerfile
+    ports:
+      - 8081:80
+    depends_on:
+      - backend
+    mem_limit: 1G
+    memswap_limit: 2G
+    ulimits:
+      core:
+        soft: 0
+        hard: 0
+      nproc:
+        soft: 4000
+        hard: 4000
+
+volumes:
+  mysql:
+  mysql_config:
+
+networks:
+  shatranj-network:

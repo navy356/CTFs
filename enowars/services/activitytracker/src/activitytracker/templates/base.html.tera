@@ -1,0 +1,134 @@
+<html>
+
+<head>
+    <title>
+        {% block title %}Activitytracker{% endblock %}
+    </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://code.divshot.com/geo-bootstrap/swatch/bootstrap.min.css">
+    <style>
+        .w-1 { width: 10%; }
+        .w-2 { width: 20%; }
+        .w-3 { width: 30%; }
+        .w-4 { width: 40%; }
+        .w-5 { width: 50%; }
+        .w-6 { width: 60%; }
+        .w-7 { width: 70%; }
+        .w-8 { width: 80%; }
+        .w-9 { width: 90%; }
+        .w-10 { width: 100%; }
+        .div-inline{
+            display:inline-block;
+        }
+        body {
+            background-image: url("/posts/imgs/background.svg");
+            background-repeat: repeat;
+            color: black;
+        }
+        h3 {
+            color: darkgreen;
+        }
+        .form-group {
+            background-color: white;
+        }
+        .blink_text {
+            animation:1s blinker linear infinite;
+            -webkit-animation:1s blinker linear infinite;
+            -moz-animation:1s blinker linear infinite;
+
+            color: red;
+        }
+
+        @-moz-keyframes blinker {
+            0% { opacity: 1.0; }
+            50% { opacity: 0.0; }
+            100% { opacity: 1.0; }
+        }
+
+        @-webkit-keyframes blinker {
+            0% { opacity: 1.0; }
+            50% { opacity: 0.0; }
+            100% { opacity: 1.0; }
+        }
+
+        @keyframes blinker {
+            0% { opacity: 1.0; }
+            50% { opacity: 0.0; }
+            100% { opacity: 1.0; }
+        }
+
+        .marquee {
+            width: 100%;
+            line-height: 15px;
+            background-color: red;
+            color: #55be00;
+            white-space: nowrap;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+        .marquee p {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 120s linear infinite;
+        }
+        @keyframes marquee {
+            0%   { transform: translate(0, 0); }
+            100% { transform: translate(-100%, 0); }
+        }
+    </style>
+</head>
+
+<body>
+<div class="container my-5">
+    <div class="row">
+        <div class="col">
+            <h1 class="display-1">
+                <a href="/posts/view/0" class="text-decoration-none" style="color: black; background-color: white">
+                    {% block heading %}Title!{% endblock %}
+                </a>
+                {% block action %}<a class="btn btn-primary btn-lg float-right" href="/posts/new">Action!</a>{% endblock %}
+                {% if user %}
+                    <a class="btn btn-danger btn-lg float-right mr-1" href="/auth/logout">Logout</a>
+                    <div class="dropdown div-inline float-right btn-lg">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Profile
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="/posts/my">Your Posts</a>
+                            <a class="dropdown-item" href="/auth/addimage">Upload another progress pic</a>
+                            <a class="dropdown-item" href="/auth/viewimages">View all your progress pics</a>
+                        </div>
+                    </div>
+                    <div class="dropdown div-inline float-right btn-lg">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Friends
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="/friends">Add a Friend</a>
+                            <a class="dropdown-item" href="/posts/friends">Friend's posts</a>
+                        </div>
+                    </div>
+                {% else %}
+                    <a class="btn btn-primary btn-lg float-right mr-1" href="/auth/login">Login</a>
+                    <a class="btn btn-primary btn-lg float-right mr-1" href="/auth/signup">Register</a>
+                {% endif %}
+            </h1>
+            <hr>
+            <div class="marquee"><p>Have you tried adding your friends? Just add everyone you want to see your posts. If they add you back, you can even see theirs! --- Never skip leg day! --- Have you made a mistake in your post? Not to worry, just use the edit feature! If you are sure that your post is correct, set it to protected and you can never edit it by accident again! --- A healthy diet is the key to success! --- If you are not happy with one of your posts, just delete it! --- A healthy mind needs a healthy body --- Did you know that you could upload images? --- An apple a day keeps the doctor away! --- If you forget your password, use our password recovery feature! --- Always work on your form! There's always something you can improve! --- If you don't want one of your posts to be visible, just set it to private and only you will be able to see it. --- 100 Push Ups a day is not enough! Go for 1.000 or 1.000.000! --- You can see all your posts when clicking the 'my posts'-Button. And you can see all your friend's posts by clicking the 'friends' button. --- Your body is the mirror image of your lifestyle --- Don't forget to upload progress pics regularly! --- Pain is weakness leaving the body --- You can see all public posts in your feed. --- Do you even lift? ---  </p></div>
+            {% if flash %}
+                <div class="alert alert-info">{{ flash }}</div>
+            {% endif %}
+        </div>
+    </div>
+    <div class="row">
+        {% block content %}Content{% endblock %}
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

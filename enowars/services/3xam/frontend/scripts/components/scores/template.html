@@ -1,0 +1,26 @@
+<div>
+    <h2>Scores</h2>
+    <nav aria-label="scores paging">
+        <ul class="pagination justify-content-center">
+            <li ng-repeat="page in pages" class="page-item"
+                ng-class="{'active': selected_page == page.num, 'disabled':
+                page.disabled}">
+                <a class="page-link" ng-href="{{page.url}}">{{page.num}}</a></li>
+        </ul>
+    </nav>
+    <table id="abc" class="table table-hover table-striped table-bordered table-sm" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th scope="col">User</th>
+                <th scope="col">Score</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="score in scores">
+                <td>{{score.user.name}}</td>
+                <td>{{score.score}} %</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+

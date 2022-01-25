@@ -1,0 +1,536 @@
+Host discovery disabled (-Pn). All addresses will be marked 'up' and scan times will be slower.
+Starting Nmap 7.91 ( https://nmap.org ) at 2021-07-10 18:15 IST
+Nmap scan report for 10.1.63.1
+Host is up (0.26s latency).
+Not shown: 989 filtered ports
+PORT      STATE SERVICE         VERSION
+22/tcp    open  ssh             OpenSSH 8.2p1 Ubuntu 4ubuntu0.2 (Ubuntu Linux; protocol 2.0)
+| vulscan: VulDB - https://vuldb.com:
+| No findings
+| 
+| MITRE CVE - https://cve.mitre.org:
+| No findings
+| 
+| SecurityFocus - https://www.securityfocus.com/bid/:
+| No findings
+| 
+| IBM X-Force - https://exchange.xforce.ibmcloud.com:
+| No findings
+| 
+| Exploit-DB - https://www.exploit-db.com:
+| No findings
+| 
+| OpenVAS (Nessus) - http://www.openvas.org:
+| No findings
+| 
+| SecurityTracker - https://www.securitytracker.com:
+| No findings
+| 
+| OSVDB - http://www.osvdb.org:
+| No findings
+|_
+2222/tcp  open  ssh             (protocol 2.0)
+| fingerprint-strings: 
+|   NULL: 
+|_    SSH-2.0-goSSHip
+4242/tcp  open  vrml-multi-use?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP: 
+|     HTTP/1.1 400 Bad Request
+|     content-length: 0
+|     date: Sat, 10 Jul 2021 12:45:47 GMT
+|   GetRequest: 
+|     HTTP/1.0 303 See Other
+|     location: /posts
+|     server: Rocket
+|     permissions-policy: interest-cohort=()
+|     x-frame-options: SAMEORIGIN
+|     x-content-type-options: nosniff
+|     content-length: 0
+|     date: Sat, 10 Jul 2021 12:45:45 GMT
+|   HTTPOptions: 
+|     HTTP/1.0 404 Not Found
+|     content-type: text/html; charset=utf-8
+|     server: Rocket
+|     permissions-policy: interest-cohort=()
+|     x-frame-options: SAMEORIGIN
+|     x-content-type-options: nosniff
+|     content-length: 383
+|     date: Sat, 10 Jul 2021 12:45:45 GMT
+|     <!DOCTYPE html>
+|     <html lang="en">
+|     <head>
+|     <meta charset="utf-8">
+|     <title>404 Not Found</title>
+|     </head>
+|     <body align="center">
+|     <div role="main" align="center">
+|     <h1>404: Not Found</h1>
+|     <p>The requested resource could not be found.</p>
+|     </div>
+|     <div role="contentinfo" align="center">
+|     <small>Rocket</small>
+|     </div>
+|     </body>
+|     </html>
+|   Help, SSLSessionReq: 
+|     HTTP/1.1 400 Bad Request
+|     content-length: 0
+|     date: Sat, 10 Jul 2021 12:45:48 GMT
+|   RPCCheck, RTSPRequest: 
+|     HTTP/1.1 400 Bad Request
+|     content-length: 0
+|_    date: Sat, 10 Jul 2021 12:45:46 GMT
+8001/tcp  open  vcom-tunnel?
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 404 Not Found
+|     Connection: close
+|     Date: Sat, 10 Jul 2021 12:45:40 GMT
+|     Server: Kestrel
+|     Content-Length: 0
+|     Content-Security-Policy: default-src 'self'; script-src 'unsafe-eval' 'unsafe-inline'; script-src-elem 'unsafe-eval' 'unsafe-inline' *; worker-src 'unsafe-eval' 'unsafe-inline' *; img-src 'self' data:;
+|   GenericLines: 
+|     HTTP/1.1 400 Bad Request
+|     Connection: close
+|     Date: Sat, 10 Jul 2021 12:45:40 GMT
+|     Server: Kestrel
+|     Content-Length: 0
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Connection: close
+|     Date: Sat, 10 Jul 2021 12:45:39 GMT
+|     Content-Type: text/html
+|     Server: Kestrel
+|     Content-Length: 1491
+|     Last-Modified: Fri, 09 Jul 2021 22:11:17 GMT
+|     Accept-Ranges: bytes
+|     ETag: "1d7750f56af3553"
+|     Content-Security-Policy: default-src 'self'; script-src 'unsafe-eval' 'unsafe-inline'; script-src-elem 'unsafe-eval' 'unsafe-inline' *; worker-src 'unsafe-eval' 'unsafe-inline' *; img-src 'self' data:;
+|     <!DOCTYPE html>
+|     <html>
+|     <head>
+|     <meta charset="utf-8" />
+|     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+|     <title>FileShare</title>
+|     <base href="/" />
+|     <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+|     <link href="css/app.css" rel="stylesheet" />
+|     <link href="FileShare.Client.styles.css" rel="stylesheet" />
+|     <link href="manifest.json" rel="manifest" />
+|   HTTPOptions: 
+|     HTTP/1.1 404 Not Found
+|     Connection: close
+|     Date: Sat, 10 Jul 2021 12:45:41 GMT
+|     Server: Kestrel
+|     Content-Length: 0
+|_    Content-Security-Policy: default-src 'self'; script-src 'unsafe-eval' 'unsafe-inline'; script-src-elem 'unsafe-eval' 'unsafe-inline' *; worker-src 'unsafe-eval' 'unsafe-inline' *; img-src 'self' data:;
+8010/tcp  open  xmpp?
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 200 OK
+|     server: ecstatic-3.3.2
+|     cache-control: max-age=3600
+|     last-modified: Fri, 09 Jul 2021 22:18:52 GMT
+|     etag: W/"2224077-1265-2021-07-09T22:18:52.000Z"
+|     content-length: 1265
+|     content-type: text/html; charset=UTF-8
+|     date: Sat, 10 Jul 2021 12:45:40 GMT
+|     connection: close
+|     <!DOCTYPE html><html lang=""><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"><link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"><title>medchat-frontend</title><link href="/cs
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     server: ecstatic-3.3.2
+|     cache-control: max-age=3600
+|     last-modified: Fri, 09 Jul 2021 22:18:52 GMT
+|     etag: W/"2224077-1265-2021-07-09T22:18:52.000Z"
+|     content-length: 1265
+|     content-type: text/html; charset=UTF-8
+|     Date: Sat, 10 Jul 2021 12:45:40 GMT
+|     Connection: close
+|_    <!DOCTYPE html><html lang=""><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"><link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"><title>medchat-frontend</title><link href="/cs
+8011/tcp  open  http            nginx 1.21.1
+|_http-server-header: nginx/1.21.1
+| vulscan: VulDB - https://vuldb.com:
+| No findings
+| 
+| MITRE CVE - https://cve.mitre.org:
+| No findings
+| 
+| SecurityFocus - https://www.securityfocus.com/bid/:
+| No findings
+| 
+| IBM X-Force - https://exchange.xforce.ibmcloud.com:
+| No findings
+| 
+| Exploit-DB - https://www.exploit-db.com:
+| No findings
+| 
+| OpenVAS (Nessus) - http://www.openvas.org:
+| No findings
+| 
+| SecurityTracker - https://www.securitytracker.com:
+| No findings
+| 
+| OSVDB - http://www.osvdb.org:
+| No findings
+|_
+8080/tcp  open  http-proxy
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 401 
+|     Vary: Origin
+|     Vary: Access-Control-Request-Method
+|     Vary: Access-Control-Request-Headers
+|     Set-Cookie: JSESSIONID=0A9E851FECF2CB76D6E4E02B80F1B25C; Path=/; HttpOnly
+|     WWW-Authenticate: Basic realm="Realm"
+|     X-Content-Type-Options: nosniff
+|     X-XSS-Protection: 1; mode=block
+|     Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+|     Pragma: no-cache
+|     Expires: 0
+|     X-Frame-Options: DENY
+|     Content-Type: application/json
+|     Date: Sat, 10 Jul 2021 12:45:40 GMT
+|     Connection: close
+|     {"timestamp":"2021-07-10T12:45:40.249+00:00","status":401,"error":"Unauthorized","message":"","path":"/"}
+|   HTTPOptions: 
+|     HTTP/1.1 401 
+|     Vary: Origin
+|     Vary: Access-Control-Request-Method
+|     Vary: Access-Control-Request-Headers
+|     Set-Cookie: JSESSIONID=3A1B983835C6E72D8572627E8C5D3920; Path=/; HttpOnly
+|     WWW-Authenticate: Basic realm="Realm"
+|     X-Content-Type-Options: nosniff
+|     X-XSS-Protection: 1; mode=block
+|     Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+|     Pragma: no-cache
+|     Expires: 0
+|     X-Frame-Options: DENY
+|     Content-Type: application/json
+|     Date: Sat, 10 Jul 2021 12:45:40 GMT
+|     Connection: close
+|     {"timestamp":"2021-07-10T12:45:40.894+00:00","status":401,"error":"Unauthorized","message":"","path":"/"}
+|   RTSPRequest: 
+|     HTTP/1.1 400 
+|     Content-Type: text/html;charset=utf-8
+|     Content-Language: en
+|     Content-Length: 435
+|     Date: Sat, 10 Jul 2021 12:45:41 GMT
+|     Connection: close
+|     <!doctype html><html lang="en"><head><title>HTTP Status 400 
+|     Request</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 400 
+|_    Request</h1></body></html>
+8081/tcp  open  http            nginx 1.20.1
+|_http-server-header: nginx/1.20.1
+| vulscan: VulDB - https://vuldb.com:
+| No findings
+| 
+| MITRE CVE - https://cve.mitre.org:
+| No findings
+| 
+| SecurityFocus - https://www.securityfocus.com/bid/:
+| No findings
+| 
+| IBM X-Force - https://exchange.xforce.ibmcloud.com:
+| No findings
+| 
+| Exploit-DB - https://www.exploit-db.com:
+| No findings
+| 
+| OpenVAS (Nessus) - http://www.openvas.org:
+| No findings
+| 
+| SecurityTracker - https://www.securitytracker.com:
+| No findings
+| 
+| OSVDB - http://www.osvdb.org:
+| No findings
+|_
+9090/tcp  open  zeus-admin?
+| fingerprint-strings: 
+|   GetRequest: 
+|     dont pwn pls
+|     ERR: No such command!
+|     ERR: No such command!
+|   NULL: 
+|_    dont pwn pls
+49153/tcp open  mysql           MySQL 8.0.25
+| vulscan: VulDB - https://vuldb.com:
+| No findings
+| 
+| MITRE CVE - https://cve.mitre.org:
+| No findings
+| 
+| SecurityFocus - https://www.securityfocus.com/bid/:
+| No findings
+| 
+| IBM X-Force - https://exchange.xforce.ibmcloud.com:
+| No findings
+| 
+| Exploit-DB - https://www.exploit-db.com:
+| No findings
+| 
+| OpenVAS (Nessus) - http://www.openvas.org:
+| No findings
+| 
+| SecurityTracker - https://www.securitytracker.com:
+| No findings
+| 
+| OSVDB - http://www.osvdb.org:
+| No findings
+|_
+49154/tcp open  unknown
+| fingerprint-strings: 
+|   GenericLines: 
+|     HTTP/1.1 400 Bad Request
+|     Connection: close
+|     Date: Sat, 10 Jul 2021 12:45:39 GMT
+|     Server: Kestrel
+|     Content-Length: 0
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Connection: close
+|     Date: Sat, 10 Jul 2021 12:45:40 GMT
+|     Content-Type: text/html
+|     Server: Kestrel
+|     Content-Length: 1491
+|     Last-Modified: Fri, 09 Jul 2021 22:11:17 GMT
+|     Accept-Ranges: bytes
+|     ETag: "1d7750f56af3553"
+|     Content-Security-Policy: default-src 'self'; script-src 'unsafe-eval' 'unsafe-inline'; script-src-elem 'unsafe-eval' 'unsafe-inline' *; worker-src 'unsafe-eval' 'unsafe-inline' *; img-src 'self' data:;
+|     <!DOCTYPE html>
+|     <html>
+|     <head>
+|     <meta charset="utf-8" />
+|     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+|     <title>FileShare</title>
+|     <base href="/" />
+|     <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+|     <link href="css/app.css" rel="stylesheet" />
+|     <link href="FileShare.Client.styles.css" rel="stylesheet" />
+|     <link href="manifest.json" rel="manifest" />
+|   HTTPOptions: 
+|     HTTP/1.1 404 Not Found
+|     Connection: close
+|     Date: Sat, 10 Jul 2021 12:45:40 GMT
+|     Server: Kestrel
+|     Content-Length: 0
+|     Content-Security-Policy: default-src 'self'; script-src 'unsafe-eval' 'unsafe-inline'; script-src-elem 'unsafe-eval' 'unsafe-inline' *; worker-src 'unsafe-eval' 'unsafe-inline' *; img-src 'self' data:;
+|   RTSPRequest: 
+|     HTTP/1.1 505 HTTP Version Not Supported
+|     Connection: close
+|     Date: Sat, 10 Jul 2021 12:45:41 GMT
+|     Server: Kestrel
+|_    Content-Length: 0
+7 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2222-TCP:V=7.91%I=7%D=7/10%Time=60E99674%P=x86_64-unknown-linux-gnu
+SF:%r(NULL,11,"SSH-2\.0-goSSHip\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port4242-TCP:V=7.91%I=7%D=7/10%Time=60E99679%P=x86_64-unknown-linux-gnu
+SF:%r(GetRequest,DA,"HTTP/1\.0\x20303\x20See\x20Other\r\nlocation:\x20/pos
+SF:ts\r\nserver:\x20Rocket\r\npermissions-policy:\x20interest-cohort=\(\)\
+SF:r\nx-frame-options:\x20SAMEORIGIN\r\nx-content-type-options:\x20nosniff
+SF:\r\ncontent-length:\x200\r\ndate:\x20Sat,\x2010\x20Jul\x202021\x2012:45
+SF::45\x20GMT\r\n\r\n")%r(HTTPOptions,271,"HTTP/1\.0\x20404\x20Not\x20Foun
+SF:d\r\ncontent-type:\x20text/html;\x20charset=utf-8\r\nserver:\x20Rocket\
+SF:r\npermissions-policy:\x20interest-cohort=\(\)\r\nx-frame-options:\x20S
+SF:AMEORIGIN\r\nx-content-type-options:\x20nosniff\r\ncontent-length:\x203
+SF:83\r\ndate:\x20Sat,\x2010\x20Jul\x202021\x2012:45:45\x20GMT\r\n\r\n<!DO
+SF:CTYPE\x20html>\n<html\x20lang=\"en\">\n<head>\n\x20\x20\x20\x20<meta\x2
+SF:0charset=\"utf-8\">\n\x20\x20\x20\x20<title>404\x20Not\x20Found</title>
+SF:\n</head>\n<body\x20align=\"center\">\n\x20\x20\x20\x20<div\x20role=\"m
+SF:ain\"\x20align=\"center\">\n\x20\x20\x20\x20\x20\x20\x20\x20<h1>404:\x2
+SF:0Not\x20Found</h1>\n\x20\x20\x20\x20\x20\x20\x20\x20<p>The\x20requested
+SF:\x20resource\x20could\x20not\x20be\x20found\.</p>\n\x20\x20\x20\x20\x20
+SF:\x20\x20\x20<hr\x20/>\n\x20\x20\x20\x20</div>\n\x20\x20\x20\x20<div\x20
+SF:role=\"contentinfo\"\x20align=\"center\">\n\x20\x20\x20\x20\x20\x20\x20
+SF:\x20<small>Rocket</small>\n\x20\x20\x20\x20</div>\n</body>\n</html>")%r
+SF:(RTSPRequest,54,"HTTP/1\.1\x20400\x20Bad\x20Request\r\ncontent-length:\
+SF:x200\r\ndate:\x20Sat,\x2010\x20Jul\x202021\x2012:45:46\x20GMT\r\n\r\n")
+SF:%r(RPCCheck,54,"HTTP/1\.1\x20400\x20Bad\x20Request\r\ncontent-length:\x
+SF:200\r\ndate:\x20Sat,\x2010\x20Jul\x202021\x2012:45:46\x20GMT\r\n\r\n")%
+SF:r(DNSVersionBindReqTCP,54,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nconten
+SF:t-length:\x200\r\ndate:\x20Sat,\x2010\x20Jul\x202021\x2012:45:47\x20GMT
+SF:\r\n\r\n")%r(DNSStatusRequestTCP,54,"HTTP/1\.1\x20400\x20Bad\x20Request
+SF:\r\ncontent-length:\x200\r\ndate:\x20Sat,\x2010\x20Jul\x202021\x2012:45
+SF::47\x20GMT\r\n\r\n")%r(Help,54,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nc
+SF:ontent-length:\x200\r\ndate:\x20Sat,\x2010\x20Jul\x202021\x2012:45:48\x
+SF:20GMT\r\n\r\n")%r(SSLSessionReq,54,"HTTP/1\.1\x20400\x20Bad\x20Request\
+SF:r\ncontent-length:\x200\r\ndate:\x20Sat,\x2010\x20Jul\x202021\x2012:45:
+SF:48\x20GMT\r\n\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port8001-TCP:V=7.91%I=7%D=7/10%Time=60E99674%P=x86_64-unknown-linux-gnu
+SF:%r(GetRequest,786,"HTTP/1\.1\x20200\x20OK\r\nConnection:\x20close\r\nDa
+SF:te:\x20Sat,\x2010\x20Jul\x202021\x2012:45:39\x20GMT\r\nContent-Type:\x2
+SF:0text/html\r\nServer:\x20Kestrel\r\nContent-Length:\x201491\r\nLast-Mod
+SF:ified:\x20Fri,\x2009\x20Jul\x202021\x2022:11:17\x20GMT\r\nAccept-Ranges
+SF::\x20bytes\r\nETag:\x20\"1d7750f56af3553\"\r\nContent-Security-Policy:\
+SF:x20default-src\x20'self';\x20script-src\x20'unsafe-eval'\x20'unsafe-inl
+SF:ine';\x20script-src-elem\x20'unsafe-eval'\x20'unsafe-inline'\x20\*;\x20
+SF:worker-src\x20'unsafe-eval'\x20'unsafe-inline'\x20\*;\x20img-src\x20'se
+SF:lf'\x20data:;\r\n\r\n<!DOCTYPE\x20html>\n<html>\n\x20\x20<head>\n\x20\x
+SF:20\x20\x20<meta\x20charset=\"utf-8\"\x20/>\n\x20\x20\x20\x20<meta\x20na
+SF:me=\"viewport\"\x20content=\"width=device-width,\x20initial-scale=1\.0,
+SF:\x20maximum-scale=1\.0,\x20user-scalable=no\"\x20/>\n\x20\x20\x20\x20<t
+SF:itle>FileShare</title>\n\x20\x20\x20\x20<base\x20href=\"/\"\x20/>\n\x20
+SF:\x20\x20\x20<link\x20href=\"css/bootstrap/bootstrap\.min\.css\"\x20rel=
+SF:\"stylesheet\"\x20/>\n\x20\x20\x20\x20<link\x20href=\"css/app\.css\"\x2
+SF:0rel=\"stylesheet\"\x20/>\n\x20\x20\x20\x20<link\x20href=\"FileShare\.C
+SF:lient\.styles\.css\"\x20rel=\"stylesheet\"\x20/>\n\x20\x20\x20\x20<link
+SF:\x20href=\"manifest\.json\"\x20rel=\"manifest\"\x20/>\n\x20\x20\x20\x20
+SF:<li")%r(FourOhFourRequest,141,"HTTP/1\.1\x20404\x20Not\x20Found\r\nConn
+SF:ection:\x20close\r\nDate:\x20Sat,\x2010\x20Jul\x202021\x2012:45:40\x20G
+SF:MT\r\nServer:\x20Kestrel\r\nContent-Length:\x200\r\nContent-Security-Po
+SF:licy:\x20default-src\x20'self';\x20script-src\x20'unsafe-eval'\x20'unsa
+SF:fe-inline';\x20script-src-elem\x20'unsafe-eval'\x20'unsafe-inline'\x20\
+SF:*;\x20worker-src\x20'unsafe-eval'\x20'unsafe-inline'\x20\*;\x20img-src\
+SF:x20'self'\x20data:;\r\n\r\n")%r(GenericLines,78,"HTTP/1\.1\x20400\x20Ba
+SF:d\x20Request\r\nConnection:\x20close\r\nDate:\x20Sat,\x2010\x20Jul\x202
+SF:021\x2012:45:40\x20GMT\r\nServer:\x20Kestrel\r\nContent-Length:\x200\r\
+SF:n\r\n")%r(HTTPOptions,141,"HTTP/1\.1\x20404\x20Not\x20Found\r\nConnecti
+SF:on:\x20close\r\nDate:\x20Sat,\x2010\x20Jul\x202021\x2012:45:41\x20GMT\r
+SF:\nServer:\x20Kestrel\r\nContent-Length:\x200\r\nContent-Security-Policy
+SF::\x20default-src\x20'self';\x20script-src\x20'unsafe-eval'\x20'unsafe-i
+SF:nline';\x20script-src-elem\x20'unsafe-eval'\x20'unsafe-inline'\x20\*;\x
+SF:20worker-src\x20'unsafe-eval'\x20'unsafe-inline'\x20\*;\x20img-src\x20'
+SF:self'\x20data:;\r\n\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port8010-TCP:V=7.91%I=7%D=7/10%Time=60E99674%P=x86_64-unknown-linux-gnu
+SF:%r(GetRequest,60E,"HTTP/1\.1\x20200\x20OK\r\nserver:\x20ecstatic-3\.3\.
+SF:2\r\ncache-control:\x20max-age=3600\r\nlast-modified:\x20Fri,\x2009\x20
+SF:Jul\x202021\x2022:18:52\x20GMT\r\netag:\x20W/\"2224077-1265-2021-07-09T
+SF:22:18:52\.000Z\"\r\ncontent-length:\x201265\r\ncontent-type:\x20text/ht
+SF:ml;\x20charset=UTF-8\r\nDate:\x20Sat,\x2010\x20Jul\x202021\x2012:45:40\
+SF:x20GMT\r\nConnection:\x20close\r\n\r\n<!DOCTYPE\x20html><html\x20lang=\
+SF:"\"><head><meta\x20charset=\"utf-8\"><meta\x20http-equiv=\"X-UA-Compati
+SF:ble\"\x20content=\"IE=edge\"><meta\x20name=\"viewport\"\x20content=\"wi
+SF:dth=device-width,initial-scale=1\"><link\x20rel=\"icon\"\x20href=\"/fav
+SF:icon\.ico\"><link\x20rel=\"stylesheet\"\x20href=\"https://use\.fontawes
+SF:ome\.com/releases/v5\.2\.0/css/all\.css\"><link\x20rel=\"preconnect\"\x
+SF:20href=\"https://fonts\.gstatic\.com\"><link\x20href=\"https://fonts\.g
+SF:oogleapis\.com/css2\?family=Montserrat:ital,wght@0,100;0,200;0,300;0,40
+SF:0;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,7
+SF:00;1,800;1,900&display=swap\"\x20rel=\"stylesheet\"><title>medchat-fron
+SF:tend</title><link\x20href=\"/cs")%r(FourOhFourRequest,60E,"HTTP/1\.1\x2
+SF:0200\x20OK\r\nserver:\x20ecstatic-3\.3\.2\r\ncache-control:\x20max-age=
+SF:3600\r\nlast-modified:\x20Fri,\x2009\x20Jul\x202021\x2022:18:52\x20GMT\
+SF:r\netag:\x20W/\"2224077-1265-2021-07-09T22:18:52\.000Z\"\r\ncontent-len
+SF:gth:\x201265\r\ncontent-type:\x20text/html;\x20charset=UTF-8\r\ndate:\x
+SF:20Sat,\x2010\x20Jul\x202021\x2012:45:40\x20GMT\r\nconnection:\x20close\
+SF:r\n\r\n<!DOCTYPE\x20html><html\x20lang=\"\"><head><meta\x20charset=\"ut
+SF:f-8\"><meta\x20http-equiv=\"X-UA-Compatible\"\x20content=\"IE=edge\"><m
+SF:eta\x20name=\"viewport\"\x20content=\"width=device-width,initial-scale=
+SF:1\"><link\x20rel=\"icon\"\x20href=\"/favicon\.ico\"><link\x20rel=\"styl
+SF:esheet\"\x20href=\"https://use\.fontawesome\.com/releases/v5\.2\.0/css/
+SF:all\.css\"><link\x20rel=\"preconnect\"\x20href=\"https://fonts\.gstatic
+SF:\.com\"><link\x20href=\"https://fonts\.googleapis\.com/css2\?family=Mon
+SF:tserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900
+SF:;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap\"\x
+SF:20rel=\"stylesheet\"><title>medchat-frontend</title><link\x20href=\"/cs
+SF:");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port8080-TCP:V=7.91%I=7%D=7/10%Time=60E99674%P=x86_64-unknown-linux-gnu
+SF:%r(GetRequest,253,"HTTP/1\.1\x20401\x20\r\nVary:\x20Origin\r\nVary:\x20
+SF:Access-Control-Request-Method\r\nVary:\x20Access-Control-Request-Header
+SF:s\r\nSet-Cookie:\x20JSESSIONID=0A9E851FECF2CB76D6E4E02B80F1B25C;\x20Pat
+SF:h=/;\x20HttpOnly\r\nWWW-Authenticate:\x20Basic\x20realm=\"Realm\"\r\nX-
+SF:Content-Type-Options:\x20nosniff\r\nX-XSS-Protection:\x201;\x20mode=blo
+SF:ck\r\nCache-Control:\x20no-cache,\x20no-store,\x20max-age=0,\x20must-re
+SF:validate\r\nPragma:\x20no-cache\r\nExpires:\x200\r\nX-Frame-Options:\x2
+SF:0DENY\r\nContent-Type:\x20application/json\r\nDate:\x20Sat,\x2010\x20Ju
+SF:l\x202021\x2012:45:40\x20GMT\r\nConnection:\x20close\r\n\r\n{\"timestam
+SF:p\":\"2021-07-10T12:45:40\.249\+00:00\",\"status\":401,\"error\":\"Unau
+SF:thorized\",\"message\":\"\",\"path\":\"/\"}")%r(HTTPOptions,253,"HTTP/1
+SF:\.1\x20401\x20\r\nVary:\x20Origin\r\nVary:\x20Access-Control-Request-Me
+SF:thod\r\nVary:\x20Access-Control-Request-Headers\r\nSet-Cookie:\x20JSESS
+SF:IONID=3A1B983835C6E72D8572627E8C5D3920;\x20Path=/;\x20HttpOnly\r\nWWW-A
+SF:uthenticate:\x20Basic\x20realm=\"Realm\"\r\nX-Content-Type-Options:\x20
+SF:nosniff\r\nX-XSS-Protection:\x201;\x20mode=block\r\nCache-Control:\x20n
+SF:o-cache,\x20no-store,\x20max-age=0,\x20must-revalidate\r\nPragma:\x20no
+SF:-cache\r\nExpires:\x200\r\nX-Frame-Options:\x20DENY\r\nContent-Type:\x2
+SF:0application/json\r\nDate:\x20Sat,\x2010\x20Jul\x202021\x2012:45:40\x20
+SF:GMT\r\nConnection:\x20close\r\n\r\n{\"timestamp\":\"2021-07-10T12:45:40
+SF:\.894\+00:00\",\"status\":401,\"error\":\"Unauthorized\",\"message\":\"
+SF:\",\"path\":\"/\"}")%r(RTSPRequest,24E,"HTTP/1\.1\x20400\x20\r\nContent
+SF:-Type:\x20text/html;charset=utf-8\r\nContent-Language:\x20en\r\nContent
+SF:-Length:\x20435\r\nDate:\x20Sat,\x2010\x20Jul\x202021\x2012:45:41\x20GM
+SF:T\r\nConnection:\x20close\r\n\r\n<!doctype\x20html><html\x20lang=\"en\"
+SF:><head><title>HTTP\x20Status\x20400\x20\xe2\x80\x93\x20Bad\x20Request</
+SF:title><style\x20type=\"text/css\">body\x20{font-family:Tahoma,Arial,san
+SF:s-serif;}\x20h1,\x20h2,\x20h3,\x20b\x20{color:white;background-color:#5
+SF:25D76;}\x20h1\x20{font-size:22px;}\x20h2\x20{font-size:16px;}\x20h3\x20
+SF:{font-size:14px;}\x20p\x20{font-size:12px;}\x20a\x20{color:black;}\x20\
+SF:.line\x20{height:1px;background-color:#525D76;border:none;}</style></he
+SF:ad><body><h1>HTTP\x20Status\x20400\x20\xe2\x80\x93\x20Bad\x20Request</h
+SF:1></body></html>");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port9090-TCP:V=7.91%I=7%D=7/10%Time=60E99674%P=x86_64-unknown-linux-gnu
+SF:%r(NULL,10F,"\x20\x20\xe2\x94\x8c\xe2\x94\x80\xe2\x94\x90\xe2\x94\x8c\x
+SF:e2\x94\xac\xe2\x94\x90\xe2\x94\xac\x20\x20\xe2\x94\x8c\xe2\x94\xac\xe2\
+SF:x94\x90\xe2\x94\x8c\xe2\x94\x80\xe2\x94\x90\xe2\x94\x8c\xe2\x94\x80\xe2
+SF:\x94\x90\xe2\x94\x8c\xe2\x94\xac\xe2\x94\x90\xe2\x94\x8c\xe2\x94\x80\xe
+SF:2\x94\x90\xe2\x94\xac\xe2\x94\x80\xe2\x94\x90\x20\x20\xe2\x94\xac\n\x20
+SF:\x20\xe2\x94\x94\xe2\x94\x80\xe2\x94\x90\x20\xe2\x94\x82\x20\xe2\x94\x8
+SF:2\x20\x20\x20\xe2\x94\x82\xe2\x94\x82\xe2\x94\x82\x20\xe2\x94\x82\xe2\x
+SF:94\x82\x20\x20\x20\xe2\x94\x82\x20\xe2\x94\x82\x20\xe2\x94\x82\xe2\x94\
+SF:x9c\xe2\x94\xac\xe2\x94\x98\x20\x20\xe2\x96\x93\n\x20\x20\xe2\x94\x94\x
+SF:e2\x94\x80\xe2\x94\x98\x20\xe2\x94\xb4\x20\xe2\x94\xb4\xe2\x94\x80\xe2\
+SF:x94\x98\xe2\x94\x80\xe2\x94\xb4\xe2\x94\x98\xe2\x94\x94\xe2\x94\x80\xe2
+SF:\x94\x98\xe2\x94\x94\xe2\x94\x80\xe2\x94\x98\x20\xe2\x94\xb4\x20\xe2\x9
+SF:4\x94\xe2\x94\x80\xe2\x94\x98\xe2\x94\xb4\xe2\x94\x94\xe2\x94\x80\x20\x
+SF:20\xe2\x94\x82\n\n\x20\x20\x20\x20\(\x20\*\xe0\xb2\xa5\x20\xe2\x8c\x82\
+SF:x20\x20\*\x20\)\x20dont\x20pwn\x20pls\n\n\r\$\x20")%r(GetRequest,141,"\
+SF:x20\x20\xe2\x94\x8c\xe2\x94\x80\xe2\x94\x90\xe2\x94\x8c\xe2\x94\xac\xe2
+SF:\x94\x90\xe2\x94\xac\x20\x20\xe2\x94\x8c\xe2\x94\xac\xe2\x94\x90\xe2\x9
+SF:4\x8c\xe2\x94\x80\xe2\x94\x90\xe2\x94\x8c\xe2\x94\x80\xe2\x94\x90\xe2\x
+SF:94\x8c\xe2\x94\xac\xe2\x94\x90\xe2\x94\x8c\xe2\x94\x80\xe2\x94\x90\xe2\
+SF:x94\xac\xe2\x94\x80\xe2\x94\x90\x20\x20\xe2\x94\xac\n\x20\x20\xe2\x94\x
+SF:94\xe2\x94\x80\xe2\x94\x90\x20\xe2\x94\x82\x20\xe2\x94\x82\x20\x20\x20\
+SF:xe2\x94\x82\xe2\x94\x82\xe2\x94\x82\x20\xe2\x94\x82\xe2\x94\x82\x20\x20
+SF:\x20\xe2\x94\x82\x20\xe2\x94\x82\x20\xe2\x94\x82\xe2\x94\x9c\xe2\x94\xa
+SF:c\xe2\x94\x98\x20\x20\xe2\x96\x93\n\x20\x20\xe2\x94\x94\xe2\x94\x80\xe2
+SF:\x94\x98\x20\xe2\x94\xb4\x20\xe2\x94\xb4\xe2\x94\x80\xe2\x94\x98\xe2\x9
+SF:4\x80\xe2\x94\xb4\xe2\x94\x98\xe2\x94\x94\xe2\x94\x80\xe2\x94\x98\xe2\x
+SF:94\x94\xe2\x94\x80\xe2\x94\x98\x20\xe2\x94\xb4\x20\xe2\x94\x94\xe2\x94\
+SF:x80\xe2\x94\x98\xe2\x94\xb4\xe2\x94\x94\xe2\x94\x80\x20\x20\xe2\x94\x82
+SF:\n\n\x20\x20\x20\x20\(\x20\*\xe0\xb2\xa5\x20\xe2\x8c\x82\x20\x20\*\x20\
+SF:)\x20dont\x20pwn\x20pls\n\n\r\$\x20ERR:\x20No\x20such\x20command!\n\r\$
+SF:\x20ERR:\x20No\x20such\x20command!\n\r\$\x20");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port49154-TCP:V=7.91%I=7%D=7/10%Time=60E99674%P=x86_64-unknown-linux-gn
+SF:u%r(GenericLines,78,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\
+SF:x20close\r\nDate:\x20Sat,\x2010\x20Jul\x202021\x2012:45:39\x20GMT\r\nSe
+SF:rver:\x20Kestrel\r\nContent-Length:\x200\r\n\r\n")%r(GetRequest,786,"HT
+SF:TP/1\.1\x20200\x20OK\r\nConnection:\x20close\r\nDate:\x20Sat,\x2010\x20
+SF:Jul\x202021\x2012:45:40\x20GMT\r\nContent-Type:\x20text/html\r\nServer:
+SF:\x20Kestrel\r\nContent-Length:\x201491\r\nLast-Modified:\x20Fri,\x2009\
+SF:x20Jul\x202021\x2022:11:17\x20GMT\r\nAccept-Ranges:\x20bytes\r\nETag:\x
+SF:20\"1d7750f56af3553\"\r\nContent-Security-Policy:\x20default-src\x20'se
+SF:lf';\x20script-src\x20'unsafe-eval'\x20'unsafe-inline';\x20script-src-e
+SF:lem\x20'unsafe-eval'\x20'unsafe-inline'\x20\*;\x20worker-src\x20'unsafe
+SF:-eval'\x20'unsafe-inline'\x20\*;\x20img-src\x20'self'\x20data:;\r\n\r\n
+SF:<!DOCTYPE\x20html>\n<html>\n\x20\x20<head>\n\x20\x20\x20\x20<meta\x20ch
+SF:arset=\"utf-8\"\x20/>\n\x20\x20\x20\x20<meta\x20name=\"viewport\"\x20co
+SF:ntent=\"width=device-width,\x20initial-scale=1\.0,\x20maximum-scale=1\.
+SF:0,\x20user-scalable=no\"\x20/>\n\x20\x20\x20\x20<title>FileShare</title
+SF:>\n\x20\x20\x20\x20<base\x20href=\"/\"\x20/>\n\x20\x20\x20\x20<link\x20
+SF:href=\"css/bootstrap/bootstrap\.min\.css\"\x20rel=\"stylesheet\"\x20/>\
+SF:n\x20\x20\x20\x20<link\x20href=\"css/app\.css\"\x20rel=\"stylesheet\"\x
+SF:20/>\n\x20\x20\x20\x20<link\x20href=\"FileShare\.Client\.styles\.css\"\
+SF:x20rel=\"stylesheet\"\x20/>\n\x20\x20\x20\x20<link\x20href=\"manifest\.
+SF:json\"\x20rel=\"manifest\"\x20/>\n\x20\x20\x20\x20<li")%r(HTTPOptions,1
+SF:41,"HTTP/1\.1\x20404\x20Not\x20Found\r\nConnection:\x20close\r\nDate:\x
+SF:20Sat,\x2010\x20Jul\x202021\x2012:45:40\x20GMT\r\nServer:\x20Kestrel\r\
+SF:nContent-Length:\x200\r\nContent-Security-Policy:\x20default-src\x20'se
+SF:lf';\x20script-src\x20'unsafe-eval'\x20'unsafe-inline';\x20script-src-e
+SF:lem\x20'unsafe-eval'\x20'unsafe-inline'\x20\*;\x20worker-src\x20'unsafe
+SF:-eval'\x20'unsafe-inline'\x20\*;\x20img-src\x20'self'\x20data:;\r\n\r\n
+SF:")%r(RTSPRequest,87,"HTTP/1\.1\x20505\x20HTTP\x20Version\x20Not\x20Supp
+SF:orted\r\nConnection:\x20close\r\nDate:\x20Sat,\x2010\x20Jul\x202021\x20
+SF:12:45:41\x20GMT\r\nServer:\x20Kestrel\r\nContent-Length:\x200\r\n\r\n");
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 233.56 seconds

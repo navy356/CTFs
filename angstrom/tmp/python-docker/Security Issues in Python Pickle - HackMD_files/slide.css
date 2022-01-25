@@ -1,0 +1,88 @@
+@charset "UTF-8";
+/* site ui font */
+.site-ui-font { font-family: "Source Sans Pro", Helvetica, Arial, sans-serif; }
+html[lang^="ja"] .site-ui-font { font-family: "Source Sans Pro", Helvetica, Arial, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", Osaka, Meiryo, "メイリオ", "MS Gothic", "ＭＳ ゴシック", sans-serif; }
+html[lang="zh-tw"] .site-ui-font { font-family: "Source Sans Pro", Helvetica, Arial, "PingFang TC", "Microsoft JhengHei", "微軟正黑", sans-serif; }
+html[lang="zh-cn"] .site-ui-font { font-family: "Source Sans Pro", Helvetica, Arial, "PingFang SC", "Microsoft YaHei", "微软雅黑", sans-serif; }
+/* monospace font */
+/* content and content UI font */
+.reveal {/* allow element lang overwrite html lang *//* allow element lang overwrite html lang *//* allow element lang overwrite html lang *//* allow element lang overwrite html lang *//* allow element lang overwrite html lang *//* allow element lang overwrite html lang */ }
+.reveal { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
+html[lang^="ja"] .reveal { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Roboto, Arial, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", Osaka, Meiryo, "メイリオ", "MS Gothic", "ＭＳ ゴシック", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
+html[lang="zh-tw"] .reveal { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Roboto, Arial, "PingFang TC", "Microsoft JhengHei", "微軟正黑", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
+html[lang="zh-cn"] .reveal { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Roboto, Arial, "PingFang SC", "Microsoft YaHei", "微软雅黑", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
+html .reveal[lang^="ja"] { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Roboto, Arial, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", Osaka, Meiryo, "メイリオ", "MS Gothic", "ＭＳ ゴシック", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
+html .reveal[lang="zh-tw"] { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Roboto, Arial, "PingFang TC", "Microsoft JhengHei", "微軟正黑", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
+html .reveal[lang="zh-cn"] { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Roboto, Arial, "PingFang SC", "Microsoft YaHei", "微软雅黑", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
+html[lang^="ja"] .reveal pre, html[lang^="ja"] .reveal code,
+html[lang^="ja"] .reveal kbd { font-family: "Source Code Pro", Consolas, monaco, Meiryo, "ＭＳ ゴシック", "MS Gothic", monospace; }
+html[lang="zh-tw"] .reveal pre, html[lang="zh-tw"] .reveal code,
+html[lang="zh-tw"] .reveal kbd { font-family: "Source Code Pro", Consolas, monaco, "Microsoft JhengHei", "微軟正黑", monospace; }
+html[lang="zh-cn"] .reveal pre, html[lang="zh-cn"] .reveal code,
+html[lang="zh-cn"] .reveal kbd { font-family: "Source Code Pro", Consolas, monaco, "Microsoft YaHei", "微软雅黑", monospace; }
+html .reveal[lang^="ja"] pre, html .reveal[lang^="ja"] code,
+html .reveal[lang^="ja"] kbd { font-family: "Source Code Pro", Consolas, monaco, Meiryo, "ＭＳ ゴシック", "MS Gothic", monospace; }
+html .reveal[lang="zh-tw"] pre, html .reveal[lang="zh-tw"] code,
+html .reveal[lang="zh-tw"] kbd { font-family: "Source Code Pro", Consolas, monaco, "Microsoft JhengHei", "微軟正黑", monospace; }
+html .reveal[lang="zh-cn"] pre, html .reveal[lang="zh-cn"] code,
+html .reveal[lang="zh-cn"] kbd { font-family: "Source Code Pro", Consolas, monaco, "Microsoft YaHei", "微软雅黑", monospace; }
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 { font-family: inherit; text-transform: initial; }
+.reveal kbd { display: inline-block; padding: 0 15px; color: #555; vertical-align: middle; background-color: #fcfcfc; border: solid 2px #ccc; border-bottom-color: #bbb; border-radius: 12px; box-shadow: inset 0 -5px 0 #bbb; }
+.reveal.fade { opacity: unset; transition: unset; }
+.vimeo, .youtube { position: relative !important; cursor: pointer; display: table; width: 100% !important; text-align: center; background-position: center center; background-repeat: no-repeat; background-size: contain; background-color: black; overflow: hidden; font-size: 24px !important; }
+/* youtube always use 16:9 aspect ratio video */
+.vimeo, .youtube { position: relative; width: 100%; padding-bottom: 56.25% !important; }
+.vimeo > img, .youtube > img { max-width: 100%; max-height: 100%; margin: 0 !important; border: 0 !important; width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; z-index: 0; }
+.vimeo > iframe, .youtube > iframe { max-width: 100%; max-height: 100%; }
+.slideshare .inner, .speakerdeck .inner { padding-bottom: 62% !important; }
+.pdfobject { height: 85vh !important; }
+.task-list-item-checkbox { font-size: inherit; height: 1em; margin: .2em 0 .2em -0.65em !important; }
+pre code .wrapper { display: -moz-inline-flex; display: -ms-inline-flex; display: -o-inline-flex; display: inline-flex; }
+pre code .gutter { float: left; overflow: hidden; -webkit-user-select: none; user-select: none; }
+pre code .gutter.linenumber { text-align: right; position: relative; display: inline-block; cursor: default; z-index: 4; padding: 0 8px 0 0; min-width: 20px; box-sizing: content-box; color: #afafaf !important; border-right: 3px solid #6ce26c !important; }
+pre code .gutter.linenumber > span:before { content: attr( data-linenumber ); }
+pre code .code { float: left; margin: 0 0 0 16px; }
+.gist .line-numbers { border-left: none; border-top: none; border-bottom: none; }
+.gist .line-data { border: none; }
+.gist table { border-spacing: 0; border-collapse: inherit !important; }
+code[data-gist-id] { background: none; padding: 0; }
+code[data-gist-id]:before { content: ''; }
+code[data-gist-id]:after { content: ''; }
+.alert { border-radius: 4px; }
+.alert h4 { margin-top: 0; color: inherit; }
+.alert > p { padding: 5px !important; }
+.alert-success { color: #3c763d; background-color: #dff0d8; border-color: #d6e9c6; }
+.alert-success hr { border-top-color: #c9e2b3; }
+.alert-success .alert-link { color: #2b542c; }
+.alert-info { color: #31708f; background-color: #d9edf7; border-color: #bce8f1; }
+.alert-info hr { border-top-color: #a6e1ec; }
+.alert-info .alert-link { color: #245269; }
+.alert-warning { color: #8a6d3b; background-color: #fcf8e3; border-color: #faebcc; }
+.alert-warning hr { border-top-color: #f7e1b5; }
+.alert-warning .alert-link { color: #66512c; }
+.alert-danger { color: #a94442; background-color: #f2dede; border-color: #ebccd1; }
+.alert-danger hr { border-top-color: #e4b9c0; }
+.alert-danger .alert-link { color: #843534; }
+pre.flow-chart, pre.sequence-diagram, pre.graphviz, pre.mermaid, pre.abc,
+pre.vega { text-align: center; background-color: white; border-radius: 0; white-space: inherit; overflow: visible; /* prevent top right menu overflow scroll */ }
+pre.flow-chart > code, pre.sequence-diagram > code, pre.graphviz > code,
+pre.mermaid > code, pre.abc > code, pre.vega > code { text-align: left; }
+pre.flow-chart > svg, pre.sequence-diagram > svg, pre.graphviz > svg,
+pre.mermaid > svg, pre.abc > svg, pre.vega > svg { max-width: 100%; height: 100%; }
+.emoji { margin: 0 !important; background: transparent !important; border: none !important; box-shadow: none !important; margin-bottom: -.25em !important; }
+.reveal.rtl .slides, .reveal.rtl .slides h1, .reveal.rtl .slides h2,
+.reveal.rtl .slides h3, .reveal.rtl .slides h4, .reveal.rtl .slides h5,
+.reveal.rtl .slides h6 { direction: rtl; font-family: inherit; }
+.text-uppercase { text-transform: uppercase; }
+.footer { background-color: white; padding: 25px 15px; font-size: 14px; }
+.footer a:hover { text-decoration: none; }
+.footer > * { margin-left: auto; margin-right: auto; max-width: 758px; }
+html, body { height: 100%; width: 100%; overflow: hidden; }
+.container { position: absolute; top: 0; bottom: 0; left: 0; right: 0; overflow-y: scroll; }
+.container.hidescrollbar { right: -17px; }
+.reveal { height: 100vh; }
+.reveal .progress, .reveal .slide-number, .reveal .playback, .reveal .controls { position: absolute; }
+.print-pdf .container { position: relative; overflow-y: hidden; }
+.print-pdf .container.hidescrollbar { right: 0; }
+.print-pdf .footer { display: none; }
+

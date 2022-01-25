@@ -1,0 +1,123 @@
+﻿@page "/convert-files"
+@using System.Linq
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.Extensions.Logging
+@inject HttpClient Http
+@inject ILogger<ImageConvert> logger
+@attribute [Authorize]
+
+
+<h1>Optimize your images</h1>
+
+<p>
+    <label>
+        You will find the converted images in your file folder.
+    </label>
+    <label>
+        Upload a file:
+        <InputFile OnChange="@OnInputFileChange" />
+    </label>
+</p>
+
+@if (files.Count > 0)
+
+{
+<div class="card">
+    <div class="card-body">
+        <ul>
+            @foreach (var file in files)
+
+            {
+            <li>
+                @file.Name
+                @if (FileUpload(uploadResults, file.Name, logger, out var result))
+                {
+                    <span>
+                        uploaded successfully
+                    </span> 
+                }                else                {
+            <span>
+                could not be uploaded (Error: @result.ErrorCode).
+            </span>}
+            </li>
+            }
+        </ul>
+    </div>
+</div>}
+
+@code { private IList<File> files = new List<File>();
+
+    private IList<UploadResult> uploadResults = new List<UploadResult>();
+
+    private bool shouldRender;
+
+    protected override bool ShouldRender() => shouldRender;
+
+    private async Task OnInputFileChange(InputFileChangeEventArgs e)
+    {
+        shouldRender = false;
+        long maxFileSize = 1024 * 1024 * 15;
+        var upload = false;
+
+        using var content = new MultipartFormDataContent();
+        var file = e.GetMultipleFiles(1)[0];
+        if (uploadResults.SingleOrDefault(f => f.FileName == file.Name) is null)
+        {
+            var fileContent = new StreamContent(file.OpenReadStream());
+            files.Add(new File()
+            {
+                Name = file.Name,
+            });
+
+            if (file.Size < maxFileSize)
+            {
+                content.Add(
+                content: fileContent,
+                name: "\"file\"",
+                fileName: file.Name);
+                upload = true;
+            }
+            else
+            {
+                logger.LogInformation("{FileName} not uploaded", file.Name);
+                uploadResults.Add(new UploadResult()
+                {
+                    FileName = file.Name,
+                    ErrorCode = 6,
+                    Uploaded = false,
+                });
+            }
+        }
+
+        if (upload)
+        {
+            logger.LogInformation("{FileName} uploading", file.Name);
+            var response = await Http.PostAsync("api/fileshare/convert/" + file.Name, content);
+            var newUploadResults = new List<UploadResult>();
+            newUploadResults.Add(new UploadResult()
+            {
+                FileName = file.Name,
+                ErrorCode = 6,
+                Uploaded = true,
+            });
+            uploadResults = newUploadResults;
+        }
+        shouldRender = true;
+    }
+
+    private static bool FileUpload(IList<UploadResult> uploadResults, string fileName, ILogger<ImageConvert> logger, out UploadResult result)
+    {
+        result = uploadResults.SingleOrDefault(f => f.FileName == fileName);
+        if (result is null)
+        {
+            logger.LogInformation("{FileName} not uploaded", fileName);
+            result = new UploadResult();
+            result.ErrorCode = 5;
+        }
+        return result.Uploaded;
+    }
+
+    private class File
+    {
+        public string Name { get; set; }
+    } }

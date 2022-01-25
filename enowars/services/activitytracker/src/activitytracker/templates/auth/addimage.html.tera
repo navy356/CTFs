@@ -1,0 +1,25 @@
+{% extends "base" %}
+
+{% block title %} Add Image {% endblock %}
+
+{% block heading %} Add Image! {% endblock %}
+
+{% block action %} <a class="btn btn-primary btn-lg float-right" href="/posts/view/0">Back!</a> {% endblock %}
+
+{% block content %}
+    <form enctype="multipart/form-data" action="/auth/addimage" method="post">
+        <div class="form-group">
+            <label for="image"><b>Your new selfie:</b></label>
+            <div class="custom-file">
+                <input type="file" name="image" class="custom-file-input" id="image" aria-describedby="imageHelpBlock">
+                <label class="custom-file-label" for="image">Choose picture file</label>
+            </div>
+            <small id="imageHelpBlock" class="form-text text-muted">
+                Hold on to this image, you can use it for password recovery!
+            </small>
+
+        </div>
+
+        <button class="btn btn-primary btn-block btn-large" type="submit">Submit!</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,32 @@
+.note-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-note {
+    flex: 1;
+    display: flex;
+    margin-top: .5em;
+    margin-left: .5em;
+}
+
+#post-note-control {
+    flex: 8;
+}
+
+#post-note-button {
+    margin-right: 1em;
+}
+
+.strategy-note {
+    flex: 1;
+    display: flex;
+}
+
+#note-idx {
+    flex: 1;
+}
+
+#note-message {
+    flex: 8;
+}

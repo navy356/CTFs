@@ -1,0 +1,22 @@
+.move-entries {
+    display: flex;
+    margin: .5em;
+    flex-direction: column;
+}
+
+.move-entry {
+    flex: 1;
+    display: flex;
+}
+
+#move-state-before {
+    flex: 6;
+}
+
+#move-white {
+    flex: 1;
+}
+
+#move-black {
+    flex: 1;
+}

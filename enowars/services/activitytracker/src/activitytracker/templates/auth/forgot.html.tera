@@ -1,0 +1,34 @@
+{% extends "base" %}
+
+{% block title %} Password recovery {% endblock %}
+
+{% block heading %} Recover! {% endblock %}
+
+{% block action %} <a class="btn btn-primary btn-lg float-right" href="/posts/view/0">Back!</a> {% endblock %}
+
+{% block content %}
+    <form enctype="multipart/form-data" action="/auth/forgot" method="post">
+        <div class="form-group">
+            <label for="email"><b>Email</b></label>
+            <input class="form-control" type="text" placeholder="email address" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="password"><b>New Password</b></label>
+            <input class="form-control" type="password" placeholder="new password" name="password" required>
+        </div>
+
+        <div class="form-group">
+            <label for="image"><b>Your verification selfie:</b></label>
+            <div class="custom-file">
+                <input type="file" name="image" class="custom-file-input" id="image" aria-describedby="imageHelpBlock">
+                <label class="custom-file-label" for="image">Choose picture file</label>
+            </div>
+            <small id="imageHelpBlock" class="form-text text-muted">
+                Hope you remembered to save this!
+            </small>
+
+        </div>
+
+        <button class="btn btn-primary btn-block btn-large" type="submit">Signup</button>
+    </form>
+{% endblock %}

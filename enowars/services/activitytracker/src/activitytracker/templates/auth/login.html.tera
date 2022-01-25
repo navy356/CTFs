@@ -1,0 +1,24 @@
+{% extends "base" %}
+
+{% block title %} Login {% endblock %}
+
+{% block heading %} Login! {% endblock %}
+
+{% block action %} <a class="btn btn-primary btn-lg float-right" href="/posts/view/0">Back!</a> {% endblock %}
+
+{% block content %}
+    <form action="/auth/login" method="post">
+        <div class="form-group">
+            <label for="email"><b>Email</b></label>
+            <input class="form-control" type="text" placeholder="email address" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="password"><b>Password</b></label>
+            <input class="form-control" type="password" placeholder="password" name="password" required>
+        </div>
+        <div style="margin-bottom: 20px">
+            <a href="/auth/forgot">Forgot your password?</a>
+        </div>
+        <button class="btn btn-primary btn-block btn-large" type="submit">Login</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,30 @@
+.game-entries {
+    display: flex;
+    margin: .5em;
+    flex-direction: column;
+}
+
+.game-entry {
+    flex: 1;
+    display: flex;
+}
+
+#entry-id {
+    flex: 1;
+}
+
+#entry-name {
+    flex: 6;
+}
+
+#entry-board {
+    flex: 6;
+}
+
+#entry-winner {
+    flex: 2;
+}
+
+#entry-button {
+    flex: 1;
+}

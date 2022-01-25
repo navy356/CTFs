@@ -1,0 +1,61 @@
+version: '2.1'
+# ports:
+# - 5469:5432
+
+services:
+  postgres:
+    image: postgres
+    hostname: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: diesel
+      POSTGRES_PASSWORD: diesel
+      POSTGRES_DB: diesel
+      PGDATA: /data/postgres
+    # The code should be copied into the container using COPY.
+    # Mount the data folder writable, so that information can be persisted across restarts.
+    volumes:
+      - ./data/:/data:rw
+    command: postgres -c 'max_connections=2048'
+    mem_limit: 2G
+    memswap_limit: 4G
+    ulimits:
+      core:
+        soft: 0
+        hard: 0
+      nproc:
+        soft: 4000
+        hard: 4000
+#    ports:
+#     - 5469:5432
+  activitytracker:
+    build: .
+    depends_on:
+      - postgres
+    # The code should be copied into the container using COPY.
+    # Mount the data folder writable, so that information can be persisted across restarts.
+    volumes:
+      - ./data/:/data:rw
+    environment:
+      DATA_DIR: /data/imgs/
+    # Define the port mapping (external:internal port)
+    ports:
+      - 4242:4242
+    restart: always
+    mem_limit: 2G
+    memswap_limit: 4G
+    ulimits:
+      core:
+        soft: 0
+        hard: 0
+      nproc:
+        soft: 4000
+        hard: 4000
+
+
+# The code should be copied into the container using COPY.
+# Mount the data folder writable, so that information can be persisted across restarts.
+volumes:
+  postgres-data:
+# ports:
+# - 5469:5432

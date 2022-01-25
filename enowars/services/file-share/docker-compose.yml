@@ -1,0 +1,57 @@
+version: '2.1'
+
+services:
+  fileshare.server:
+    image: ${DOCKER_REGISTRY-}fileshareserver
+    build:
+      context: .
+      dockerfile: FileShare/Server/Dockerfile
+    environment:
+      - WAIT_HOSTS=db:5432
+      - WAIT_TIMEOUT=300
+      - WAIT_SLEEP_INTERVAL=30
+    volumes:
+      - ./mount/files:/app/files/
+    ports:
+      - 8001:80
+    depends_on:
+      - db
+    mem_limit: 1G
+    memswap_limit: 2G
+    ulimits:
+      core:
+        soft: 0
+        hard: 0
+      nproc:
+        soft: 4000
+        hard: 4000
+  imageprocessing:
+    build:
+      context: ./ImageProcessing
+      dockerfile: Dockerfile
+    volumes:
+      - ./mount/files/:/files/
+    mem_limit: 1G
+    memswap_limit: 2G
+    ulimits:
+      core:
+        soft: 0
+        hard: 0
+      nproc:
+        soft: 4000
+        hard: 4000
+  db:
+    image: postgres:13
+    environment:
+      - POSTGRES_PASSWORD=1Secure*Password1#
+      - POSTGRES_USER=dbuser
+      - POSTGRES_DB=fileshare
+    mem_limit: 1G
+    memswap_limit: 2G
+    ulimits:
+      core:
+        soft: 0
+        hard: 0
+      nproc:
+        soft: 4000
+        hard: 4000

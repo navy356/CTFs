@@ -1,0 +1,23 @@
+<div class="text-center">
+
+    <main class="form-signin">
+        <form ng-submit="submit()">
+            <h1 class="h3 mb-3 fw-normal">Sign up to enroll in exams</h1>
+            <div class="row">
+            <div class="col-12">
+                <label for="address" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name" ng-model="name" required="">
+                <div class="invalid-feedback" style="{{error?'display:block':'display:none'}}">
+                    {{error}}
+                </div>
+            </div>
+            </div>
+            <hr class="my-4">
+             <div class="row">
+                <div class="col-6">
+                <button class="w-100 btn btn-lg btn-primary" type="submit">Sign up</button>
+                </div>
+            </div>
+        </form>
+    </main>
+</div>

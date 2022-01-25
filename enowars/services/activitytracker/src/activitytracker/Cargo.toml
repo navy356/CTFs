@@ -1,0 +1,41 @@
+[package]
+name = "activitytracker"
+version = "0.1.0"
+authors = ["Richard Viehöver <richard.viehoever@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+# patched version of hyper to fix keep-alive https://github.com/SergioBenitez/Rocket/issues/580
+#[patch.crates-io]
+#hyper = { git = 'https://github.com/strohel/hyper', branch = '0.10.x' }
+
+[dependencies]
+rocket = "0.5.0-rc.1"
+diesel = { version = "1.4.4", features = ["postgres", "r2d2"] }
+dotenv = "0.15.0"
+serde = { version = "1.0.125", features = ["derive"] }
+serde_json = "1.0.64"
+file_diff = "1.0.0"
+rust-argon2 = "0.8.3"
+rand = "0.8.3"
+chrono = "0.4.19"
+r2d2 = "0.8.9"
+scheduled-thread-pool = "0.2.5"
+futures = "0.3"
+tokio = "1.8.0"
+tokio-diesel = "0.3.0"
+
+[dependencies.rocket_dyn_templates]
+version = "0.1.0-rc.1"
+features = ["tera"]
+
+[dependencies.rocket_auth]
+git = 'https://github.com/tvallotton/rocket_auth'
+branch = 'master'
+features = ["postgres-db"]
+
+[dependencies.rocket_sync_db_pools]
+version = "0.1.0-rc.1"
+default-features = false
+features = ["diesel_postgres_pool"]

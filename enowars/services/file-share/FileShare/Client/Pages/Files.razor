@@ -1,0 +1,217 @@
+﻿@page "/files"
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+@using FileShare.Shared
+@using System.Linq
+@using Microsoft.Extensions.Logging
+@attribute [Authorize]
+@inject HttpClient Http
+@inject ILogger<Files> logger
+@inject IJSRuntime JSRuntime
+
+<h1>All your Files are here:</h1>
+
+<p>
+    Upload a file:
+    <InputFile OnChange="@OnInputFileChange" />
+</p>
+
+@if (files == null)
+
+{
+<p><em>Loading...</em></p> }
+
+else
+
+{
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Filename</th>
+            <th>Size</th>
+            <th>Created</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var file in files)
+
+        {
+<tr>
+    <td>@file.Name</td>
+    <td>@file.Size</td>
+    <td>@file.Date</td>
+    <td><button @onclick="() => DownloadFile(file.Id)">Download</button></td>
+</tr>}
+    </tbody>
+</table>}
+
+<h1>Files that have been shared with you:</h1>
+
+@if (sharedFiles == null)
+{
+<p><em>Loading...</em></p> 
+} else if (sharedFiles.Count == 0)
+{
+<p><em>Nobody shared Files with you :(</em></p>
+} else {
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Filename</th>
+            <th>Size</th>
+            <th>Created</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var file in sharedFiles)
+
+        {
+<tr>
+    <td>@file.Name</td>
+    <td>@file.Size</td>
+    <td>@file.Date</td>
+    <td><button @onclick="() => DownloadFile(file.Id)">Download</button></td>
+</tr>}
+    </tbody>
+</table>}
+
+
+
+
+@code { private IList<FileShareFileDTO> uploadFiles = new List<FileShareFileDTO>();
+
+    private IList<UploadResult> uploadResults = new List<UploadResult>();
+    private bool shouldRender = true;
+    protected override bool ShouldRender() => shouldRender;
+
+    private IList<FileShareFileDTO> files;
+    private IList<FileShareFileDTO> sharedFiles;
+    protected override async Task OnInitializedAsync()
+    {
+        await RefreshFileList();
+        await RefreshSharedFileList();
+    }
+
+    private async Task RefreshFileList()
+    {
+        try
+        {
+            files = await Http.GetFromJsonAsync<List<FileShareFileDTO>>("api/fileshare");
+            await InvokeAsync(() => StateHasChanged())
+                        .ConfigureAwait(false);
+        }
+        catch (AccessTokenNotAvailableException exception)
+        {
+            exception.Redirect();
+        }
+    }
+
+    private async Task RefreshSharedFileList()
+    {
+        try
+        {
+            var sharedWithMe = await Http.GetFromJsonAsync<string[]>("api/share/withme");
+            foreach (var item in sharedWithMe)
+            {
+                sharedFiles = await Http.GetFromJsonAsync<List<FileShareFileDTO>>("api/fileshare/shared?sharedUser=" + item);
+                await InvokeAsync(() => StateHasChanged())
+                            .ConfigureAwait(false);
+            }
+
+        }
+        catch (AccessTokenNotAvailableException exception)
+        {
+            exception.Redirect();
+        }
+    }
+
+    private async Task DownloadFile(string fileName)
+    {
+        try
+        {
+            byte[] file = await Http.GetByteArrayAsync("api/fileshare/" + fileName);
+            string contentType = "application/octet-stream";
+
+            await JSRuntime.InvokeVoidAsync(
+              "downloadFromByteArray",
+              new
+              {
+                  ByteArray = file,
+                  FileName = fileName,
+                  ContentType = contentType
+              });
+        }
+        catch (AccessTokenNotAvailableException exception)
+        {
+            exception.Redirect();
+        }
+    }
+
+    private async Task OnInputFileChange(InputFileChangeEventArgs e)
+
+    {
+
+        shouldRender = false;
+        long maxFileSize = 1024 * 1024 * 15;
+        var upload = false;
+        using var content = new MultipartFormDataContent();
+        var file = e.GetMultipleFiles(1)[0];
+        if (uploadResults.SingleOrDefault(
+        f => f.FileName == file.Name) is null)
+        {
+            var fileContent = new StreamContent(file.OpenReadStream());
+            uploadFiles.Add(new FileShareFileDTO()
+            {
+                Name = file.Name,
+            });
+            if (file.Size < maxFileSize)
+            {
+                content.Add(
+                content: fileContent,
+                name: "\"file\"",
+                fileName: file.Name);
+                upload = true;
+            }
+            else
+            {
+                logger.LogInformation("{FileName} not uploaded", file.Name);
+                uploadResults.Add(new UploadResult()
+                {
+                    FileName = file.Name,
+                    ErrorCode = 6,
+                    Uploaded = false,
+                });
+            }
+        }
+
+        if (upload)
+        {
+            var response = await Http.PostAsync("api/fileshare/" + file.Name, content);
+            var newUploadResults = new List<UploadResult>();
+            newUploadResults.Add(new UploadResult()
+            {
+                FileName = file.Name,
+                ErrorCode = 6,
+                Uploaded = true,
+            });
+            uploadResults = newUploadResults;
+            await RefreshFileList();
+        }
+        shouldRender = true;
+    }
+
+    private static bool FileUpload(IList<UploadResult> uploadResults, string fileName, ILogger<Files> logger, out UploadResult result)
+    {
+        result = uploadResults.SingleOrDefault(f => f.FileName == fileName);
+        if (result is null)
+        {
+            logger.LogInformation("{FileName} not uploaded", fileName);
+            result = new UploadResult();
+            result.ErrorCode = 5;
+        }
+        return result.Uploaded;
+    } }

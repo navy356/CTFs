@@ -1,0 +1,30 @@
+plugins {
+	id 'org.springframework.boot' version '2.4.5'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+  	id 'application'
+}
+
+group = 'org.shatranj.diwana'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '14'
+mainClassName = "org.shatranj.diwana.shatranjserver.ShatranjServerApplication"
+
+repositories {
+	mavenCentral()
+	maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	runtimeOnly 'mysql:mysql-connector-java'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation 'com.github.bhlangonijr:chesslib:1.3.1'
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-validation', version: '2.4.5'
+}
+
+test {
+	useJUnitPlatform()
+}
