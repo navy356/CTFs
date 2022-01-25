@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Security-Policy" content="font-src 'self'">
+    <title>
+        test
+    </title>
+    <style>
+        #outerdiv {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        #inneriframe {
+            position: absolute;
+            top: 0px;
+            left: 0%;
+            width: 100%;
+            height: 100%;
+        }
+
+        @font-face {
+            font-family: 'Nothing You Could Do';
+            src: url('sansation_light.woff');
+        }
+
+        h1 {
+            font-family: 'Nothing You Could Do';
+        }
+    </style>
+</head>
+
+<body>
+    <p>TEST
+    </p>
+    <div id="outerdiv">
+        <iframe id="inneriframe" src="http://172.17.0.2:8000/flag#msg" scrolling="yes">
+        </iframe>
+    </div>
+</body>
+
+</html>

