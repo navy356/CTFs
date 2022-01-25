@@ -1,0 +1,52 @@
+ <initializeShirts>:
+ f3 0f 1e fa endbr64
+ 55 push rbp
+ 48 89 e5 mov rbp,rsp
+ 53 push rbx
+ 48 83 ec 08 sub rsp,0x8
+ bf 38 00 00 00 mov edi,0x38
+ e8 fb f9 ff ff call 4011e0 <malloc@plt>
+ 48 89 05 14 29 00 00 mov QWORD PTR [rip+0x2914],rax # 404100 <s1>
+ 48 8b 05 0d 29 00 00 mov rax,QWORD PTR [rip+0x290d] # 404100 <s1>
+ 48 83 c0 08 add rax,0x8
+ ba 30 00 00 00 mov edx,0x30
+ be 00 00 00 00 mov esi,0x0
+ 48 89 c7 mov rdi,rax
+ e8 87 f9 ff ff call 401190 <memset@plt>
+ 48 8b 1d f0 28 00 00 mov rbx,QWORD PTR [rip+0x28f0] # 404100 <s1>
+ bf 20 00 00 00 mov edi,0x20
+ e8 c6 f9 ff ff call 4011e0 <malloc@plt>
+ 48 89 03 mov QWORD PTR [rbx],rax
+ bf 5e 00 00 00 mov edi,0x5e
+ e8 b9 f9 ff ff call 4011e0 <malloc@plt>
+ 48 89 05 ca 28 00 00 mov QWORD PTR [rip+0x28ca],rax # 4040f8 <ts>
+ 48 8b 05 c3 28 00 00 mov rax,QWORD PTR [rip+0x28c3] # 4040f8 <ts>
+ ba 4e 00 00 00 mov edx,0x4e
+ be 00 00 00 00 mov esi,0x0
+ 48 89 c7 mov rdi,rax
+ e8 49 f9 ff ff call 401190 <memset@plt>
+ 48 8b 05 aa 28 00 00 mov rax,QWORD PTR [rip+0x28aa] # 4040f8 <ts>
+ 48 8d 48 4e lea rcx,[rax+0x4e]
+ 48 8b 05 67 28 00 00 mov rax,QWORD PTR [rip+0x2867] # 4040c0 <canary>
+ 48 8b 15 68 28 00 00 mov rdx,QWORD PTR [rip+0x2868] # 4040c8 <canary+0x8>
+ 48 89 01 mov QWORD PTR [rcx],rax
+ 48 89 51 08 mov QWORD PTR [rcx+0x8],rdx
+ bf 38 00 00 00 mov edi,0x38
+ e8 6f f9 ff ff call 4011e0 <malloc@plt>
+ 48 89 05 78 28 00 00 mov QWORD PTR [rip+0x2878],rax # 4040f0 <s2>
+ 48 8b 05 71 28 00 00 mov rax,QWORD PTR [rip+0x2871] # 4040f0 <s2>
+ 48 83 c0 08 add rax,0x8
+ ba 30 00 00 00 mov edx,0x30
+ be 00 00 00 00 mov esi,0x0
+ 48 89 c7 mov rdi,rax
+ e8 fb f8 ff ff call 401190 <memset@plt>
+ 48 8b 1d 54 28 00 00 mov rbx,QWORD PTR [rip+0x2854] # 4040f0 <s2>
+ bf 20 00 00 00 mov edi,0x20
+ e8 3a f9 ff ff call 4011e0 <malloc@plt>
+ 48 89 03 mov QWORD PTR [rbx],rax
+ 90 nop
+ 48 83 c4 08 add rsp,0x8
+ 5b pop rbx
+ 5d pop rbp
+ c3 ret
+

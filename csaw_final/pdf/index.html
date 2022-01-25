@@ -1,0 +1,17 @@
+<html>
+
+<head>
+    <title>Killme</title>
+</head>
+
+<body>
+    <p id="test">test</p>
+    <iframe src="file:///etc/passwd"></iframe>
+    <script>
+        document.getElementById('test').innerHTML = 'a';
+        document.location = 'file:///etc/passwd';
+        document.getElementById('test').innerHTML = x.responseText;
+    </script>
+</body>
+
+</html>
