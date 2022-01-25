@@ -1,0 +1,3 @@
+"In engineering, the point is to get the job done, and people are happy to help. You should be generous with credit, and you should be happy to help others." Who am I?
+
+Here is your flag: shaktictf{G00d!_b3st_0f_luck_f0r_th3_n3xt_chall3nge}

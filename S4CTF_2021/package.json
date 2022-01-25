@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "cookie-parser": "^1.4.5",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "sqlite3": "^5.0.2",
+    "sqlstring": "^2.3.2"
+  }
+}
