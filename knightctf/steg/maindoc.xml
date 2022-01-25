@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE DOC PUBLIC '-//KDE//DTD krita 2.0//EN' 'http://www.calligra.org/DTD/krita-2.0.dtd'>
+<DOC xmlns="http://www.calligra.org/DTD/krita" editor="Krita" kritaVersion="5.0.2" syntaxVersion="2.0">
+ <IMAGE mime="application/x-kra" profile="sRGB-elle-V2-srgbtrc.icc" description="" colorspacename="RGBA" width="1371" x-res="300" y-res="300" height="770" name="Unnamed">
+  <layers>
+   <layer compositeop="normal" uuid="{b1ab1cd1-d397-447c-a842-4e06afbb838d}" collapsed="0" visible="1" nodetype="paintlayer" x="0" colorlabel="0" colorspacename="RGBA" y="0" onionskin="0" channelflags="" filename="layer2" intimeline="1" name="262542097_4584992211584504_8789864444062048145_n.jpg" opacity="255" locked="0" channellockflags="1111"/>
+   <layer compositeop="normal" uuid="{25ef86c0-04a4-4eab-8212-ee397c61ba6b}" collapsed="0" visible="1" nodetype="paintlayer" x="0" colorlabel="0" colorspacename="RGBA" y="0" onionskin="0" channelflags="" filename="layer3" intimeline="1" name="Paint Layer 8" opacity="255" locked="0" channellockflags="1111"/>
+   <layer compositeop="normal" uuid="{063a83f8-2683-433b-82a7-9cbee1cc80b2}" collapsed="0" visible="1" nodetype="paintlayer" x="0" colorlabel="0" colorspacename="RGBA" y="0" onionskin="0" channelflags="" filename="layer4" intimeline="1" name="Paint Layer 9" opacity="255" locked="0" channellockflags="1111"/>
+   <layer compositeop="normal" uuid="{5fea40e5-2ac8-4a77-b373-08ab1378040e}" collapsed="0" visible="1" nodetype="paintlayer" x="0" colorlabel="0" colorspacename="RGBA" y="0" onionskin="0" channelflags="" filename="layer5" intimeline="1" name="Paint Layer 2" opacity="255" locked="0" channellockflags="1111"/>
+   <layer compositeop="normal" uuid="{2736c1bc-81ad-4b58-acc2-b5dec1dbdb53}" collapsed="0" visible="1" nodetype="paintlayer" x="0" colorlabel="0" colorspacename="RGBA" y="0" onionskin="0" channelflags="" filename="layer6" intimeline="1" name="242183392_373655677574826_1104609096235308966_n.jpg" opacity="255" locked="0" channellockflags="1111"/>
+   <layer compositeop="normal" uuid="{cb85ff9d-0ef4-4eb8-9c88-7d66b1701809}" collapsed="0" visible="1" nodetype="paintlayer" x="0" colorlabel="0" colorspacename="RGBA" y="0" onionskin="0" channelflags="" filename="layer7" intimeline="1" name="FFZApw3XEAQSX3j.jpg" opacity="255" locked="0" channellockflags="1111"/>
+   <layer compositeop="normal" uuid="{253f768b-eab8-49cc-8999-ea088b8723fc}" collapsed="0" visible="1" nodetype="paintlayer" x="0" colorlabel="0" colorspacename="RGBA" y="0" onionskin="0" channelflags="" filename="layer8" intimeline="0" name="knight.png" opacity="255" locked="0" channellockflags="1111"/>
+   <layer selected="true" colorspacename="RGBA" filename="layer9" channellockflags="1111" y="0" onionskin="0" intimeline="0" colorlabel="0" locked="0" compositeop="normal" visible="1" name="ctf.png" collapsed="0" opacity="255" nodetype="paintlayer" uuid="{12d78ddf-fa94-4698-94a0-12bd5fc9521d}" x="0" channelflags=""/>
+   <layer compositeop="normal" uuid="{847f1b56-b2a4-4f8c-aeae-34ba3b836036}" collapsed="0" visible="1" nodetype="paintlayer" x="0" colorlabel="0" colorspacename="RGBA" y="0" onionskin="0" channelflags="" filename="layer10" intimeline="1" name="Paint Layer 1" opacity="255" locked="0" channellockflags="1111"/>
+   <layer compositeop="normal" uuid="{efb44d9d-cdc3-4422-9a07-51a44ab737b7}" collapsed="0" visible="1" nodetype="paintlayer" x="0" colorlabel="0" colorspacename="RGBA" y="0" onionskin="0" channelflags="" filename="layer11" intimeline="1" name="Background" opacity="255" locked="1" channellockflags="1111"/>
+  </layers>
+  <ProjectionBackgroundColor ColorData="AAAAAA=="/>
+  <GlobalAssistantsColor SimpleColorData="176,176,176,255"/>
+  <Palettes/>
+  <resources/>
+  <animation>
+   <framerate type="value" value="24"/>
+   <range to="100" type="timerange" from="0"/>
+   <currentTime type="value" value="0"/>
+  </animation>
+ </IMAGE>
+</DOC>

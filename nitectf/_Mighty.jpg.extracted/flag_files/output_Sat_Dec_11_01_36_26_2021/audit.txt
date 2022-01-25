@@ -1,0 +1,23 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Sat Dec 11 01:36:26 2021
+Invocation: foremost saregama.wav -T 
+Output directory: /home/navy356/CTFs/nitectf/_Mighty.jpg.extracted/flag_files/output_Sat_Dec_11_01_36_26_2021
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: saregama.wav
+Start: Sat Dec 11 01:36:26 2021
+Length: 3 MB (3559468 bytes)
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+0:	00000000.wav 	       3 MB 	          0 	 
+Finish: Sat Dec 11 01:36:26 2021
+
+1 FILES EXTRACTED
+	
+rif:= 1
+------------------------------------------------------------------
+
+Foremost finished at Sat Dec 11 01:36:26 2021

@@ -1,0 +1,1 @@
+cat ftp.log |grep FAIL | awk '{print $8,$12}'|sort|uniq -c

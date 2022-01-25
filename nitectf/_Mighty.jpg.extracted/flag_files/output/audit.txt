@@ -1,0 +1,15 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Sat Dec 11 01:36:16 2021
+Invocation: foremost saregama. 
+Output directory: /home/navy356/CTFs/nitectf/_Mighty.jpg.extracted/flag_files/output
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: stdin
+Start: Sat Dec 11 01:36:16 2021
+Length: Unknown
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+Interrupt received at Sat Dec 11 01:36:18 2021

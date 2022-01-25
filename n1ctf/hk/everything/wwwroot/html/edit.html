@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>N1CTF - ctfhub</title>
+    </head>
+    <body>
+        <form action="edit.php?a=sub" method="post">
+            <p>create or edit writeup:</p>
+            <p>writeup name:</p><input type="text" name="name" value="{wpname}"/>
+            <p>content:</p><textarea name="buf" id="a"></textarea>
+            <br/>
+            <input type="submit" value="submit"/>
+        </form>
+        <script>
+            document.getElementById("a").value="{wpcont}";
+        </script>
+    </body>
+</html>

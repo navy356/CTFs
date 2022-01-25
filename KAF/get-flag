@@ -1,0 +1,19 @@
+HTTP/2 200 
+date: Fri, 06 Nov 2020 20:05:10 GMT
+content-type: text/html; charset=UTF-8
+set-cookie: __cfduid=d005b0eb7d258936647eed50835c23bd71604693109; expires=Sun, 06-Dec-20 20:05:09 GMT; path=/; domain=.wearemist.in; HttpOnly; SameSite=Lax
+set-cookie: PHPSESSID=k3h2es0uh7ap9uu476nfs742e3; path=/
+expires: Thu, 19 Nov 1981 08:52:00 GMT
+cache-control: no-store, no-cache, must-revalidate
+pragma: no-cache
+hint: Post decode([Get-flag]) as [QCTF] as fast as you can, then your will get flag
+get-flag: aUlBdFN2b3d2YUNHSjJIVw==
+vary: Accept-Encoding
+cf-cache-status: DYNAMIC
+cf-request-id: 0640c2c43b00000ff65fbd2000000001
+expect-ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+report-to: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=3TCx9Ce%2FSzoP2ZQF1xSq%2F%2FPHAHO2ofe4Gb8%2FyXuHE3eL5gCwZJvUikpRYz5cvUfWmDkKB%2BRtzlMGnnwoEZyf3lG5jhJQ4UVq7X9HoldLsXHLnBusxa7NoMV%2F6VRnUJRTDwE%3D"}],"group":"cf-nel","max_age":604800}
+nel: {"report_to":"cf-nel","max_age":604800}
+server: cloudflare
+cf-ray: 5ee16d805a910ff6-MRS
+

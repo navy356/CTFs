@@ -1,0 +1,23 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Sat Dec 11 00:40:28 2021
+Invocation: foremost zombies.jpg 
+Output directory: /home/navy356/CTFs/nitectf/output
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: zombies.jpg
+Start: Sat Dec 11 00:40:28 2021
+Length: 15 KB (16265 bytes)
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+0:	00000000.jpg 	      15 KB 	          0 	 
+Finish: Sat Dec 11 00:40:28 2021
+
+1 FILES EXTRACTED
+	
+jpg:= 1
+------------------------------------------------------------------
+
+Foremost finished at Sat Dec 11 00:40:28 2021

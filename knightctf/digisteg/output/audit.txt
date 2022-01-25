@@ -1,0 +1,25 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Fri Jan 21 14:45:03 2022
+Invocation: foremost interesting_waves.png 
+Output directory: /home/navy356/CTFs/knightctf/digisteg/output
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: interesting_waves.png
+Start: Fri Jan 21 14:45:03 2022
+Length: 68 KB (70335 bytes)
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+0:	00000136.zip 	      368 B 	      69968 	 
+1:	00000000.png 	      68 KB 	          0 	  (1024 x 768)
+Finish: Fri Jan 21 14:45:03 2022
+
+2 FILES EXTRACTED
+	
+zip:= 1
+png:= 1
+------------------------------------------------------------------
+
+Foremost finished at Fri Jan 21 14:45:03 2022

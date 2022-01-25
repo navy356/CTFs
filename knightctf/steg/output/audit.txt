@@ -1,0 +1,23 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Fri Jan 21 02:25:51 2022
+Invocation: foremost ezgif-5-2abaf30a5d.png 
+Output directory: /home/navy356/CTFs/knightctf/steg/output
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: ezgif-5-2abaf30a5d.png
+Start: Fri Jan 21 02:25:51 2022
+Length: 45 KB (46757 bytes)
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+0:	00000000.png 	      45 KB 	          0 	  (200 x 200)
+Finish: Fri Jan 21 02:25:51 2022
+
+1 FILES EXTRACTED
+	
+png:= 1
+------------------------------------------------------------------
+
+Foremost finished at Fri Jan 21 02:25:51 2022

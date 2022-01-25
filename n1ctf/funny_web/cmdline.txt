@@ -1,0 +1,5 @@
+# this is a comment, we ask to follow redirects
+--location
+--head
+url = "http://129.226.12.144/"
+-a /dev/stdout
