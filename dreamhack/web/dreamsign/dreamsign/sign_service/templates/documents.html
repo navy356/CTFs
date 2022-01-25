@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block block_main %}
+    <div class="py-24">
+        <table class="min-w-full table-auto">
+            <thead class="justify-between">
+                <tr class="bg-gray-800">
+                    <th class="px-16 py-2">
+                        <span class="text-gray-300">IDX</span>
+                    </th>
+                    <th class="px-16 py-2">
+                        <span class="text-gray-300">Title</span>
+                    </th>
+                    <th class="px-16 py-2">
+                        <span class="text-gray-300">User</span>
+                    </th>
+                    <th class="px-16 py-2">
+                        <span class="text-gray-300">Time</span>
+                    </th>
+                </tr>
+            </thead>
+            <tbody class="bg-gray-200 justify-between">
+                {% for document in documents %}
+                    <tr class="bg-white border-4 border-gray-200 hover:bg-gray-200" onclick="location.href='/document/{{ document.id }}'">
+                        <td class="text-center px-16 py-2">
+                            <span>{{ document.id }}</span>
+                        </td>
+                        <td class="text-center px-16 py-2">
+                            <span>{{ document.title }}</span>
+                        </td>
+                        <td class="text-center px-16 py-2">
+                            <span>{{ document.user.username }}</span>
+                        </td>
+                        <td class="text-center px-16 py-2">
+                            <span>{{ document.time }}</span>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="{% url 'sign_service:document_create' %}"><button class="btn btn-primary border-2 border-black hover:bg-gray-500 hover:text-gray-100 mt-3 text-gray-800 block text-center p-3 px-4 text-sm w-full">문서 생성</button></a>
+    </div>
+{% endblock %}

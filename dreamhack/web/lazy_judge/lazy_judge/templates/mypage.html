@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<title>Lazy Judge</title>
+<link rel="stylesheet" href="{{ url_for('static',filename='bootstrap.min.css') }}" />
+<script src="{{ url_for('static',filename='jquery.min.js') }}"></script>
+<script src="{{ url_for('static',filename='bootstrap.min.js') }}"></script>
+</head>
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Lazy Judge</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            {% if user == '' %}
+              <li><a href="/login">Login</a></li>
+            {% else %}
+              <li><a href="/logout">Logout</a></li>
+            {% endif %}
+            <li><a href="/prob">Prob</a></li>
+            <li><a href="/mypage">MyPage</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      {% for line in log %}
+        <h5> {{line}} </h5>
+      {% endfor %}
+      {% for line in solves %}
+        <h5><a href="?view={{line}}">View File</a></h5>
+      {% endfor %}
+    </div>
+</body>
+</html>

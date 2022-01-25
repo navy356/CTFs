@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}socket{% endblock %}
+
+{% block head %}
+  {{ super() }}
+{% endblock %}
+
+{% block content %}
+{% if error %}
+<h1>{{ filename }} does not exist. :(</h1>
+{% else %}
+<h1>{{ filename }} Memo</h1><br/>
+  <div class="row">
+    <div class="col-md-12 form-group">
+      <label for="FileData">Content</label>
+      <textarea id="FileData" class="form-control" rows="5" name="content" readonly>{{ content }}</textarea>
+    </div>
+  </div>
+{% endif %}
+{% endblock %}

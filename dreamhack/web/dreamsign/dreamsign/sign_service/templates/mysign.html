@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block block_main %}
+    <div class="item-center object-center content-center">
+        <div id="signature-pad" class="signature-pad flex-row">
+            <p class="text-2xl text-gray-600 text-center">새로운 서명</p> <br />
+            <div class="signature-pad--body flex justify-center">
+                <canvas class="border-2 border-black"></canvas>
+            </div>
+            <div class="signature-pad--footer flex justify-center">
+                <div class="signature-pad--actions">
+                    <div>
+                        <button type="button" class="button clear border-2 border-green-500 hover:bg-green-500 hover:text-gray-100 mt-3 text-green-500 text-center p-3 px-4 text-sm rounded cursor-pointer font-bold" data-action="clear">새로 만들기</button>&nbsp;
+                        <button type="button" class="button save button clear border-2 border-green-500 hover:bg-green-500 hover:text-gray-100 mt-3 text-green-500 text-center p-3 px-4 text-sm rounded cursor-pointer font-bold" data-action="upload">업로드</button>
+                    </div>
+                    <form method="POST" action="./upload" id="uploadform">
+                        {% csrf_token %}
+                        <input type="hidden" id="uploadfile" name="uploadfile"/>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="p-16">
+        <form method="POST" id="changeform">
+            {% csrf_token %}
+            <input type="hidden" id="signpath" name="signpath"/>
+            <div class="grid md:grid-cols-2 sm:grid-cols-1 lg:grid-cols-3 m-5 mb-10">
+                {% for sign in signs %}
+                    <div class="bg-white overflow-hidden hover:bg-green-100 border border-gray-200 p-3">
+                        <div class="m-2 text-justify text-sm">
+                            <img class="h-32 max-h-32" src="/sign/{{ sign.id }}"/>
+                        </div>
+                        <div class="w-full text-right mt-4">
+                            <button class="text-green-400 uppercase font-bold text-sm" onclick="change_sign({{ sign.id }})">서명 변경</button>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </form>
+    </div>
+    <script>
+        var wrapper = document.getElementById("signature-pad");
+        var clearButton = wrapper.querySelector("[data-action=clear]");
+        var uploadfunc = wrapper.querySelector("[data-action=upload]");
+        var canvas = wrapper.querySelector("canvas");
+        var signaturePad = new SignaturePad(canvas, {
+            // It's Necessary to use an opaque color when saving image as JPEG;
+            // this option can be omitted if only saving as PNG or SVG
+            backgroundColor: 'rgb(255, 255, 255)'
+        });
+        function resizeCanvas() {
+            // When zoomed out to less than 100%, for some very strange reason,
+            // some browsers report devicePixelRatio as less than 1
+            // and only part of the canvas is cleared then.
+            var ratio =  Math.max(window.devicePixelRatio || 1, 1);
+
+            // This part causes the canvas to be cleared
+            canvas.width = canvas.offsetWidth * ratio;
+            canvas.height = canvas.offsetHeight * ratio;
+            canvas.getContext("2d").scale(ratio, ratio);
+
+            // This library does not listen for canvas changes, so after the canvas is automatically
+            // cleared by the browser, SignaturePad#isEmpty might still return false, even though the
+            // canvas looks empty, because the internal data of this library wasn't cleared. To make sure
+            // that the state of this library is consistent with visual state of the canvas, you
+            // have to clear it manually.
+            signaturePad.clear();
+        }
+
+        // On mobile devices it might make more sense to listen to orientation change,
+        // rather than window resize events.
+        window.onresize = resizeCanvas;
+        resizeCanvas();
+
+        clearButton.addEventListener("click", function (event) {
+            signaturePad.clear();
+        });
+        function createFileList(a) {
+          a = [].slice.call(Array.isArray(a) ? a : arguments)
+          for (var c, b = c = a.length, d = !0; b-- && d;) d = a[b] instanceof File
+          if (!d) throw new TypeError('expected argument to FileList is File or array of File objects')
+          for (b = (new ClipboardEvent('')).clipboardData || new DataTransfer; c--;) b.items.add(a[c])
+          return b.files
+        }
+
+        uploadfunc.addEventListener("click", function (event) {
+            if (signaturePad.isEmpty()) {
+                alert("Please provide a signature first.");
+            } else {
+                var data = signaturePad.toDataURL('image/png');
+                document.getElementById("uploadfile").value = data;
+                document.getElementById("uploadform").submit();
+            }
+        });
+
+        function change_sign(idx){
+            document.getElementById('signpath').value = '/sign/' + idx;
+            document.getElementById('changeform').submit();
+        }
+    </script>
+{% endblock %}

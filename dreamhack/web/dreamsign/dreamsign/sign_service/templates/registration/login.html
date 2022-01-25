@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block block_main %}
+    <div class="place-items-center h-96">
+        <form id="form" method="POST" action="{% url 'sign_service:login' %}">
+            <p class="text-2xl text-gray-600">Login</p> <br />
+            {% csrf_token %}
+            {% include "form_errors.html" %}
+            <div class="form-group"><span class="flex shadow-md mb-5 text-xs">
+                <span class="bg-green-500 w-56 font-bold text-center text-gray-200 p-3 px-5 rounded-l">User Name</span><input class="field text-sm text-gray-600 p-2 px-3 rounded-r w-full form-control" type="text" name="username" id="username" value="{{ form.username.value|default_if_none:'' }}">
+            </span>
+            </div>
+            <div class="form-group">
+            <span class="flex shadow-md mb-5 text-xs">
+                <span class="bg-green-500 w-56 font-bold text-center text-gray-200 p-3 px-5 rounded-l">Password</span><input class="field text-sm text-gray-600 p-2 px-3 rounded-r w-full form-control" type="password" name="password" id="password" value="{{ form.password.value|default_if_none:'' }}">
+            </span>
+            </div>
+            <button type="submit" class="btn btn-primary border-2 border-green-500 hover:bg-green-500 hover:text-gray-100 mt-3 text-green-500 block text-center p-3 px-4 text-sm w-full">로그인</button>
+        </form>
+        <a href="{% url 'sign_service:signup' %}"><button class="btn btn-primary border-2 border-gray-500 hover:bg-gray-500 hover:text-gray-100 mt-3 text-gray-500 block text-center p-3 px-4 text-sm w-full">회원가입</button></a>
+    </div>
+{% endblock %}

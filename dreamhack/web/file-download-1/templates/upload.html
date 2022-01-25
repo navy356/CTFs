@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}socket{% endblock %}
+
+{% block head %}
+  {{ super() }}
+{% endblock %}
+
+{% block content %}
+<h1>Upload Your Own Memo</h1><br/>
+<form method="POST">
+  <div class="row">
+    <div class="col-md-6 form-group">
+      <label for="FileName">Filename</label>
+      <input type="text" class="form-control" id="FileName" placeholder="my-first-memo" name="filename" required>
+    </div>
+
+    <div class="col-md-12 form-group">
+      <label for="FileData">Content</label>
+      <textarea id="FileData" class="form-control" rows="5" placeholder="Today, I ate an apple." name="content" required></textarea>
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-default">Upload</button>
+</form>
+{% endblock %}

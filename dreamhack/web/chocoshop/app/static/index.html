@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chocoshop</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.min.css" integrity="sha512-ZRv40llEogRmoWgZwnsqke3HNzJ0kiI0+pcMgiz2bxO6Ew1DVBtWjVn0qjrXdT3+u+pSN36gLgmJiiQ3cQtyzA==" crossorigin="anonymous" />
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vuex@3.5.1/dist/vuex.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@3.5.0/dist/fetch.umd.min.js"></script>
+<style>
+html, body, #app {
+  width: 100%;
+  height: 100%;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+}
+
+.app-content {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  text-align: center;
+}
+
+.products {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  width: 20rem;
+  cursor: pointer;
+}
+
+.product:hover {
+  background-color: #f7f7f7;
+}
+
+.product .name {
+  margin: 1rem 0;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+</style>
+</head>
+<body>
+
+<div id="app">
+  <app-header></app-header>
+
+  <div class="app-content">
+    <div class="container">
+      <main-content></main-content>
+    </div>
+  </div>
+</div>
+
+<script>
+Vue.use(Vuex);
+
+function checkStatus(res) {
+  if (res.status >= 200 && res.status < 300) {
+    return res;
+  }
+
+  var error = new Error(res.statusText);
+  error.res = res;
+  throw error;
+}
+
+function parseJSON(res) {
+  return res.json();
+}
+
+
+const store = new Vuex.Store({
+  state: {
+    page: null,
+    session: '',
+    user: null,
+  },
+
+  mutations: {
+    setPage(state, page) {
+      state.page = page;
+    },
+
+    setSessionId(state, sessionId) {
+      window.localStorage.setItem('session-id', sessionId);
+      state.session = sessionId;
+    },
+
+    setUser(state, user) {
+      state.user = user;
+    },
+  },
+
+  actions: {
+    init(context) {
+      const sessionId = window.localStorage.getItem('session-id');
+      context.commit('setSessionId', sessionId);
+
+      if (sessionId) {
+        context.dispatch('getMe')
+          .then(() => {
+            context.commit('setPage', 'has-session');
+          })
+          .catch(err => {
+            context.commit('setSessionId', '');
+            context.commit('setPage', 'no-session');
+          });
+      } else {
+        context.commit('setPage', 'no-session');
+      }
+    },
+
+    navigate(context, page) {
+      context.commit('setPage', page);
+    },
+
+    getSessionId(context) {
+      return fetch('/session')
+        .then(checkStatus)
+        .then(parseJSON)
+        .then(body => {
+          context.commit('setSessionId', body.session);
+          context.dispatch('getMe');
+        });
+    },
+
+    getMe(context) {
+      return fetch('/me', { headers: { Authorization: context.state.session } })
+        .then(checkStatus)
+        .then(parseJSON)
+        .then(body => {
+          context.commit('setUser', body);
+        });
+    },
+
+    claimCoupon(context) {
+      return fetch('/coupon/claim', { headers: { Authorization: context.state.session } })
+        .then(checkStatus)
+        .then(parseJSON)
+        .then(body => {
+          return body.coupon;
+        });
+    },
+
+    submitCoupon(context, coupon) {
+      return fetch('/coupon/submit', { headers: { Authorization: context.state.session, coupon: coupon } })
+        .then(checkStatus)
+        .then(parseJSON)
+        .then(body => {
+          return body.status;
+        });
+    },
+
+    claimProduct(context, id) {
+      return fetch(`/${id}/claim`, { headers: { Authorization: context.state.session } })
+        .then(checkStatus)
+        .then(parseJSON)
+        .then(body => {
+          return body.message;
+        });
+    },
+  }
+});
+
+
+Vue.component('app-header', {
+  template: `
+    <header class="app-header">
+      <nav class="navbar is-dark">
+        <div class="navbar-brand">
+          <a href="/" class="navbar-item">Chocoshop</a>
+        </div>
+
+        <div v-if="user" class="navbar-end">
+          <div class="navbar-item">
+            {{ user.uuid }}
+          </div>
+          <div class="navbar-item">
+            £{{ user.money }}
+          </div>
+        </div>
+      </nav>
+    </header>
+  `,
+
+  computed: {
+    user() { return this.$store.state.user; },
+  },
+});
+
+Vue.component('no-session', {
+  template: `
+    <div>
+      <h1 class="title">Session Required</h1>
+      <p class="mb-4">Session is required for further access</p>
+      <button class="button is-info is-large is-fullwidth" @click="acquireSession">Acquire Session</button>
+    </div>
+  `,
+
+  methods: {
+    acquireSession() {
+      this.$store.dispatch('getSessionId');
+      this.$store.dispatch('navigate', 'has-session');
+    },
+  },
+});
+
+Vue.component('has-session', {
+  template: `
+    <div>
+      <button class="button is-success is-large" @click="navigate('shop')">SHOP</button>
+      <button class="button is-warning is-large" @click="navigate('mypage')">MYPAGE</button>
+    </div>
+  `,
+
+  methods: {
+    navigate(page) {
+      this.$store.dispatch('navigate', page);
+    },
+  }
+});
+
+Vue.component('page-shop', {
+  template: `
+    <div>
+      <h2 class="title">Welcome to Chocoshop!</h2>
+
+      <hr>
+
+      <div class="products">
+        <div v-for="product in products" :key="product.id" class="product" @click="claimProduct(product.id)">
+          <img :src="\`/images/\${product.id}.jpg\`">
+          <h3 class="name">{{ product.name }} (£{{ product.price }})</h3>
+          <p class="description">{{ product.description }}</p>
+        </div>
+      </div>
+    </div>
+  `,
+
+  data() {
+    return {
+      products: [
+        { id: 'pepero', name: 'Pepero', description: 'Do you guys not have Peperos?', price: 1500 },
+        { id: 'flag', name: 'Flag', description: 'Get your flag!', price: 2000 },
+      ],
+    }
+  },
+
+  methods: {
+    claimProduct(id) {
+      this.$store.dispatch('claimProduct', id)
+        .then(message => {
+          alert(message);
+          this.$store.dispatch('getMe');
+        })
+        .catch(err => {
+          if (err.res) {
+            err.res.json().then(body => {
+              alert(body.message);
+            });
+          } else {
+            alert(err.message);
+          }
+        });
+    },
+  },
+});
+
+Vue.component('page-mypage', {
+  template: `
+    <div>
+      <h2 class="title">My Page</h2>
+
+      <hr class="my-6">
+
+      <h3 class="subtitle">Coupon Claim</h3>
+      <button class="button is-info is-large is-fullwidth" @click="claimCoupon">Claim</button>
+      <textarea v-model="couponClaimed" class="textarea" type="text" placeholder="Your Coupon" readonly></textarea>
+
+      <hr class="my-6">
+
+      <h3 class="subtitle">Coupon Submit</h3>
+      <textarea v-model="couponSubmit" class="textarea" type="text" placeholder="Enter Your Coupon"></textarea>
+      <button class="button is-success is-large is-fullwidth" @click="submitCoupon">Submit</button>
+    </div>
+  `,
+
+  data() {
+    return {
+      couponClaimed: '',
+      couponSubmit: '',
+    };
+  },
+
+  methods: {
+    claimCoupon() {
+      this.$store.dispatch('claimCoupon')
+        .then(coupon => {
+          this.couponClaimed = coupon;
+          this.$store.dispatch('getMe');
+        })
+        .catch(err => {
+          if (err.res) {
+            err.res.json().then(body => {
+              alert(body.message);
+            });
+          } else {
+            alert(err.message);
+          }
+        });
+    },
+
+    submitCoupon() {
+      this.$store.dispatch('submitCoupon', this.couponSubmit)
+        .then(coupon => {
+          alert('Coupon submitted!');
+          this.couponSubmit = '';
+          this.$store.dispatch('getMe');
+        })
+        .catch(err => {
+          if (err.res) {
+            err.res.json().then(body => {
+              alert(body.message);
+            });
+          } else {
+            alert(err.message);
+          }
+        });
+    },
+  },
+});
+
+Vue.component('main-content', {
+  template: `
+    <div class="page-content">
+      <no-session v-if="page === 'no-session'" />
+      <has-session v-if="page === 'has-session'" />
+      <page-shop v-if="page === 'shop'" />
+      <page-mypage v-if="page === 'mypage'" />
+    </div>
+  `,
+
+  computed: {
+    page() { return this.$store.state.page; },
+  },
+});
+
+const app = new Vue({
+  el: '#app',
+  store: store,
+
+  created() {
+    this.$store.dispatch('init');
+  },
+});
+</script>
+
+</body>
+</html>

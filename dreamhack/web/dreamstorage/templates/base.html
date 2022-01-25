@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <title>Dream Storage</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+                <h1 class="title">Dream Storage</h1> 
+            </a>
+        </div>
+        <div class="navbar-end">
+            <div class="navbar-item">
+                <div class="buttons">
+                        <a class="button is-success" href="{{ url_for('signup') }}">Sign Up</a>
+                        <a class="button is-success" href="{{ url_for('signin') }}">Sign In</a>
+                        <a class="button is-success" href="{{ url_for('user') }}">User</a>
+                        <a class="button is-danger is-light" href="{{ url_for('report') }}">Report</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div id="content" class="container  is-widescreen">
+        <div class="columns is-centered ">
+            <div class="column is-half has-text-centered"><br/>
+                {% block content %}
+                {% endblock %}
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>

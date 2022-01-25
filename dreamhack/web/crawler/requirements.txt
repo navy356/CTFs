@@ -1,0 +1,5 @@
+flask
+sockets
+ipaddress
+urllib
+requests

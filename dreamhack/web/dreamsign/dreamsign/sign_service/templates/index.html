@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block block_main %}
+    <div class="flex items-center py-24 sm:flex-row ">
+        <div class="flex flex-col items-center text-center sm:w-2/5 sm:items-start sm:text-left">
+            <h1 class="mb-2 text-6xl font-bold leading-none tracking-wide text-green-900 uppercase">Dream Sign</h1>
+            <h2 class="mb-6 text-4xl tracking-widest text-secondary">Online Easy Sign</h2>
+            <p class="mb-12 leading-relaxed text-gray-600">드림사인은 온라인 간편 서명 플랫폼 입니다.<br/>종이 없이 30초 안에 서명할 수 있습니다.</p>
+        </div>
+        <div class="w-full">
+            <img class="float-right" src="{% static 'img/main_1.png' %}"/>
+        </div>
+    </div>
+    <hr />
+    <div class="py-24">
+        <div class="flex flex-col items-center justify-center space-y-8 lg:flex-row lg:items-stretch lg:space-x-8 lg:space-y-0">
+            <section class="flex flex-col w-full max-w-sm p-12 space-y-6 bg-white rounded-lg shadow-md">
+                <div class="flex-shrink-0">
+                    <span class="text-4xl font-medium tracking-tight">드림사인 무료 플랜</span>
+                </div>
+                <div class="flex-shrink-0 pb-6 space-y-2 border-b">
+                    <div class="w-full"><img class="object-none object-center w-full p-4" src="{% static 'img/main_2.png' %}"/></div>
+                    <p class="text-sm text-gray-400">드림사인을 무료로 사용할 수 있습니다. 베타 기간 동안 모든 기능을 사용할 수 있으며 정식 서비스 출시 이후 기능이 제한됩니다.<br/><br/><br/>~ 2051년 1월 1일</p>
+                </div>
+            </section>
+            <section class="flex flex-col w-full max-w-sm p-12 space-y-6 bg-white rounded-lg shadow-md">
+                <div class="flex-shrink-0">
+                    <span class="text-4xl font-medium tracking-tight">프리미엄 플랜</span>
+                </div>
+                <div class="flex-shrink-0 pb-6 space-y-2 border-b">
+                    <div class="w-full"><img class="object-none object-center w-full p-4" src="{% static 'img/main_3.png' %}"/></div>
+                    <p class="text-sm text-gray-400">...</p>
+                </div>
+            </section>
+            <section class="flex flex-col w-full max-w-sm p-12 space-y-6 bg-white rounded-lg shadow-md">
+                <div class="flex-shrink-0">
+                    <span class="text-4xl font-medium tracking-tight">준비중</span>
+                </div>
+                <div class="flex-shrink-0 pb-6 space-y-2 border-b">
+                    <div class="w-full"><img class="object-none object-center w-full p-4" src="{% static 'img/main_3.png' %}"/></div>
+                    <p class="text-sm text-gray-400">...</p>
+                </div>
+            </section>
+        </div>
+    </div>
+{% endblock %}

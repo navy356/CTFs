@@ -1,0 +1,22 @@
+{% extends "user/base.html" %}
+{% block content %}
+<table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+    <thead>
+      <tr>
+        <th>-</th>
+        <th>File Name</th>
+        <th>Link</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for file in files %}
+      <tr>
+        <th>{{ file.id }}</th>
+        <td>{{ file.filename }}</td>
+        <td><a href="{{ url_for('storage', user_uuid=file.user_uuid, filename=file.filename) }}">🔗</a></td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+
+{% endblock content %}

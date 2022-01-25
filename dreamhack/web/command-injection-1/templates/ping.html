@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}ping{% endblock %}
+
+{% block head %}
+  {{ super() }}
+{% endblock %}
+
+{% block content %}
+<h1>Let's ping your host</h1><br/>
+<form method="POST">
+  <div class="row">
+    <div class="col-md-6 form-group">
+      <label for="Host">Host</label>
+      <input type="text" class="form-control" id="Host" placeholder="8.8.8.8" name="host" pattern="[A-Za-z0-9.]{5,20}" required>
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-default">Ping!</button>
+</form>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+
+{% block head %}
+  {{ super() }}
+  <style type="text/css">
+    .important { color: #336699; }
+  </style>
+{% endblock %}
+
+{% block content %}
+    <h2>Send Verify Code</h2>
+    <form method="POST">
+        <div class="form-group row">
+            <label for="staticEmail" class="col-sm-2 col-form-label">User Email</label>
+            <div class="col-sm-20">
+                <input type="text" class="form-control-plaintext" value="{{email}}" style="width: 300px;" disabled/><br/>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+{% endblock %}

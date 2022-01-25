@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+
+<head>
+    <!-- block me -->
+    <script>
+        function a() {
+            return 'a';
+        }
+    </script>
+    <!-- block me -->
+    <script nonce="i_am_super_random">
+        function b() {
+            return 'b';
+        }
+    </script>
+    <!-- allow me -->
+    <script nonce="i_am_super_random">
+        function c() {
+            return 'c';
+        }
+    </script>
+
+    <!-- allow me -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+</head>
+
+</html>

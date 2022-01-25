@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+
+{% block head %}
+  {{ super() }}
+  <style type="text/css">
+    .important { color: #336699; }
+  </style>
+{% endblock %}
+
+{% block content %}
+  {% if files %}
+  <h1>Your uploaded memos</h1>
+  <ul>
+  {% for file in files  %}
+  <li><a href="/read?name={{ file }}">{{ file }}</a></li>
+  {% endfor %}
+  </ul>
+  {% else %}
+  <h1>Please upload your memo!</h1>
+  {% endif %}
+{% endblock %}

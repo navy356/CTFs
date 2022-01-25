@@ -1,0 +1,1 @@
+hashcat -m 500 '$1$SKhaTzNq$.eHJ8wZ1dsmjwZ0mufuqG/' -a 3 -1 ?d?l G4HeulB?1?1?1?1?1?1?1?1 --increment --increment-min 7

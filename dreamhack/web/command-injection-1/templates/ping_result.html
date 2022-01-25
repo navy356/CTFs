@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}ping result{% endblock %}
+
+{% block head %}
+  {{ super() }}
+{% endblock %}
+
+{% block content %}
+<h1>Ping Result Result</h1><br/>
+
+  {% if data %}
+  <pre>{{ data }}</pre>
+  {% endif %}
+
+<a type="button" class="btn btn-link" href="javascript:history.back(-1);">Back</a>
+{% endblock %}

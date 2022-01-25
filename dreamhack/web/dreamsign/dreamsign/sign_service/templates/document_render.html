@@ -1,0 +1,52 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style type="text/css">
+        @font-face { font-family: notosanskr; src: url("/static/font/NotoSansKr-Medium.ttf"); }
+        body {
+            padding: 20px;
+            height: 842px;
+            width: 595px;
+            font-family: notosanskr;
+        }
+        h1 {
+            text-align:center;
+            font-size: 4em;
+            display:inline
+        }
+        h2 {
+            font-size: 2em;
+            display:inline
+        }
+        h3 {
+            font-size: 1.5em;
+            display:inline
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div style="text-align: center;">
+            <h1>{{ document.title }}</h1><br/>
+        </div>
+        <br/>
+        <h3>작성자: {{ document.user.username }}</h3><br/><br/><br/>
+    </div>
+    <div>
+        <hr/>
+        <h3>문서 본문</h3><br/>
+        <div style="font-tamily: notosanskr">{{ document.contents | linebreaks }}
+        </div>
+        <br/><br/><br/><br/>
+    </div>
+    <div>
+        <hr/>
+        <h3>서명자: {{ user.username }}</h3><br/>
+        {% if user.signpath %}
+            <h3>서명: </h3><img src="{{ user.signpath }}" style="max-width:60px;width:60px;height:auto;"/>
+        {% else %}
+            <h3>서명 등록 필요</h3>
+        {% endif %}
+    </div>
+</body>
+</html>

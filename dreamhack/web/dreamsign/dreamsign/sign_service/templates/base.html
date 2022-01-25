@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'css/tailwind.min.css' %}" rel="stylesheet">
+    <script src="{% static 'js/signature_pad.umd.min.js' %}"></script>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <title>DreamSign</title>
+</head>
+<body>
+    <div class="p-6 bg-green-400">
+        <div class="flex flex-col h-full min-h-screen font-sans bg-white">
+            <div class="container px-8 mx-auto b">
+                <header class="relative flex flex-col items-center justify-between py-6 sm:flex-row">
+                    <span class="text-4xl font-bold text-green-400">
+                        Dream Sign
+                    </span>
+                    <nav class="hidden text-lg md:flex">
+                        <a href="{% url 'sign_service:index' %}" class="px-6 py-3 text-gray-400 hover:text-green-200">Home</a>
+                        <a href="{% url 'sign_service:documents' %}" class="px-6 py-3 text-gray-400 hover:text-green-200">Free Service</a>
+                        <a href="{% url 'sign_service:mysign' %}" class="px-6 py-3 text-gray-400 hover:text-green-200">Add Sign</a>
+                        {% if user.is_authenticated %}
+                        <a href="{% url 'sign_service:logout' %}" class="px-6 py-3 text-gray-400 hover:text-green-200">LogOut</a>
+                        {% else %}
+                        <a href="{% url 'sign_service:login' %}" class="px-6 py-3 text-green-700 uppercase bg-green-100 rounded-full hover:bg-green-200">LogIn</a>
+                        {% endif %}
+                    </nav>
+                </header>
+                <main>
+                    {% block block_main %}
+                    {% endblock %}
+                </main>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

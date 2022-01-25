@@ -1,0 +1,1 @@
+console.log('Debug mode on');

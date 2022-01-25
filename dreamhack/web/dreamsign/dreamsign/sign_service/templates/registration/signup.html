@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block block_main %}
+    <div class="place-items-center h-96">
+        <form id="form" method="POST" action="{% url 'sign_service:signup' %}">
+            <p class="text-2xl text-gray-600">Signup</p> <br />
+            {% csrf_token %}
+            {% include "form_errors.html" %}
+            <div class="form-group"><span class="flex shadow-md mb-5 text-xs">
+                <span class="bg-green-500 w-56 font-bold text-center text-gray-200 p-3 px-5 rounded-l">User Name</span><input class="field text-sm text-gray-600 p-2 px-3 rounded-r w-full form-control" type="text" name="username" id="username" value="{{ form.username.value|default_if_none:'' }}">
+            </span>
+            </div>
+            <div class="form-group">
+            <span class="flex shadow-md mb-5 text-xs">
+                <span class="bg-green-500 w-56 font-bold text-center text-gray-200 p-3 px-5 rounded-l">Password</span><input class="field text-sm text-gray-600 p-2 px-3 rounded-r w-full form-control" type="password" name="password1" id="password1" value="{{ form.password.value|default_if_none:'' }}">
+            </span>
+            <span class="flex shadow-md mb-5 text-xs">
+                <span class="bg-green-500 w-56 font-bold text-center text-gray-200 p-3 px-5 rounded-l">Password Check</span><input class="field text-sm text-gray-600 p-2 px-3 rounded-r w-full form-control" type="password" name="password2" id="password2" value="{{ form.password.value|default_if_none:'' }}">
+            </span>
+            </div>
+            <button type="submit" class="btn btn-primary border-2 border-green-500 hover:bg-green-500 hover:text-gray-100 mt-3 text-green-500 block text-center p-3 px-4 text-sm w-full">회원가입</button>
+        </form>
+    </div>
+{% endblock %}

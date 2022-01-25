@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-theme.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/non-responsive.css') }}">
+    <title>{% block title %}{% endblock %} WEB Medium</title>
+    {% block head %}{% endblock %}
+  </head>
+<body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">WEB Medium</a>
+        </div>
+        <div id="navbar">
+          <ul class="nav navbar-nav">
+            <li><a href="/">home</a></li>
+            <li><a href="/flag">FLAG</a></li>
+            <li><a href="/signup">signup</a></li>
+            <li><a href="/signin">signin</a></li>
+            <li><a href="/signout">signout</a></li>
+            <li><a href="/email_verify">email_verify</a></li>
+            <li><a href="/email_verify_chk">email_verify_code</a></li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+          </ul>
+
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+      {% block content %}{% endblock %}
+    </div> <!-- /container -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="{{ url_for('static', filename='js/jquery.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script> 
+</body>
+</html>

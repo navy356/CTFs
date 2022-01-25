@@ -1,0 +1,31 @@
+{% extends "user/base.html" %}
+
+{% block content %}
+<div class="box">
+    <h4 class="title is-4">New File</h4>
+    <form method="POST">
+        <div class="field">
+            <div class="control">
+                <input class="input" type="text" name="filename" placeholder="File Name">
+            </div>
+        </div>
+        <div class="field">
+            <div class="control">
+                <textarea class="textarea" name="data" placeholder="Data"></textarea>
+            </div>
+        </div>
+        <div class="field">
+            <p class="control">
+                <button class="button is-success" id="submit">
+                Submit
+                </button>
+            </p>
+        </div>
+    </form>
+    {% if get_flashed_messages() %}
+    <div class="notification is-danger is-light">
+        {{ get_flashed_messages()[0] }}
+    </div>
+    {% endif %}
+</div>
+{% endblock content %}

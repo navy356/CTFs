@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block block_main %}
+    <div class="py-24">
+        <form method="POST">
+            {% csrf_token %}
+            <div class="bg-white shadow-md rounded my-6">
+                <div class="bg-white w-full rounded-lg">
+                    <div class="form-group p-4 border-b">
+                        <input disabled="disabled" class="text-2xl min-w-full" name="title" value="제목: {{ document.title }}">
+                    </div>
+                    <div class="form-group p-4 border-b">
+                        <input disabled="disabled" class="text-2xl min-w-full" name="title" value="작성자: {{ document.user.username }}">
+                    </div>
+                    <div class="form-group p-4 border-b flex">
+                        서명 링크:&nbsp;
+                        {% for signdoc in signdocs %}
+                            <a class="text-blue-500" href="/signdocument/{{ signdoc.id }}">{{ signdoc.user.username }}</a>&nbsp;
+                        {% endfor %}
+                    </div>
+                    <div class="form-group p-4 border-b">
+                        <input disabled="disabled" class="text-2xl min-w-full" name="signers" value="서명 참여자: {{ signers }}">
+                    </div>
+                    <div class="hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
+                        <textarea disabled="disabled" class="form-group h-80 min-w-full" name="contents">{{ document.contents }}</textarea>
+                    </div>
+                    <div class="p-4 border-b">
+                        <span class="border-2 border-green-500 hover:bg-green-500 hover:text-gray-100 mt-3 text-green-500 block text-center p-3 px-4 text-sm rounded cursor-pointer font-bold" onclick="location.href='/document/{{ document.id }}/render'">서명 예시 확인</span>
+                        {% if user.signpath %}
+                            <button type="submit" class="btn btn-primary border-2 border-green-500 hover:bg-green-500 hover:text-gray-100 mt-3 text-green-500 block text-center p-3 px-4 text-sm w-full">서명</button>
+                        {% else %}
+                            <br/>
+                            <span class="text-1xl min-w-full">등록된 서명이 없어 서명할 수 없습니다.<br/>상단 메뉴(Add Sign)를 통해 서명을 등록해주세요.</span>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}

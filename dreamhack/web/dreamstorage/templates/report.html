@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="box">
+    <h4 class="title is-4">Report</h4>
+    <form method="POST">
+        <div class="field">
+            <div class="control">
+                <input class="input" type="text" placeholder="http://localhost:80/" disabled>
+                <input class="input" type="text" name="path" placeholder="/">
+            </div>
+        </div>
+        <div class="field">
+        <p class="control">
+            <button type="submit" id="submit" class="button is-success">
+            Report
+            </button>
+        </p>
+        </div>
+    </form>
+    {% if get_flashed_messages() %}
+    <div class="notification is-primary is-light">
+        {{ get_flashed_messages()[0] }}
+    </div>
+    {% endif %}
+</div>
+{% endblock content %}

@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <style>/* Create two equal columns that floats next to each other */
+    .column {
+      float: left;
+      width: 50%;
+    }
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    </style>
+</head>
+<body>
+    <div th:fragment="main" class="row">
+        <div class="column"><h3 th:text="'Hello, ' + ${message}"></h3></div>
+        <div class="column" align="right"><a href="/?lang=en">en</a>/<a href="/?lang=ko">ko</a></div>
+    </div>
+    <a href="/welcome">Welcome</a>
+    <a href="/signup">Singup</a>
+    <a href="/signin">Singin</a>
+</body>
+</html>

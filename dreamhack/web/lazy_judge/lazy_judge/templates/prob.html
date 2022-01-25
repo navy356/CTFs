@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<title>Lazy Judge</title>
+<link rel="stylesheet" href="{{ url_for('static',filename='bootstrap.min.css') }}" />
+<script src="{{ url_for('static',filename='jquery.min.js') }}"></script>
+<script src="{{ url_for('static',filename='bootstrap.min.js') }}"></script>
+</head>
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Lazy Judge</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            {% if user == '' %}
+              <li><a href="/login">Login</a></li>
+            {% else %}
+              <li><a href="/logout">Logout</a></li>
+            {% endif %}
+            <li><a href="/prob">Prob</a></li>
+            <li><a href="/mypage">MyPage</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+
+      <div class="starter-template">
+        <h1>Factorealrudaganya?</h1>
+        <img src="{{url_for('static',filename='realru.jpeg')}}" style="width:100px" />
+        <h2>input(Input is stdin)</h2>
+        <h3>n, 0 < n < 20</h3>
+        <h2>output is return code => if input is 19, "int main(){return 20;}"</h2>
+        <h2>print function is not work, output is return code</h2>
+        <pre>"Factorealrudaganya?" Table
+input => output
+1 => 1
+2 => 2
+3 => 6
+4 => 24
+5 => 120
+6 => 110
+7 => 100
+8 => 90
+9 => 80
+10 => 70
+11 => 60
+12 => 50
+13 => 40
+14 => 30
+15 => 20
+16 => 10
+17 => 9
+18 => 8
+19 => 6
+      </pre>
+        <h2>exam</h2>
+        <h3>input: 15 | output: 20</h3>
+        <a href="javascript:alert('Noda');"><h2>Hint</h2></a>
+      </div>
+      <h2>Input Your Code</h2>
+      <form method="POST">
+        <input type="submit" value="Submit" />
+        <textarea style="width: 100%;height: 500px;padding: 10px;" name="code">{{ main_data }}</textarea>
+      </form>
+
+    </div>
+</body>
+</html>

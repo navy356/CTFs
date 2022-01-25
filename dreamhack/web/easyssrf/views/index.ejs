@@ -1,0 +1,14 @@
+<%- include('./header') %>
+<h1>Website viewer</h1>
+<form method="POST" action="/viewer">
+  <label for="url">Only HTTP URL : </label>
+  <input type="url" pattern="http://.+/.*" title="Include http://.+/.*" name="url" />
+  <input type="submit" value="View" />
+</form>
+<br>
+<div class="response">
+<pre>
+  <%- response %>
+</pre>
+</div>
+<%- include('./footer') %>

@@ -1,0 +1,2 @@
+route uri=/jst extensions=jst handler=jst
+route uri=/

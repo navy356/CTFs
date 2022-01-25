@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block block_main %}
+    <div class="py-24">
+        <form id="form" method="POST">
+            {% csrf_token %}
+            {% include "form_errors.html" %}
+            <div class="bg-white shadow-md rounded my-6">
+                <div class="bg-white w-full rounded-lg">
+                    <div class="form-group p-4 border-b">
+                        <input class="text-2xl min-w-full" name="title" placeholder="문서 제목">
+                    </div>
+                    <div class="hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
+                        <textarea class="form-group h-80 min-w-full" name="contents" placeholder="문서 본문"></textarea>
+                    </div>
+                    <div class="p-4 border-b">
+                        <span class="border-2 border-green-500 hover:bg-green-500 hover:text-gray-100 mt-3 text-green-500 block text-center p-3 px-4 text-sm rounded cursor-pointer font-bold" onclick="form.submit()">Write</span>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}

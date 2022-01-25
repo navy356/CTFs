@@ -1,0 +1,3 @@
+when y=32 => x (-1,0)
+
+when y=0 => x(-0x800000,0x7fffff)
